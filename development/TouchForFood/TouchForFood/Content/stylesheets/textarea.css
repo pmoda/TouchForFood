@@ -1,0 +1,14 @@
+﻿.highlight {
+    top: 7px;
+    left: 32px;
+    background-color: #D8DFEA;
+    width: 53px;
+    height: 9pt;
+}
+
+div#reviewText
+{
+    border:solid 1px;
+    height:auto;
+    width:360px;
+}

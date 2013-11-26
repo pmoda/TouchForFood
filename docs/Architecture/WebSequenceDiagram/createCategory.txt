@@ -1,0 +1,65 @@
+MenuDetailsView->MenuController:createCategory(name)
+activate MenuDetailsView
+activate MenuController
+participant "c:Category"as c
+MenuController -> c:<<create>>
+participant "om:CategoryOM"as om
+MenuController -> om:<<create>>
+activate om
+MenuController->om:create(c)
+om->DBContext:add(c)
+activate DBContext
+om->DBContext:saveChanges()
+deactivate DBContext
+deactivate om
+
+participant "mc:MenuCategory" as mc
+MenuController->mc:<<create>>
+MenuController->mc:setMenuId(menuId)
+MenuController->mc:setCategoryId(catId)
+participant "mcom:MenuCategoryOM" as mcom
+MenuController->mcom:create(mc)
+activate mcom
+mcom->DBContext:add(mc)
+activate DBContext
+mcom->DBContext:saveChanges()
+deactivate DBContext
+deactivate mcom
+
+participant "cim:CategoryIM"as cim
+MenuController->cim:<<create>>
+activate cim
+MenuController->cim:find()
+participant "cl:CategoryProxyList" as cl
+cim->cl:<<create>>
+activate cl
+cim->DBContext:find(is_active,is_deleted)
+activate DBContext
+DBContext-->cim:category
+deactivate DBContext
+participant "cp:CategoryProxy" as cp
+
+loop
+cim->cp:<<create>>
+cim->cl: add(cp)
+end
+
+deactivate cl
+
+cim-->MenuController:cl
+deactivate cim
+MenuController-->MenuDetailsView:cl
+deactivate MenuController
+
+loop for(int i =0; i < cl.length;i++)
+MenuDetailsView->cl:get(i)
+activate cl
+cl-->MenuDetailsView: cp
+deactivate cl
+MenuDetailsView->DBContext:loadEntity(cp)
+activate DBContext
+DBContext->Category:<<create>>
+DBContext-->MenuDetailsView:category
+end
+deactivate DBContext
+deactivate MenuDetailsView

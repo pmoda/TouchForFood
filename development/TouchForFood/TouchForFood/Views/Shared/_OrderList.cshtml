@@ -1,0 +1,93 @@
+﻿@model IEnumerable<TouchForFood.Models.order>
+
+@using TouchForFood.Models
+
+
+@{
+    ViewBag.Title = "Manage Orders";
+}
+
+<div>
+    @foreach (var item in Model)
+    {
+        if (item.order_status == (int)OrderStatusHelper.OrderStatusEnum.PROCESSING )
+        {
+            <span class="go-right">&nbsp;&nbsp;&nbsp;@Html.ActionLink("Manage bills", "ManageBills", "Bill", new { id = item.id }, new { @class = "button" })</span>
+        }
+        var time = String.Format("{0:dd MMM yyyy HH:mm:ss}", item.timestamp);
+        var date = String.Format("{0:dd MMM yyyy}", item.timestamp);
+        @Html.Raw("<div class='order-wrapper'>");
+            <div class="order-header bold order-@Html.DisplayFor(modelItem => item.table_id)">Order #: @Html.DisplayFor(modelItem => item.id)</div>
+        
+            @Html.Raw("<div class='order-wrapper-small'>");
+                <span>Time: </span><span class="go-right">@Html.DisplayFor(modelItem => time)</span><br />
+                <!--<span>Total: </span>@Html.DisplayFor(modelItem => item.total)<br />-->
+                <span>Order Status: </span><span class="go-right">@TouchForFood.Models.OrderStatusHelper.GetOrderStatusName(item.order_status)</span><br />
+                <span>Waiter: </span>@Html.DisplayFor(modelItem => item.waiter.first_name)<br />
+                <!--<span>Version: </span>@Html.DisplayFor(modelItem => item.version)<br />-->
+        
+            <div class="spacer10">&nbsp;</div>
+    
+            bool isValid = true;
+            if (item.order_item.Count > 0)
+            {
+                foreach (order_item orderItem in item.order_item)
+                {
+                    if ((int)orderItem.order_item_status != (int)OrderStatusHelper.OrderItemStatusEnum.PENDING &&
+                        (int)orderItem.order_item_status != (int)OrderStatusHelper.OrderItemStatusEnum.PLACED)
+                    {
+                        isValid = false;
+                        break;
+                    }
+                }
+            }
+
+            if (isValid &&
+                (item.order_status == (int)OrderStatusHelper.OrderStatusEnum.OPEN ||
+                item.order_status == (int)OrderStatusHelper.OrderStatusEnum.PLACED))
+            {
+             @Html.ActionLink("Cancel", "Cancel", new { id = item.id }, new { @class = "button"}   )
+            }
+                <div>
+        
+            @{
+                  int counter = 1;
+            }
+
+            @foreach (var menuItem in item.order_item)
+            {
+                <span class="bold">&nbsp;Item #@counter</span><br />   
+                <div class="menuItem" id="@menuItem.id">
+                    <div id="menuItemName">
+                        <span>&nbsp;&nbsp;&nbsp;</span>@Html.DisplayFor(menu => menuItem.menu_item.item.name)
+                            <!-- if order is placed and user is not editing order allow Accept order to be performed by admin  -->
+                        @if (menuItem.order.order_status == (int)TouchForFood.Models.OrderStatusHelper.OrderStatusEnum.PLACED &&
+                            menuItem.order_item_status == (int)TouchForFood.Models.OrderStatusHelper.OrderItemStatusEnum.PENDING)
+                        {
+                            <span class="go-right">&nbsp;&nbsp;&nbsp;@Html.ActionLink("Accept", "Accept", "Order_Item", new { id = menuItem.id }, new { @class = "button" })</span>
+                            <span class="go-right">&nbsp;&nbsp;&nbsp;@Html.ActionLink("Decline", "Decline", "Order", new { id = menuItem.order_id, itemID = menuItem.id }, new { @class = "button" })</span>
+                        }
+                        else if (menuItem.order.order_status == (int)TouchForFood.Models.OrderStatusHelper.OrderStatusEnum.PROCESSING &&
+                            menuItem.order_item_status == (int)TouchForFood.Models.OrderStatusHelper.OrderItemStatusEnum.PROCESSING)
+                        {
+                            <span class="go-right">&nbsp;&nbsp;&nbsp;@Html.ActionLink("Delivered", "Delivered", "Order_Item", new { id = menuItem.id }, new { @class = "button" })</span>
+                            <span class="go-right">&nbsp;&nbsp;&nbsp;@OrderStatusHelper.GetOrderItemStatusName(menuItem.order_item_status)</span>
+                        }
+                        else
+                        {
+                             <span class="go-right">&nbsp;&nbsp;&nbsp;@OrderStatusHelper.GetOrderItemStatusName(menuItem.order_item_status)</span>
+                        }
+                            
+                    </div>
+                    &nbsp;
+                    </div>
+                        counter = counter + 1;
+            }
+            <span><br/></span>
+            </div>
+            @Html.Raw("</div>");
+        @Html.Raw("</div>");
+    }
+</div>
+
+<div class="clear"></div>

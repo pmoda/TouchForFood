@@ -1,0 +1,48 @@
+﻿@model TouchForFood.Models.user
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+<div class="one-third column">
+    &nbsp;
+</div>
+
+@using (Html.BeginForm())
+{ 
+    <div class="one-third column">
+        
+        <h3 class="main-green">Login</h3>
+        @Html.ValidationSummary(true, "")
+    
+        <fieldset>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.username)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.username)
+                @Html.ValidationMessageFor(m => m.username)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.password)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(m => m.password)
+                @Html.ValidationMessageFor(m => m.password)
+            </div>
+            <div class="spacer20"></div>
+            
+            <p>
+                <input type="submit" value="Login" />
+                 or @Html.ActionLink("Sign Up", "Create", null, new { @class = "signup-button" })
+            </p>
+
+        </fieldset>
+    </div>
+}

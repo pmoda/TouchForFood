@@ -1,0 +1,748 @@
+/* General styles
+---------------------------------------------------------*/
+
+.item-form
+{
+	margin-bottom:0px;
+}
+
+input#image-button
+{
+	background: url(../images/add.bmp) no-repeat top left;
+	display:block;
+	width: 28px;
+	height: 28px;
+	text-indent: -9999px; /* hides the link text */
+	border-width:0px
+}
+
+.remove-br
+{
+	display:inline;
+}
+
+.go-right 
+{
+	float:right;
+}
+.go-left
+{
+	float:left;
+}
+.main-green
+{
+	color:#269926;
+}
+.main-blue
+{
+	color:#1D7373;
+}
+.dark-green
+{
+	color:#008500;
+}
+.light-blue
+{
+	color:#5CCCCC;
+}
+.red
+{
+	color:red;
+}
+.bold
+{
+	font-weight:bold;
+}
+.italic
+{
+	font-style:italic;
+}
+.button a
+{
+	text-decoration:none;
+}
+.button a:hover 
+{
+	color:#333;
+}
+.spacer20
+{
+	height:20px;
+}
+.spacer10
+{
+	height:10px;
+}
+.italic-grey
+{
+	font-style: italic;
+	color: #006363;
+}
+.smaller-font
+{
+	font-size:12.5px;
+}
+legend
+{
+	color:#006363
+}
+.footer
+{
+	margin-top:10px;
+}
+.center
+{
+	margin-left:auto;
+	margin-right:auto;
+}
+a.header-home-link
+{
+	text-decoration:none;
+	color:#269926;
+}
+a.header-home-link:hover
+{
+	text-decoration:none;
+	color:#0D8800;
+}
+.food-menu-delete
+{    
+	width:22px;
+	height:23px;
+	padding: 5px;
+	float:left;
+}
+.food-menu-active
+{
+	float: right;
+	padding: 1px;
+}
+
+.category-names
+{
+	font-size: large;
+}
+
+.remove-button
+{
+	background: url(../images/remove.bmp) no-repeat top left;
+	display: block;
+	width: 28px;
+	height: 28px;
+	text-indent: -9999px; /* hides the link text */
+}
+
+.add-button
+{
+	background: url(../images/add.bmp) no-repeat top left;
+	display:block;
+	width: 28px;
+	height: 28px;
+	text-indent: -9999px; /* hides the link text */
+}
+
+.pop-up
+{
+	background-color: #FFFFFF;
+	border-width: medium;
+	border-style: ridge;
+	border-color: #006363;
+	padding: 5px;	
+}
+
+.error
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #a12225;
+	padding: 5px;
+	background-color: #dc8686;
+}
+
+.message
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #00cc00;
+	padding: 5px;
+	background-color: #67e667;
+}
+
+.warning
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #9f6000;
+	padding: 5px;
+	background-color: #feefb3;
+}
+
+body {background-color:#FFFFFF;}
+
+header,
+footer,
+nav,
+section {
+	display: block;
+}
+
+#mainContents
+{
+    min-height: 600px;
+}
+
+/* Login header */
+.login 
+{
+	margin-top:10px;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset 
+{
+	border:1px solid #ddd;
+	padding:0 1.4em 1.4em 1.4em;
+	margin:0 0 1.5em 0;
+}
+legend 
+{
+	font-size:1.2em;
+	font-weight: bold;
+}
+textarea 
+{
+	min-height: 75px;
+}
+.editor-label 
+{
+	margin: 1em 0 0 0;
+}
+.editor-field 
+{
+	margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+	color: #ff0000;
+}
+.field-validation-valid
+{
+	display: none;
+}
+.input-validation-error
+{
+	border: 1px solid #ff0000;
+	background-color: #ffeeee;
+}
+.validation-summary-errors
+{
+	font-weight: bold;
+	color: #ff0000;
+}
+.validation-summary-valid
+{
+	display: none;
+}
+
+/* Style for navigation menu
+================================================ */
+.nav-menu-item
+{
+	float:left;
+	margin-left:10px;
+	margin-right:10px;
+	font-weight:bold;
+}
+
+/* # Food menu page
+================================================== */
+
+.isactive-menu-button
+{
+	width:190px;
+	height:47px;
+	border: 5px solid #006363;
+	
+	text-align:center;
+	padding-top: 23px;
+	margin-left: 10px;
+	
+	background: #ccc; /* Old browsers */
+	background: #ccc -moz-linear-gradient(top, rgba(57,230,57,.9) 0%, rgba(0,133,0,.9) 100%); /* FF3.6+ */
+	background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(57,230,57,.9)), color-stop(100%,rgba(0,133,0,.9))); /* Chrome,Safari4+ */
+	background: #ccc -webkit-linear-gradient(top, rgba(57,230,57,.9) 0%,rgba(0,133,0,.9) 100%); /* Chrome10+,Safari5.1+ */
+	background: #ccc -o-linear-gradient(top, rgba(57,230,57,.9) 0%,r60,133,0,.9) 100%); /* Opera11.10+ */
+	background: #ccc -ms-linear-gradient(top, rgba(57,230,57,.9) 0%,rgba(0,133,0,.9) 100%); /* IE10+ */
+	background: #ccc linear-gradient(top, rgba(57,230,57,.9) 0%,rgba(0,133,0,.9) 100%); /* W3C */
+}
+
+.food-menu-button-size
+{
+	width: 200px;
+    height: 65px;
+    text-align: center;
+    padding-top: 15px;
+    margin-left: 10px;
+}
+.menu-item-bill-unselected
+{
+	background: #eee !important; /* Old browsers */
+	background: #eee -moz-linear-gradient(top, rgba(57,230,57,.6) 0%, rgba(0,133,0,.6) 100%) !important; /* FF3.6+ */
+	background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(57,230,57,.6)), color-stop(100%,rgba(0,133,0,.6))) !important; /* Chrome,Safari4+ */
+	background: #eee -webkit-linear-gradient(top, rgba(57,230,57,.6) 0%,rgba(0,133,0,.6) 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: #eee -o-linear-gradient(top, rgba(57,230,57,.6) 0%,r60,133,0,.6) 100%) !important; /* Opera11.10+ */
+	background: #eee -ms-linear-gradient(top, rgba(57,230,57,.6) 0%,rgba(0,133,0,.6) 100%) !important; /* IE10+ */
+	background: #eee linear-gradient(top, rgba(57,230,57,.6) 0%,rgba(0,133,0,.6) 100%) !important; /* W3C */
+}
+
+.menu-item-bill-selected
+{
+	background: #eee !important; /* Old browsers */
+	background: #eee -moz-linear-gradient(top, rgba(57,20,57,.6) 0%, rgba(0,133,0,.6) 100%) !important; /* FF3.6+ */
+	background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(57,230,57,.6)), color-stop(100%,rgba(0,133,0,.6))) !important; /* Chrome,Safari4+ */
+	background: #eee -webkit-linear-gradient(top, rgba(57,20,57,.6) 0%,rgba(0,133,0,.6) 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: #eee -o-linear-gradient(top, rgba(57,20,57,.6) 0%,r60,133,0,.6) 100%) !important; /* Opera11.10+ */
+	background: #eee -ms-linear-gradient(top, rgba(57,20,57,.6) 0%,rgba(0,133,0,.6) 100%) !important; /* IE10+ */
+	background: #eee linear-gradient(top, rgba(57,20,57,.6) 0%,rgba(0,133,0,.6) 100%) !important; /* W3C */
+}
+
+.bill-item:hover
+{
+	cursor: hand;
+	cursor: pointer;
+}
+
+.food-menu-button 
+{			
+	background: #eee; /* Old browsers */
+	background: #eee -moz-linear-gradient(top, rgba(57,230,57,.6) 0%, rgba(0,133,0,.6) 100%); /* FF3.6+ */
+	background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(57,230,57,.6)), color-stop(100%,rgba(0,133,0,.6))); /* Chrome,Safari4+ */
+	background: #eee -webkit-linear-gradient(top, rgba(57,230,57,.6) 0%,rgba(0,133,0,.6) 100%); /* Chrome10+,Safari5.1+ */
+	background: #eee -o-linear-gradient(top, rgba(57,230,57,.6) 0%,r60,133,0,.6) 100%); /* Opera11.10+ */
+	background: #eee -ms-linear-gradient(top, rgba(57,230,57,.6) 0%,rgba(0,133,0,.6) 100%); /* IE10+ */
+	background: #eee linear-gradient(top, rgba(57,230,57,.6) 0%,rgba(0,133,0,.6) 100%); /* W3C */
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #444;
+	display: inline-block;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px rgba(255, 255, 255, .75);
+	cursor: pointer;
+	margin-bottom: 20px;
+	line-height: normal;
+	padding-right: 10px;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+.food-menu-button:hover
+{	
+	background: #ddd; /* Old browsers */
+	background: #ddd -moz-linear-gradient(top, rgba(57,230,57,.75) 0%, rgba(0,133,0,.75) 100%); /* FF3.6+ */
+	background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(57,230,57,.75)), color-stop(100%,rgba(0,133,0,.75))); /* Chrome,Safari4+ */
+	background: #ddd -webkit-linear-gradient(top, rgba(57,230,57,.75) 0%,rgba(0,133,0,.75) 100%); /* Chrome10+,Safari5.1+ */
+	background: #ddd -o-linear-gradient(top, rgba(57,230,57,.75) 0%,r60,133,0,.75) 100%); /* Opera11.10+ */
+	background: #ddd -ms-linear-gradient(top, rgba(57,230,57,.75) 0%,rgba(0,133,0,.75) 100%); /* IE10+ */
+	background: #ddd linear-gradient(top, rgba(57,230,57,.75) 0%,rgba(0,133,0,.75) 100%); /* W3C */
+	color: #006363
+}
+
+.food-menu-button:active{
+	background: #ccc; /* Old browsers */
+	background: #ccc -moz-linear-gradient(top, rgba(57,230,57,.9) 0%, rgba(0,133,0,.9) 100%); /* FF3.6+ */
+	background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(57,230,57,.9)), color-stop(100%,rgba(0,133,0,.9))); /* Chrome,Safari4+ */
+	background: #ccc -webkit-linear-gradient(top, rgba(57,230,57,.9) 0%,rgba(0,133,0,.9) 100%); /* Chrome10+,Safari5.1+ */
+	background: #ccc -o-linear-gradient(top, rgba(57,230,57,.9) 0%,r60,133,0,.9) 100%); /* Opera11.10+ */
+	background: #ccc -ms-linear-gradient(top, rgba(57,230,57,.9) 0%,rgba(0,133,0,.9) 100%); /* IE10+ */
+	background: #ccc linear-gradient(top, rgba(57,230,57,.9) 0%,rgba(0,133,0,.9) 100%); /* W3C */
+}
+
+.food-menu-button.full-width{
+	width: 100%;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	text-align: center; 
+}
+
+/* Fix for odd Mozilla border & padding issues */
+food-menu-button::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+
+/* Styles for user pages */
+.user-edit-link
+{
+	font-size:100%;
+}
+
+/* #User Order page
+================================================== */
+.ordered-list{
+	margin: 0px;
+	padding: 0px;
+	list-style-position: inside;
+}
+
+.align-left{    
+	float: left;
+}
+
+.align-right{
+	float: right;
+}
+
+/* Home page
+================================================= */
+.home-page
+{
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	min-height:150px;
+}
+.home-bg-img
+{
+    width: 290px;
+    
+}
+
+/* Style for Order Manager Page
+================================================== */
+.order-wrapper
+{
+	border:1px solid #ccc;
+}
+.order-wrapper-small
+{
+	padding:5px;
+}
+.order-header
+{
+	background: #eee; /* Old browsers */
+	background: #eee -moz-linear-gradient(top, rgba(57,230,57,.6) 0%, rgba(0,133,0,.6) 100%); /* FF3.6+ */
+	background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(57,230,57,.6)), color-stop(100%,rgba(0,133,0,.6))); /* Chrome,Safari4+ */
+	background: #eee -webkit-linear-gradient(top, rgba(57,230,57,.6) 0%,rgba(0,133,0,.6) 100%); /* Chrome10+,Safari5.1+ */
+	background: #eee -o-linear-gradient(top, rgba(57,230,57,.6) 0%,r60,133,0,.6) 100%); /* Opera11.10+ */
+	background: #eee -ms-linear-gradient(top, rgba(57,230,57,.6) 0%,rgba(0,133,0,.6) 100%); /* IE10+ */
+	background: #eee linear-gradient(top, rgba(57,230,57,.6) 0%,rgba(0,133,0,.6) 100%); /* W3C */
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 0px;
+	height:30px;
+}
+
+/* Style for View Menu Page
+=============================================== */
+.suggest-button
+{
+    width: 78px;
+    text-align: center;
+}
+.top-rated-button
+{
+    width: 60px;
+    text-align: center;
+}
+
+.vm-button {
+	background: #eee; /* Old browsers */
+	background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+	background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+	background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+	background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+	background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+	background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+	border: 1px solid #aaa;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #444;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0 1px rgba(255, 255, 255, .75);
+	cursor: pointer;
+	line-height: normal;
+	padding: 3px 5px;
+	margin-left:2px;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.vm-button:hover {
+	color: #222;
+	background: #ddd; /* Old browsers */
+	background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+	background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+	background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+	background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+	background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+	border: 1px solid #888;
+	border-top: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+}
+
+.vm-button:active {
+	border: 1px solid #666;
+	background: #ccc; /* Old browsers */
+	background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+	background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+	background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+	background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+	background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+	background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */
+}
+
+/* Style for search
+==================================== */
+input.search-input
+{
+	width:86%;
+	margin-top: 3px;
+}
+
+.search-button
+{ 
+    margin-left:-28px;
+    margin-top:5px;
+    display: inline;
+  /*  background: url(../images/search16.png) no-repeat top left;*/
+}
+.search-seethrough
+{
+    opacity:0;
+    width:32px;
+    height:32px;
+}
+
+/*Style for Reviews*/
+.review-container
+{
+    padding: 10px;
+    border:2px solid;
+    border-radius:25px;
+    box-shadow: 10px 10px 5px #888888;
+    -moz-border-radius:25px; /* Old Firefox */
+}
+.reviewUserName
+{
+    font-weight: bolder;
+}
+
+.reviewItem
+{
+    font-weight: bolder;
+}
+
+.orderContainer
+{
+     padding: 10px;
+    border:2px solid;
+    border-radius:25px;
+    box-shadow: 10px 10px 5px #888888;
+    -moz-border-radius:25px; /* Old Firefox */
+}
+
+.order-top
+{
+   font-weight: bolder; 
+}
+.order_item_li
+{
+    font-style:italic;
+    margin: 3px;
+}
+.orderList
+{
+    margin-bottom: 5px;
+}
+.order_item_desc
+{
+    margin-left: 15px;
+}
+
+/* Data Table Styles
+---------------------------------------------------------*/
+
+table.altrowstable {
+	color:#333333;
+	border-width: 1px;
+	border-color: #545454;
+	border-collapse: collapse;
+}
+table.altrowstable th {
+    border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #545454;
+	font-weight: bold;
+	white-space: nowrap;
+	background: #ddd; /* Old browsers */
+	background: #ddd -moz-linear-gradient(top, rgba(57,230,57,.75) 0%, rgba(0,133,0,.75) 100%); /* FF3.6+ */
+	background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(57,230,57,.75)), color-stop(100%,rgba(0,133,0,.75))); /* Chrome,Safari4+ */
+	background: #ddd -webkit-linear-gradient(top, rgba(57,230,57,.75) 0%,rgba(0,133,0,.75) 100%); /* Chrome10+,Safari5.1+ */
+	background: #ddd -o-linear-gradient(top, rgba(57,230,57,.75) 0%,r60,133,0,.75) 100%); /* Opera11.10+ */
+	background: #ddd -ms-linear-gradient(top, rgba(57,230,57,.75) 0%,rgba(0,133,0,.75) 100%); /* IE10+ */
+	background: #ddd linear-gradient(top, rgba(57,230,57,.75) 0%,rgba(0,133,0,.75) 100%); /* W3C */	
+}
+table.altrowstable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #545454;
+}
+.oddrowcolor{
+	background-color:#FFFFFF;
+}
+.evenrowcolor{
+	background-color:#DFDFDF;
+}
+
+/* Style for table actions
+*Icons From: http://www.iconarchive.com/show/mini-icons-by-custom-icon-design.html
+*Icons are free with non-commercial use
+=============================================== */
+.table-button{
+	display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-indent: -9999px; /* hides the link text */
+}
+
+.table-delete
+{
+    background: url(../images/trash16.png) no-repeat top left;
+}
+
+.table-cancel
+{
+    background: url(../images/Cancel16.png) no-repeat top left;
+}
+
+.table-edit
+{
+    background: url(../images/Edit16.png) no-repeat top left;
+}
+
+.table-complete
+{
+    background: url(../images/Accept16.png) no-repeat top left;
+}
+
+.table-details
+{
+    background: url(../images/Search16.png) no-repeat top left;
+}
+
+/* Style for signup button on login */
+a.signup-button
+	{
+		background: #eee; /* Old browsers */
+		background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+		background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+		background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+		background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+		background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+	  border: 1px solid #aaa;
+	  border-top: 1px solid #ccc;
+	  border-left: 1px solid #ccc;
+	  -moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;
+	  color: #444;
+	  display: inline-block;
+	  font-size: 11px;
+	  font-weight: bold;
+	  text-decoration: none;
+	  text-shadow: 0 1px rgba(255, 255, 255, .75);
+	  cursor: pointer;
+	  margin-bottom: 20px;
+	  line-height: normal;
+	  padding: 4px 10px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+	a.signup-button:hover {
+		color: #222;
+		background: #ddd; /* Old browsers */
+		background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+		background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+		background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+		background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+		background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+	  border: 1px solid #888;
+	  border-top: 1px solid #aaa;
+	  border-left: 1px solid #aaa; }
+
+	a.signup-button:active {
+		border: 1px solid #666;
+		background: #ccc; /* Old browsers */
+		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+		background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+		background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+		background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+		
+.menu-table-td
+{
+    padding-right:10px;
+}
+input.price-input
+{
+    width:100px;
+    margin-bottom: -10px;
+}
+.side-color
+{
+    color:#006363
+}
+
+/* Style for user profile/login actions
+*Icons From: http://www.iconarchive.com/show/mini-icons-by-custom-icon-design.html
+*Icons are free with non-commercial use
+=============================================== */
+.user-button{
+	display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-indent: -9999px; /* hides the link text */
+}
+
+.user-edit
+{
+    background: url(../images/Edit16.png) no-repeat top left;
+}
+
+.user-login
+{
+    background: url(../images/Login_in16.png) no-repeat top left;
+}
+
+.user-logout
+{
+    background: url(../images/Login_out16.png) no-repeat top left;
+}
+
+.user-home
+{
+    width: 32px;
+    height: 32px;
+    background: url(../images/32x32.png) no-repeat top left;
+}

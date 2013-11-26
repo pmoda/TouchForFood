@@ -1,0 +1,49 @@
+﻿@model IEnumerable<TouchForFood.Models.table>
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="@Url.Content("~/Scripts/altrows.js")" type="text/javascript"></script>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="altrowstable" id="alternatecolor">
+    <tr>
+        <th>
+            name
+        </th>
+        <th>
+            restaurant
+        </th>
+        <th>
+            NFC Link
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.restaurant.name)
+        </td>
+        <td>
+            <a href=@Request.Url.AbsoluteUri/Assign/@item.generateNFCHash()>NFC Link</a>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "table-button table-edit", title = "Edit" })
+            @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "table-button table-details", title = "Details" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "table-button table-delete", title = "Delete" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,46 @@
+﻿@model TouchForFood.Models.bill
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>bill</legend>
+
+    <div class="display-label">order</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.order.id)
+    </div>
+
+    <div class="display-label">tvq</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tvq)
+    </div>
+
+    <div class="display-label">tps</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tps)
+    </div>
+
+    <div class="display-label">total</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.total)
+    </div>
+
+    <div class="display-label">timestamp</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.timestamp)
+    </div>
+
+    <div class="display-label">paid</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.paid)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

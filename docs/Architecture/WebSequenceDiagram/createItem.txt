@@ -1,0 +1,65 @@
+MenuCategoryDetailsView->ItemController:createItem(name, desc, price)
+activate MenuCategoryDetailsView
+activate ItemController
+participant "i:Item"as i
+ItemController-> i:<<create>>
+participant "om:ItemOM"as om
+ItemController-> om:<<create>>
+activate om
+ItemController->om:create(i)
+om->DBContext:add(i)
+activate DBContext
+om->DBContext:saveChanges()
+deactivate DBContext
+deactivate om
+
+participant "mi:MenuItem" as mi
+ItemController->mi:<<create>>
+ItemController->mi:setMenuCatId(menuCatId)
+ItemController->mi:setItemId(itemId)
+participant "miom:MenuItemOM" as miom
+ItemController->miom:create(mi)
+activate miom
+miom->DBContext:add(mi)
+activate DBContext
+miom->DBContext:saveChanges()
+deactivate DBContext
+deactivate miom
+
+participant "im:ItemIM"as im
+ItemController->im:<<create>>
+activate im
+ItemController->im:find()
+participant "il:ItemProxyList" as il
+im->il:<<create>>
+activate il
+im->DBContext:find(is_active,is_deleted)
+activate DBContext
+DBContext-->im:category
+deactivate DBContext
+participant "ip:ItemProxy" as ip
+
+loop
+im->ip:<<create>>
+im->il: add(ip)
+end
+
+deactivate il
+
+im-->ItemController:il
+deactivate im
+ItemController-->MenuCategoryDetailsView:il
+deactivate ItemController
+
+loop for(int i =0; i < il.length;i++)
+MenuCategoryDetailsView->il:get(i)
+activate il
+il-->MenuCategoryDetailsView:ip
+deactivate il
+MenuCategoryDetailsView->DBContext:loadEntity(ip)
+activate DBContext
+DBContext->Item:<<create>>
+DBContext-->MenuCategoryDetailsView:item
+end
+deactivate DBContext
+deactivate MenuCategoryDetailsView

@@ -1,0 +1,38 @@
+﻿@model TouchForFood.Models.menu_category
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>menu_category</legend>
+
+    <div class="display-label">category</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.category.name)
+    </div>
+
+    <div class="display-label">menu</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.menu.name)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+@if (ViewBag.Warning != "")
+{
+    <script type="text/javascript">
+        var message = @Html.Raw(Json.Encode(ViewBag.Warning));
+        alert(message);
+    </script>
+}

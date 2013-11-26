@@ -1,0 +1,99 @@
+﻿@model TouchForFood.Models.menu
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Util.Html
+@using System.Collections
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "View Menu";
+}
+
+@section JavaScript{
+    <script type="text/javascript" src="@Url.Content("/Scripts/Menu/menu_ajax_handler.js")"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/colorbox/jquery.colorbox-min.js")"></script>
+}
+
+<link rel="stylesheet" href="@Url.Content("/Content/stylesheets/colorbox.css")" />
+
+<script>
+
+    $(document).ready(function () {
+
+        $(".ajax").colorbox({ width: "95%" });
+
+    });
+
+</script>
+
+<div class="one-third column">&nbsp;
+
+</div>
+
+<div class="one-third column">
+    @Html.ActionLink("Suggestions", "../User/SuggestItems", "User", new { @class = "button suggest-button" })
+    @Html.ActionLink("Most Ordered", "../User/PopularItems", "User", new { @class = "button" })
+    @Html.ActionLink("Top Rated", "../User/PopularItemsByRating", "User", new { id = @Model.id }, new { @class = "button top-rated-button" })
+     
+
+@foreach (var menu_category in Model.menu_category)
+{
+    if (menu_category.is_active && !menu_category.is_deleted)
+    {
+        <div id="@menu_category.id">          
+            <h4 class="align-left main-green">
+                @Html.Partial("../Menu_Category/View", menu_category, new ViewDataDictionary { { "tag", "div" } })                
+            </h4>
+            @if (menu_category.sides.Count > 0)
+            {
+                <div class="italic align-left">
+                    Comes with your choice of (1):
+                    @foreach (var side in menu_category.sides)
+                    {
+                        if (side.is_active)
+                        {
+                            @: @Html.Raw(side.name); 
+                        }
+                    }
+                    
+                </div>
+            }
+            <hr />
+            
+            @foreach (var menu_item in menu_category.menu_item)
+            {
+                if (menu_item.is_active && !menu_item.is_deleted)
+                {
+                    var item_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("PartialDetails", "Menu_Item", new { id = menu_item.id }));
+                    var side_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("PickSides", "Menu_Item", new { id = menu_item.id }));
+                
+                    <div id="mi-@menu_item.id" style="overflow:auto;">
+                        <div class="bold go-left">
+                            <a class='ajax cboxElement' href='@item_url'>
+                                @Html.Raw(menu_item.item.name)
+                            </a>
+                        </div>
+                        <div class="bold go-right">
+                            <a class='vm-button ajax cboxElement' href='@side_url'>
+                                Order
+                            </a>
+                        </div>
+
+                        <div class="bold go-right">
+                            $@Html.Raw(menu_item.price.ToString())
+                        </div>
+                        <div class="clear"></div>      
+                        <div class="italic go-left">
+                            @Html.Raw(menu_item.item.description)
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <br />
+                }
+            }                
+                    
+            <div style="clear: both;"></div>
+        </div>
+    }    
+}
+
+</div>

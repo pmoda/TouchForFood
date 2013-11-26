@@ -1,0 +1,23 @@
+﻿@model IEnumerable<TouchForFood.Models.menu_category>
+@using TouchForFood.App_GlobalResources
+
+    <fieldset>
+    <h4 class="main-green">On the Menu</h4>
+        @foreach (var menu_category in Model)
+        {
+            <div id="@menu_category.id">                    
+                <a class="go-left" href='@Url.Content("~/Menu_Category/Details/" + menu_category.id)'> 
+                    @Html.Partial("../Menu_Category/View", menu_category, new ViewDataDictionary { { "tag", "div" } })
+                </a>                    
+                    
+                @Ajax.ActionLink("X", "AjaxDelete", "Menu_Category", new { id = menu_category.id }, new AjaxOptions()
+           {
+               Confirm = "Are you sure you want to delete?",
+               HttpMethod = "POST",
+               OnSuccess = "onRemoveMenuCategorySuccess",
+               OnFailure = "console.log(error)"
+           }, new { @class = "go-right remove-button" })
+                <div style="clear: both;"></div>
+            </div>
+        }
+    </fieldset>

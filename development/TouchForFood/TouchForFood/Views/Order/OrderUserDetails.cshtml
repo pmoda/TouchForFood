@@ -1,0 +1,97 @@
+﻿@model TouchForFood.ViewModels.OrderVM
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Models
+@using TouchForFood.Util.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="one-third column ">
+    &nbsp;</div>
+<div class="one-third column">
+    @if (@Model.order == null)
+    {
+        <h5 class="main-blue">
+            You do not have any Orders created</h5>
+    }
+    else
+    {
+        <h3 class="main-green">
+            Order</h3>
+        
+        <fieldset>
+            <div id="order-username">
+                Ordered by: @Html.DisplayFor(model => model.order.user.username)</div>
+            <div id="order-timestamp">@Html.DisplayFor(model => model.order.timestamp)</div>
+            <div id="order-table-status">
+                <span id="order-table" class="go-left">Table #@Html.DisplayFor(model => model.order.table.id)</span>
+                <span id="order-status" class="go-right">Status: @TouchForFood.Models.OrderStatusHelper.GetOrderStatusName(Model.order.order_status)</span>
+                <div style="clear: both;">
+                </div>
+            </div>
+            <div id="order-waiter">
+                Your waiter today is @Html.DisplayFor(model => model.order.waiter.first_name)</div>
+            <div class="spacer20">
+            </div>
+            <div id="order-view-status">
+                <ol>
+                    @foreach (var orderItemVm in @Model.orderItemVMs)
+                    {
+                        <li>
+                            <div>@Html.DisplayFor(model => orderItemVm.menu_item.item.name)&nbsp&nbsp$@Html.DisplayFor(model => orderItemVm.menu_item.price)</div>
+                            <div>
+                                Cooking Status: @TouchForFood.Models.OrderStatusHelper.GetOrderItemStatusName(orderItemVm.order_item.order_item_status)</div>
+                            <div>
+                                Description: @Html.DisplayFor(model => orderItemVm.menu_item.item.description)</div>
+                            <div>
+                                Note: @Html.DisplayFor(model => orderItemVm.order_item.note)</div>
+                        </li>
+                    }
+                </ol>
+            </div>
+        </fieldset>        
+        
+                    if (@Model.order.order_status == (int)OrderStatusHelper.OrderStatusEnum.EDITING ||
+                        @Model.order.order_status == (int)OrderStatusHelper.OrderStatusEnum.OPEN ||
+                        @Model.order.order_status == null)
+                    {
+                        //Option to re-finalize
+        <div>
+            @using (Html.BeginForm("Cancel", "Order", FormMethod.Post))
+            {
+                <span class="go-right">
+                    <input type="submit" value="Cancel" /></span> @*Doesn't do anything yet*@
+            }
+            @using (Html.BeginForm("Finalize", "Order", FormMethod.Post))
+            {
+                <span class="go-right">
+                    <input type="submit" value="Finalize" /></span>
+            }
+            <div style="clear: both;">
+            </div>
+        </div>
+                    }
+                    else
+                    {
+        <div>
+            @*//Option to view status of the item*@
+            @using (Html.BeginForm("ViewFromSession", "Order", FormMethod.Post))
+            {
+                <span class="go-right">
+                    <input type="submit" value="View Order" /></span>
+            }
+            @*//Option to begin editing*@
+            @if (@Model.order.order_status == (int)OrderStatusHelper.OrderStatusEnum.PLACED)
+            {
+                using (Html.BeginForm("Editing", "Order", new { id = @Model.order.id }, FormMethod.Post))
+                {
+                    <span class="go-right">
+                        <input type="submit" value="Edit Order" /></span>
+                }
+            }
+            <div style="clear: both;">
+            </div>
+        </div>
+                    }
+    }
+</div>

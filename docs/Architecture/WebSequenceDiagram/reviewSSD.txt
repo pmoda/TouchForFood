@@ -1,0 +1,10 @@
+User->System: getOrders(int userID)
+System-->User: orderList
+
+loop each order in orderList
+
+loop each orderItem in order
+    User->System: createReview(orderItem, reviewText, rating, is_anonymous)
+    System-->User:Review
+end
+end

@@ -1,0 +1,35 @@
+MenuIndexView->MenuController:Index()
+activate MenuIndexView
+activate MenuController
+participant "im:MenuIM"as im
+MenuController->im:<<create>>
+activate im
+MenuController->im:find()
+participant "ml:MenuProxyList" as ml
+im->ml:<<create>>
+activate ml
+im->DBContext:find(is_active,is_deleted)
+activate DBContext
+participant "mp:MenuProxy" as mp
+
+loop
+DBContext->mp:<<create>>
+im->ml: add(mp)
+end
+
+im-->MenuController:ml
+deactivate im
+MenuController-->MenuIndexView:ml
+deactivate MenuController
+
+loop for(int i =0; i < ml.length;i++)
+MenuIndexView->ml:get(i)
+ml-->MenuIndexView: mp
+MenuIndexView->DBContext:loadEntity(mp)
+participant "m:Menu"as m
+DBContext->m:<<create>>
+DBContext-->MenuIndexView:m
+end
+deactivate DBContext
+deactivate ml
+deactivate MenuIndexView

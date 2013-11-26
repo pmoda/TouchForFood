@@ -1,0 +1,7 @@
+TouchForFood (TFF) is an application that can be used by restaurants to provide a higher level of service to their clients using mobile technology. The goal of TFF is to allow users to have a personalized dining experience. The application will be available to restaurant customers as an app for iPhone or Android and can also be accessed through a browser. For restaurant TFF users, the application is optimized for use on computers or tablets.
+
+Once a customer is seated at a restaurant, they can get started with the application by tapping an NFC tag on the table or scanning a QR code. TFF will allow users to view menus of the restaurant they are currently in, place orders and request assistance from their waiter/waitress. Once they are finished eating, the user can manage how they want their bill split if they wish to have multiple bills.
+
+Once a user has completed their dining experience, TFF allows them to rate meals and leave comments. Based on their order history, suggestions will be made to the customer the next time they go to a restaurant using TFF.
+
+For the restaurant, reports can be generated using statistics collected from orders made through TFF.

@@ -1,0 +1,51 @@
+﻿@model TouchForFood.Models.ItemFilterVM
+@using TouchForFood.Util.Html
+
+<table id="item_table">
+<!--<thead><tr><th>NAME</th><th>DESCRIPTION</th></tr></thead>-->
+
+@foreach (var item in Model.items)
+{
+    using (Html.BeginForm("AddItem", "Menu_Category", FormMethod.Post, new { id = "addItemForm" }))
+    {
+        var item_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("PartialDetails", "Item", new { id = item.id }));
+    
+        <tr id="@item.id">
+            <td class="menu-table-td">
+                <a class='go-left ajax cboxElement' href='@item_url'>
+                    @Html.Raw(item.name)
+                </a>
+            </td>
+            <td class="menu-table-td">
+                @Html.TextBox("price", @Model.GetRegularPrice(item.id), new { @class = "price-input" })
+            </td>
+            <td class="menu-table-td">
+                @Html.ActionLink("Edit", "Edit", "Item", new { id = item.id }, new { @class = "button" })
+            </td>
+            <td>
+                <input type="submit" value="Add Item" />
+            </td>
+            @Html.Hidden("menu_cat_id", @Model.menu_cat.id)
+            @Html.Hidden("itemID", item.id)
+        </tr>
+    }
+}
+
+</table>
+
+<div id="result" style="display:none;"></div> 
+
+<script type="text/javascript">
+    $(document).ready(function () {        
+        $("#result").dialog({
+            autoOpen: false,
+            title: 'Add new Item',
+            width: 500,
+            height: 'auto',
+            modal: true,
+        });   
+    });
+    function openPopup() {
+        $("#result").dialog("open");
+    }
+</script>

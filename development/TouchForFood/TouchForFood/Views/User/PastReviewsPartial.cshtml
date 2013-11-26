@@ -1,0 +1,42 @@
+﻿@model IEnumerable<TouchForFood.Models.review_order_item>
+@using TouchForFood.App_GlobalResources
+<fieldset>
+    <legend>Past Reviews</legend>
+    <div id="pastReviews">
+        @foreach (var item in Model)
+        {
+            <div class="review-container">
+                <div class="reviewDate">
+                    @*@Html.LabelFor(modelItem => item.submitted_on): @Html.DisplayFor(modelItem => item.submitted_on)*@
+                </div>
+                <div class="reviewRestaurant main-green">
+                    @* Make a link to the restaurant's details *@
+                    @Html.ActionLink(item.review.restaurant.name, "Details", "Restaurant", new { id = item.review.restaurant_id }, null)  
+                    <span class="go-right">@item.rating / 5</span>           
+                </div>
+                <div class="reviewItem main-green">
+                    @item.order_item.menu_item.item.name 
+                </div>
+                <div class="reviewText">
+                    @Html.DisplayFor(modelItem => item.review_text)
+                </div>
+                <div class="review-date main-blue">
+                    @Html.DisplayFor(modelItem => item.submitted_on)
+                </div>
+                <div class="">
+                    
+                   @Ajax.ActionLink("X", "AjaxDelete", "Review_Order_Item", new { id = item.id }, new AjaxOptions()
+              {
+                  Confirm = "Are you sure you want to delete?",
+                  HttpMethod = "POST",
+                  OnSuccess = "window.location.reload()",
+                  OnFailure = "console.log(error)"
+              }, new { @class = "go-right remove-button" })
+                        <div style="clear: both;"></div>     
+                </div>
+
+            </div>
+            <br/>
+        }
+    </div>
+</fieldset>

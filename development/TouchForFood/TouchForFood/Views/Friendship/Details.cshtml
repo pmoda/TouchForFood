@@ -1,0 +1,26 @@
+﻿@model TouchForFood.Models.friendship
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>friendship</legend>
+
+    <div class="display-label">user</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user.username)
+    </div>
+
+    <div class="display-label">user1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user1.username)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

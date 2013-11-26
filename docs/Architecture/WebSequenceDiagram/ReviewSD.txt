@@ -1,0 +1,37 @@
+UserPageView -> UserController: UserDetails()
+activate UserController
+participant "oim:OrderInputMapper" as oim
+
+UserController->oim:find(user)
+activate oim
+participant "ol:OrderProxyList" as ol
+oim->ol:<<create>>
+oim-->UserController:ol
+UserController-->UserPageView:ol
+
+deactivate UserController
+
+UserPageView->ReviewController:create(int orderID)
+activate ReviewController
+ReviewController->oim: find(orderID)
+oim --> ReviewController: order
+
+deactivate oim
+
+
+ReviewController->"r:Review": <<create>>>
+activate "r:Review"
+ReviewController->"rvm:ReviewVM": <<create>>(review, order)
+activate "rvm:ReviewVM"
+
+loop foreach(orderitem oi in order)
+    "rvm:ReviewVM"->"roi:ReviewOrderItem": <<create>>
+end
+
+ReviewController->ReviewPageView:<<create>> (ReviewVM)
+
+
+   ReviewPageView->ReviewController:    CreateReview(review)
+
+
+ReviewController->"rom:ReviewOuputMapper":save(r)

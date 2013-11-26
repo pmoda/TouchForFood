@@ -1,0 +1,36 @@
+﻿@model TouchForFood.Models.menu_item
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Util.Item
+
+<div class="one-third column">
+
+    <div>
+        <h4 class="main-green go-left">@Model.item.name&nbsp;&nbsp;</h4>
+        <span class="bold italic go-left">$@Html.DisplayFor(model => model.price)</span>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="italic">@Html.DisplayFor(model => model.item.description)</div>
+    
+</div>
+
+@if (!String.IsNullOrEmpty(Model.item.image_url))
+{
+<div class="one-third column">
+    <div class="spacer20"></div>
+    <div style="width:280px; height:260px;">
+        <img src="@Url.Content(Model.item.image_url)" alt="image" style="max-height:260px; max-width:280px;" />
+    </div>
+    <div class="spacer20"></div>
+</div>
+}
+
+<div class="one-third column">
+    <fieldset>
+        <legend>Past Reviews - Average: @ItemUtil.getAverageRating(@Model) </legend>
+        <div id="pastReviews">
+            @Html.Action("GetAllReviews", "Menu_Item", Model)
+        </div>
+    </fieldset>
+</div>

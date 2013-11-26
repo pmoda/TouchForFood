@@ -1,0 +1,25 @@
+title Manage Menu
+
+User->System: createMenu(...)
+System-->>User: menu
+opt
+User->System: createCateogry(...)
+System-->>User: category
+loop numLoops < numCategories
+User->System: addCategoryToMenu(...)
+end
+end
+opt
+User->System: createItem(...)
+System-->>User: item
+loop numLoops < numItems
+User->System: addItemToCategory(...)
+end
+end
+opt
+User->System: createSide(...)
+System-->>User: side
+loop numLoops < numSides
+User->System: addSideToMenuCategory(...)
+end
+end

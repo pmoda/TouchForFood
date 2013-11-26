@@ -1,0 +1,92 @@
+﻿@model TouchForFood.Models.menu_item
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Util.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@section JavaScript{
+    <script type="text/javascript" src="@Url.Content("/Scripts/Menu/menu_ajax_handler.js")"></script>
+}
+
+<div class="one-third column">
+    @Html.ActionLink("< Back", "Details", "Menu_Category", new { id = Model.menu_category.id }, new { @class = "button" })
+</div>
+
+<div class="one-third column">
+
+    <h3 class="main-green">@Model.item.name</h3>
+    
+<fieldset>
+@*
+    <div class="display-label">name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>*@
+    <div class="editor-label">
+            @Html.LabelFor(model => model.item.description)
+        </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.item.description)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.item.metadata)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.item.metadata)
+    </div>
+    
+        <div class="editor-label">
+            @Html.LabelFor(model => model.item.category)
+        </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.item.category.name)
+    </div>
+    
+    <div class="editor-label">
+            @Html.LabelFor(model => model.price)
+        </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.price)
+        $
+    </div>
+
+    @*
+    <div class="display-field">
+        @Html.DisplayFor(model => model.image_url)
+    </div>*@
+</fieldset>
+</div>
+
+<div class="one-third column">
+    <div class="spacer20"></div>
+    <img alt="blank" width="300" height="265" src = "http://@(Model.item.image_url)"/>        
+    <div class="spacer20"></div>
+
+    <p>
+        @Ajax.ActionLink("Add to order", "AddMenuItem", "Order", new { id = Model.id }, new AjaxOptions()
+   {
+       Confirm = "Are you sure you want to add?",
+       HttpMethod = "POST",
+       OnSuccess = "alert(\"Added\")",
+       OnFailure = "console.log(error)"
+   },
+        new { @class = "button" }) 
+
+@*        @Ajax.ActionLink("Finalize", "Finalize", "Order", new AjaxOptions()
+        {
+            Confirm = "Are you sure you want to finalize?",
+            HttpMethod = "POST",
+            OnSuccess = "alert(\"Added\")",
+            OnFailure = "console.log(error)"
+        }, 
+        new { @class = "button" })*@
+    </p>
+</div>
+
+<div class="sixteen columns">
+    <h5 class="main-green">Recent Ratings - Average: @ItemUtil.getAverageRating(@Model)</h5>
+    @Html.Action("GetAllReviews", "Menu_Item", Model)
+</div>

@@ -1,0 +1,75 @@
+﻿@model TouchForFood.Models.order
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>order</legend>
+
+    <div class="display-label">timestamp</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.timestamp)
+    </div>
+
+    <div class="display-label">total</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.total)
+    </div>
+
+    <div class="display-label">table_number</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.table_id)
+    </div>
+
+    <div class="display-label">order_status</div>
+    <div class="display-field">
+    @TouchForFood.Models.OrderStatusHelper.GetOrderStatusName(Model.order_status)
+    </div>
+
+    <div class="display-label">user</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user.username)
+    </div>
+
+    <div class="display-label">waiter</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.waiter.first_name)
+    </div>
+
+    <div class="display-label">version</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.version)
+    </div>
+
+    <table id="menu_table">    
+    <thead><tr><th> ITEM</th><th> NOTE</th><th> TYPE</th></tr></thead>
+        @foreach (var order_item in @Model.order_item)
+        {
+            <tr id="@order_item.id">
+                <td>                      
+                    <div class="display-field">
+                        @Html.DisplayFor(model => order_item.menu_item.item.name)
+                    </div>
+                 </td>
+                 <td>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => order_item.note)
+                    </div>
+                 </td>
+                 <td>
+                    <div class="display-field">
+                        @TouchForFood.Models.OrderStatusHelper.GetOrderItemStatusName((int)order_item.order_item_status)
+                    </div>
+                 </td>
+            </tr>    
+        }
+    </table>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

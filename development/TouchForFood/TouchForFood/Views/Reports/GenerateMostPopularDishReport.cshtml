@@ -1,0 +1,33 @@
+﻿@model TouchForFood.ViewModels.MostPopularDishViewModel
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Util.User
+@using TouchForFood.Util.Security
+
+@{
+    ViewBag.Title = "Generate Report";
+}
+
+<h2 class="main-green">Generate Most Popular dish Report</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    TouchForFood.Models.user authUser = UserUtil.getAuthenticatedUser(Request);
+    if (authUser.user_role == (int)SiteRoles.Admin ||
+           authUser.user_role == (int)SiteRoles.Developer ||
+           authUser.user_role == (int)SiteRoles.Restaurant)
+    {            
+            <div class="editor-field">
+                @Html.DropDownList("restoId", "Select a restuarant")
+                @Html.ValidationMessageFor(model => model.restoId)
+            </div>
+           <br/>
+           <input type="submit" value="Create" />
+        
+      }
+       
+       
+}
+
+
+

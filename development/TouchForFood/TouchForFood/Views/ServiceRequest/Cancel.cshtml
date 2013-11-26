@@ -1,0 +1,40 @@
+﻿@model TouchForFood.Models.service_request
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Cancel";
+}
+
+<h2 class="main-green">Cancel Service Request</h2>
+
+<h3>Are you sure you want to cancel this service request?</h3>
+
+<fieldset>
+    <legend>Details</legend>
+    <div class="bold remove-br">Table: </div> <div class="remove-br">@Html.DisplayFor(model => model.table.name)</div>
+    <br />
+    <div class="bold remove-br">Restaurant ID: </div> <div class="remove-br">@Html.DisplayFor(model => model.table.restaurant.id)</div>
+    <br />
+    <div class="bold remove-br">Restaurant Name: </div> <div class="remove-br">@Html.DisplayFor(model => model.table.restaurant.name)</div>
+    <br />
+    <div class="bold remove-br">Created: </div> <div class="remove-br">@Html.DisplayFor(model => model.created)</div>
+    <br />
+    <div class="bold remove-br">Comment: </div>
+    <br />
+    <div class="remove-br">@Html.DisplayFor(model => model.note)</div>
+</fieldset>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.id)
+    @Html.HiddenFor(model => model.note)
+    @Html.HiddenFor(model => model.status)
+    @Html.HiddenFor(model => model.created)
+    @Html.HiddenFor(model => model.version)
+    @Html.HiddenFor(model => model.table_id)
+        
+    <p>
+        <input type="submit" value="Cancel Request" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

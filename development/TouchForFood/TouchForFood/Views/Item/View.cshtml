@@ -1,0 +1,30 @@
+﻿@model TouchForFood.Models.item
+@{
+    var tag = ViewData["tag"];
+    if (tag == null)
+    {
+        tag = "td";
+    }
+}
+    <td>
+        <@tag class="display-field">
+            @Html.DisplayFor(model => model.name)
+        </@tag>
+    </td>
+    <td>
+        <@tag class="display-field">
+            @Html.DisplayFor(model => model.description)
+        </@tag>
+    </td>
+
+    @*<@tag class="display-field">
+        @Html.DisplayFor(model => model.metadata)
+    </@tag>*@
+@*
+    <@tag class="display-field">
+        @Html.DisplayFor(model => model.category.name)
+    </@tag>*@
+
+@*    <@tag class="display-field">
+        @Html.DisplayFor(model => model.image_url)
+    </@tag>*@

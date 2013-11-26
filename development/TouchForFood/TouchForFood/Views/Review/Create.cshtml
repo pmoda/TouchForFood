@@ -1,0 +1,158 @@
+﻿@model TouchForFood.ViewModels.ReviewVM
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Create";
+}
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.raty.min.js")" type="text/javascript"></script>
+<div class="one-third column">
+    &nbsp;</div>
+<div class="one-third column">
+    @using (Html.BeginForm("Create", "Review", new { ReviewVM = Model }, FormMethod.Post, new { id = "reviewForm" }))
+    {
+        @Html.ValidationSummary(true)
+
+        <h3 class="main-green">
+            Leave Review</h3>
+        
+        <h5 class="main-blue">
+            Select items and write your comments between the #</h5>
+ 
+        <fieldset>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.reviewText)
+            </div>
+            <div class="editor-field">
+                @Html.ValidationMessageFor(model => model.reviewText)
+                <div contenteditable="true" id="reviewText" style="width:250px; height:200px;">
+                </div>
+            </div>
+            <br />
+            <table>
+                <thead>
+                    <tr>
+                        <td>@Html.LabelFor(model => model.review_order_items[0].rating)
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </thead>
+                @for (int i = 0; i < Model.review_order_items.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <div id="@(i)" class="star">
+                            </div>
+                            <!--<div class="editor-label">
+                                @*@Html.DropDownListFor(model => model.review_order_items[i].rating, (SelectList)ViewBag.ratings)*@
+                            </div>-->
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <div class="editor-label">
+                                <span id="roi_@(Model.review_order_items[i].order_item.id)" class="review_order_item button">@Html.DisplayFor(model => model.review_order_items[i].order_item.menu_item.item.name)</span>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                <tr>
+                    <td>
+                        <p>
+                            <input type="submit" value="Create" />
+                        </p>
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.is_anonymous)
+                    </td>
+                    <td>
+                        <div class="editor-field go-right">
+                            @Html.LabelFor(model => model.is_anonymous)
+                            @Html.ValidationMessageFor(model => model.is_anonymous)
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    }
+</div>
+<script type="text/javascript">
+
+    /**
+    We need to be able to press # and that will dynamically give us a list of items that we can auto complete.
+    Need to keep track of the items already added, as well as their position.
+    For now when we click on an item, that item will be added to the textbox with a # prepended to it
+    **/
+    $(document).ready(function () {
+        var orderItemsIDS = new Array();
+        $("span.review_order_item").click(function () {
+            //get the value of the item clicked
+            var item = $(this).html();
+            var id = $(this).attr("id");
+            //check the current HTML state of reviewText. If it doesn't contain the id anymroe remove it from the orderItemIDS array
+            //before checking
+            checkForOrderItem();
+            if (orderItemsIDS.indexOf(id) == -1) {
+                //add the element to the array to compare to against later
+                orderItemsIDS.push(id);
+                $.trim(item);
+                //append this item with a # to the contents of the editor box
+                var html = $("#reviewText").html();
+                //get the id of the item selected after the _
+                id = id.split("_")[1];
+                //if the last character of html is a white space or it's the first character to be placed
+                //then just add #item, otherwise we need a space
+                if (html.length == 0) {
+                    html += "<p style='display: inline;' id='p_" + id + "'><span class='highlight' id='" + id + "' contenteditable='false' data-ondelete='editx'>#" + item + "</span></p>&nbsp;";
+                } else {
+                    html += "<p style='display: inline;' id='p_" + id + "'><span class='highlight' id='" + id + "' contenteditable='false' data-ondelete='editx'>#" + item + "</span></p>&nbsp;";
+                }
+                $("#reviewText").html(html);
+            }
+        })
+
+
+        $("#reviewText").keydown(function (e) {
+            var evt = e || window.event;
+            var code = (e.keyCode ? e.keyCode : e.which);
+            var doDelete = false, delEl = $($(this).attr('data-ondelete'));
+            if (code == 8) {
+                delEl.remove();
+            }
+        });
+
+        function checkForOrderItem() {
+            //check the html of the div to see if one of the spans has been removed
+            var html = $("#reviewText").html();
+            for (var i = 0; i < orderItemsIDS.length; i++) {
+                var id = orderItemsIDS[i];
+                $.trim(id);
+                id = id.split("_")[1];
+                if (html.indexOf('id="' + id + '"') == -1) {
+                    orderItemsIDS.splice(i, 1);
+                    $("#p_" + id).remove();
+                }
+            }
+        }
+
+        $("#reviewForm").submit(function (e) {
+            //since the review text is in a content editable div we want to grab that, and pass it along with the view model
+            var reviewText = $("#reviewText").html();
+            var input = $("<input>").attr("type", "hidden").attr("name", "reviewText").val(reviewText);
+            $('#reviewForm').append($(input));
+            return true;
+        });
+
+        $('.star').raty({
+            score: 1,
+            click: function (score, evt) {
+                $(this).raty('set', { scoreName: "review_order_items[" + $(this).attr('id') + "].rating" });
+                $(this).raty('set', { score: score });
+            }
+        });
+    })
+</script>

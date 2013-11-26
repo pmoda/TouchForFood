@@ -1,0 +1,42 @@
+﻿@model TouchForFood.Models.menu_item
+@using TouchForFood.App_GlobalResources
+
+<div class="one-third column">&nbsp;</div>
+
+<div class="one-third column">
+    <div>
+        <h4 class="main-green go-left">Pick a Side</h4>
+    </div>
+    <div class="clear"></div>
+    
+    <div><input type="radio" name="Side_Order" value="-1" checked="checked"/>None</div>
+    @foreach (var side in Model.menu_category.sides)
+    {
+        if (side.is_active)
+        {
+            <div><input type="radio" name="Side_Order" value="@side.id" />@side.name</div>
+        }
+    }
+    @Ajax.ActionLink("Add to Order", "AddMenuItem", "Order", new { id = Model.id, side_id = "-1" }, new AjaxOptions()
+    {
+        HttpMethod = "POST",
+        OnSuccess = "$('#cboxClose').click();$('#mi-" + @Model.id + "').effect('highlight', {color: '#67E667'}, 6000);",        
+        OnFailure = "console.log(error)"
+    }, new { @class = "vm-button", id = "OrderButton" })    
+</div>
+
+<div class="one-third column">&nbsp;</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("input[type=radio][name=Side_Order]").change(function () {            
+            $('#OrderButton').attr('href', function () {
+                return this.href.split(/side_id=/)[0] + 'side_id=' + $("input[type=radio][name=Side_Order]:checked").val();
+            });
+        });
+    })
+    //return this.href.split(/side_id=/)[0] + 'side_id=' + $("input[type=radio][name=Side_Order]:checked").val();
+    //return this.href.replace(/side_id=.*/, 'side_id=' + $("input[type=radio][name=Side_Order]:checked").val());    
+
+
+</script>

@@ -1,0 +1,68 @@
+﻿@model  List<KeyValuePair<TouchForFood.Models.menu_item, double>>
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Util.Html
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "SuggestedItems";
+}
+
+
+@section JavaScript{
+    <script type="text/javascript" src="@Url.Content("/Scripts/Menu/menu_ajax_handler.js")"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/colorbox/jquery.colorbox-min.js")"></script>
+}
+
+<link rel="stylesheet" href="@Url.Content("/Content/stylesheets/colorbox.css")" />
+
+<script>
+
+    $(document).ready(function () {
+
+        $(".ajax").colorbox({ width: "95%" });
+
+    });
+
+</script>
+
+<div class="one-third column">&nbsp;</div>
+
+<div class="one-third column">
+
+    <span class="italic main-green">@ViewBag.Suggest</span>
+    <div class="clear"></div>
+    <br />
+            
+    @foreach (KeyValuePair<TouchForFood.Models.menu_item, double> kvp in Model)
+    {
+        var item_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("PartialDetails", "Menu_Item", new { id = kvp.Key.id }));
+        var side_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("PickSides", "Menu_Item", new { id = kvp.Key.id }));
+                
+        <div id="mi-@kvp.Key.id" style="overflow:auto;">
+            <div class="bold go-left">
+                    @Html.Raw(kvp.Value.ToString())&nbsp;-&nbsp;               
+            </div>
+            <div class="bold go-left">
+                <a class='ajax cboxElement' href='@item_url'>
+                    @Html.Raw(kvp.Key.item.name)
+                </a>
+            </div>
+            <div class="bold go-right">
+                <a class='vm-button ajax cboxElement' href='@side_url'>
+                    Order
+                </a>
+            </div>
+
+            <div class="bold go-right">
+                $@Html.Raw(kvp.Key.price.ToString())
+            </div>
+            <div class="clear"></div>      
+            <div class="italic go-left">
+                @Html.Raw(kvp.Key.item.description)
+            </div>
+        </div>
+        <div class="clear"></div>
+        <br />
+    }    
+</div>
+

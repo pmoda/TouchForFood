@@ -1,0 +1,28 @@
+﻿@model TouchForFood.Models.CategoryFilterVM
+
+<div>
+@using (@Ajax.BeginForm("addCategoryToMenu", "Category", new { id = "category_menu_form" },
+    new AjaxOptions { HttpMethod = "POST", OnSuccess = "window.location.reload()", OnFailure="console.log('err')" }))
+{
+    @Html.ValidationSummary(true)
+
+        <h3 class="main-green">New Category</h3>
+        <fieldset >
+                @Html.Hidden("menu_id", Model.m_menu.id)
+            <div class="editor-label">
+                @Html.LabelFor(model => model.m_category[0].name)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.m_category[0].name)
+                @Html.ValidationMessageFor(model => model.m_category[0].name)
+            </div>
+        
+            <div class="spacer20"></div>
+            <p>
+                <input type="submit" value="Create"/>
+            </p>
+        </fieldset>
+
+}
+
+    </div>

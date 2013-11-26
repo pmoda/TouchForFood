@@ -1,0 +1,44 @@
+﻿@model TouchForFood.Models.CategoryFilterVM
+    
+<table id="category_table">
+@foreach (var item in Model.m_category)
+{
+    <tr id="@item.id">        
+        <td>    
+         @Ajax.ActionLink("+", "AddCategory", "Menu", new { menuID = Model.m_menu.id, categoryID = item.id }, new AjaxOptions()
+             {
+                 HttpMethod = "POST",
+                 OnSuccess = "window.location.reload()",
+                 OnFailure = "console.log(error)",
+             }, new { @class="add-button"})
+        </td>
+        <td>
+           &nbsp; <span class="category-names"> @Html.DisplayFor(modelItem => item.name) </span>
+        </td>
+        <td>
+           &nbsp; <span class="category-description">space for some description like sides.</span>
+        </td>
+        <td>
+         &nbsp; (@Html.ActionLink("Edit", "Edit", "Category", new { id = item.id }, null))
+        </td>
+    </tr>
+}
+
+</table>
+
+<div id="result" style="display:none;"></div> 
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#result").dialog({
+            autoOpen: false,
+            title: 'Add new Category',
+            width: 500,
+            height: 'auto',
+            modal: true,
+        });
+    });
+    function openPopup() {
+        $("#result").dialog("open");
+    }
+</script>

@@ -1,0 +1,26 @@
+﻿@model TouchForFood.Models.restaurant_user
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>restaurant_user</legend>
+
+    <div class="display-label">user</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user.username)
+    </div>
+
+    <div class="display-label">restaurant</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.restaurant.name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

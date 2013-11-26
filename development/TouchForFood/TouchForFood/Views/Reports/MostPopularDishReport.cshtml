@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TouchForFood.ViewModels.MostPopularDishViewModel>
+@using TouchForFood.App_GlobalResources
+
+<script src="@Url.Content("~/Scripts/altrows.js")" type="text/javascript"></script>
+
+<table class="altrowstable" id="alternatecolor">
+    <tr>
+        <th>
+           Restuarant 
+        </th>
+        <th>
+            Menu Item
+        </th>
+        <th>
+            Times ordered
+        </th>       
+    </tr>
+@foreach (var item in Model)
+{
+    <tr>
+    <td>@Html.DisplayFor(model => item.restoName)</td>
+
+    <td>@Html.DisplayFor(model => item.menuItemName)</td>
+
+    <td>@Html.DisplayFor(model => item.timesOrdered)</td>
+    </tr>
+}
+</table>
+

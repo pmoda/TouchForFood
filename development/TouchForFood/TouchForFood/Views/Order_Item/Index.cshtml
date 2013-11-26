@@ -1,0 +1,67 @@
+﻿@model IEnumerable<TouchForFood.Models.order_item>
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="@Url.Content("~/Scripts/altrows.js")" type="text/javascript"></script>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="altrowstable" id="alternatecolor">
+    <tr>
+        <th>
+            order
+        </th>
+        <th>
+            menu_item
+        </th>
+        <th>
+            note
+        </th>
+        <th>
+            order_item_status
+        </th>
+        <th>
+            last_changed
+        </th>
+        <th>
+            version
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.order.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.menu_item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.note)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.order_item_status.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_changed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.version)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "table-button table-edit", title = "Edit" })
+            @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "table-button table-details", title = "Details" })
+            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "table-button table-delete", title = "Delete" })
+        </td>
+    </tr>
+}
+
+</table>

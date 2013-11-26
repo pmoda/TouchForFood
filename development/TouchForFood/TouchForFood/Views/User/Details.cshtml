@@ -1,0 +1,47 @@
+﻿@model TouchForFood.Models.user
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "My Profile";
+}
+
+<div class="sixteen columns">
+    <h3 class="main-green go-left">My Profile &nbsp;<h5 class="user-edit-link">@Html.ActionLink("&nbsp;", "Edit", "User", new { id = Model.id }, new { @class = "user-button user-edit", title = "Edit Profile" })
+    </h5></h3> 
+</div>
+
+<div class="one-third column">
+    
+        @if (!String.IsNullOrEmpty(Model.image_url))
+        {
+            <img src="@Url.Content(Model.image_url)" alt="profile" style="max-height:62px; max-width:62px;" class="go-left" />
+        }
+        else
+        {
+            <img src="@Url.Content("/Content/images/profilepic.jpg")" alt="profile" style="max-height:62px; max-width:62px;" class="go-left" />
+        }
+
+    <div class="go-left">
+        <div class="display-field">
+            @Html.DisplayFor(model => model.first_name) @Html.DisplayFor(model => model.last_name)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.email)
+        </div>
+    </div>
+</div>
+
+<div class="one-third column">
+    @Html.Partial("_PastOrdersPartial", Model.orders)
+</div>
+
+<div class="one-third column">
+     @Html.Action("GetAllReviews", "User", Model)
+</div>
+
+<!--
+<p>
+     |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+-->

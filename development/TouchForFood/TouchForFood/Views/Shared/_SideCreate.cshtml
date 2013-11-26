@@ -1,0 +1,24 @@
+﻿@model TouchForFood.ViewModels.SideFilterVM
+<div>
+@using (@Ajax.BeginForm("AddSideToCategory", "Side", new { id = "item_menu_form" },
+    new AjaxOptions { HttpMethod = "POST", OnSuccess = "window.location.reload()", OnFailure = "console.log('err')" }))
+{
+    @Html.ValidationSummary(true)
+    <h3 class="main-green">New Side</h3>
+    <fieldset>
+            @Html.Hidden("menuCategoryId", Model.menu_cat.id)
+            @Html.Hidden("isDeleted", false)
+            @Html.Hidden("isActive", true)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sides[0].name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sides[0].name)
+            @Html.ValidationMessageFor(model => model.sides[0].name)
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+</div>

@@ -1,0 +1,50 @@
+﻿@model TouchForFood.Models.bill
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>bill</legend>
+
+    <div class="display-label">order</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.order.id)
+    </div>
+
+    <div class="display-label">tvq</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tvq)
+    </div>
+
+    <div class="display-label">tps</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tps)
+    </div>
+
+    <div class="display-label">total</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.total)
+    </div>
+
+    <div class="display-label">timestamp</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.timestamp)
+    </div>
+
+    <div class="display-label">paid</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.paid)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

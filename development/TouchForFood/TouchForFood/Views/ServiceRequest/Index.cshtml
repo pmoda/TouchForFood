@@ -1,0 +1,172 @@
+﻿@model TouchForFood.ViewModels.ServiceRequestVM
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Util.ServiceRequest
+@using TouchForFood.Util.User
+@using TouchForFood.Util.Security
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<script src="@Url.Content("~/Scripts/altrows.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/ServiceRequest/toggleVisibility.js")" type="text/javascript"></script>
+
+<h2 class="main-green"> Service Requests</h2>
+
+<p class="remove-br">
+    @Html.ActionLink("Create New", "Create") 
+    @if (Model.AllServiceRequests.Count() > 0)
+    {
+       <text>  | </text><a href="javascript:void(0);" id="request-toggle">Hide Cancelled & Completed</a>
+    }
+</p>
+
+<div id="AllRequests">
+    @if (Model.AllServiceRequests.Count() > 0)
+    {
+        <table class="altrowstable" id="alternatecolor">
+            <tr>
+                <th>
+                    Table    
+                </th>
+                <th>
+                    Restaurant ID
+                </th>
+                <th>
+                    Restaurant
+                </th>
+                <th>
+                    Comment
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Created
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model.AllServiceRequests)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.table.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.table.restaurant.id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.table.restaurant.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.note)
+                    </td>
+                    <td>
+                        @if (item.status != null)
+                        {
+                            @Enum.GetName(typeof(ServiceRequestUtil.ServiceRequestStatus), item.status)
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.created)
+                    </td>
+                    <td>
+                        @if (item.status == (int)ServiceRequestUtil.ServiceRequestStatus.OPEN)
+                        { 
+                            @Html.ActionLink("Complete", "Complete", new { id = item.id }, new { @class = "table-button table-complete", title = "Complete" }) 
+                            @Html.ActionLink("Cancel", "Cancel", new { id = item.id }, new { @class = "table-button table-cancel", title = "Cancel" })
+                
+                        }
+                        @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "table-button table-details", title = "Details" }) 
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "table-button table-edit", title = "Edit" })          
+                        @if ((UserUtil.getAuthenticatedUser(Request).user_role == (int)SiteRoles.Admin) ||
+                            (UserUtil.getAuthenticatedUser(Request).user_role == (int)SiteRoles.Developer))
+                        {        
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "table-button table-delete", title = "Delete" })
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>No service requests found</p>
+    }
+</div>
+
+<div id="OpenRequests" style="display:none;">
+    @if (Model.OpenServiceRequests.Count() > 0)
+    {
+        <table class="altrowstable" id="alternatecolor1">
+            <tr>
+                <th>
+                    Table    
+                </th>
+                <th>
+                    Restaurant ID
+                </th>
+                <th>
+                    Restaurant
+                </th>
+                <th>
+                    Comment
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Created
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model.OpenServiceRequests)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.table.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.table.restaurant.id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.table.restaurant.name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.note)
+                    </td>
+                    <td>
+                        @if (item.status != null)
+                        {
+                            @Enum.GetName(typeof(ServiceRequestUtil.ServiceRequestStatus), item.status)
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.created)
+                    </td>
+                    <td>
+                        @if (item.status == (int)ServiceRequestUtil.ServiceRequestStatus.OPEN)
+                        { 
+                            @Html.ActionLink("Complete", "Complete", new { id = item.id }, new { @class = "table-button table-complete", title = "Complete" }) 
+                            @Html.ActionLink("Cancel", "Cancel", new { id = item.id }, new { @class = "table-button table-cancel", title = "Cancel" })
+                
+                        }
+                        @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "table-button table-details", title = "Details" }) 
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "table-button table-edit", title = "Edit" })          
+                        @if ((UserUtil.getAuthenticatedUser(Request).user_role == (int)SiteRoles.Admin) ||
+                            (UserUtil.getAuthenticatedUser(Request).user_role == (int)SiteRoles.Developer))
+                        {        
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "table-button table-delete", title = "Delete" })
+                        }
+                    </td>
+                </tr>   
+            }
+        </table>
+    }
+    else
+    {
+        <p>No open service requests found</p>
+    }
+</div>
+
+

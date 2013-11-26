@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AFk-FU-6Dc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="I6A-LU-o9z">
+            <objects>
+                <tabBarController id="AFk-FU-6Dc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="mdD-K9-yUG">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Tn7-bM-WiR" kind="relationship" relationship="viewControllers" id="7me-tB-J3a"/>
+                        <segue destination="Csc-AH-Eic" kind="relationship" relationship="viewControllers" id="oVZ-5P-iP4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxy-0P-bsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1115" y="74"/>
+        </scene>
+        <!--Navigation Controller - Scan QR Code-->
+        <scene sceneID="lgE-BA-DLf">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="Tn7-bM-WiR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scan QR Code" id="DJT-3p-vk9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kxd-dq-bDU">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="vd3-Cs-MZG">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="NyL-Q6-eqz" kind="relationship" relationship="rootViewController" id="9OX-YO-SEh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHs-Ik-Zpw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488" y="377"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1ar-Nq-uos">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Rn-3r-elf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="NyL-Q6-eqz" customClass="QRViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oJO-Su-gIu">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5g4-Lw-kcx"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-54" y="377"/>
+        </scene>
+        <!--Navigation Controller - TFF-->
+        <scene sceneID="nFE-DU-H1z">
+            <objects>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="Csc-AH-Eic" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="TFF" id="c8p-9b-54z"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d9W-ol-SdY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rHW-pf-BHB" kind="relationship" relationship="rootViewController" id="p7z-8X-gG4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45H-nb-2yi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488" y="-278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eoi-FS-0Kz">
+            <objects>
+                <viewController id="rHW-pf-BHB" customClass="TFFViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQ7-Ux-Buf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYd-Uq-eCp">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="aMm-II-uZ3"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OYd-Uq-eCp" firstAttribute="top" secondItem="MQ7-Ux-Buf" secondAttribute="top" type="default" id="1kx-ky-EYQ"/>
+                            <constraint firstItem="OYd-Uq-eCp" firstAttribute="bottom" secondItem="MQ7-Ux-Buf" secondAttribute="bottom" type="default" id="8uN-W4-vIt"/>
+                            <constraint firstItem="OYd-Uq-eCp" firstAttribute="trailing" secondItem="MQ7-Ux-Buf" secondAttribute="trailing" type="default" id="OcX-cq-IWj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dBI-TQ-2Gf"/>
+                    <connections>
+                        <outlet property="webView" destination="OYd-Uq-eCp" id="91X-U9-DMZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5w9-GG-b2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="-278"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="QRViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QRViewController.h"/>
+        </class>
+        <class className="TFFViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TFFViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

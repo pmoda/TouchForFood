@@ -1,0 +1,113 @@
+﻿@model TouchForFood.Models.order
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Models
+@using TouchForFood.Util.Html
+@using TouchForFood.Util.Bill
+@using TouchForFood.Util.User
+
+@{
+    ViewBag.Title = "ManageBills";
+}
+
+<script src="@Url.Content("~/Scripts/Bill/bill.js")" type="text/javascript"></script>
+
+<h2>ManageBills</h2>
+
+<div class="one-third column"> 
+&nbsp;
+<div>
+@foreach (var oi in Model.order_item)
+{
+    if (oi.bill_id != null || oi.order_item_status == (int)OrderStatusHelper.OrderItemStatusEnum.REJECTED)
+    {
+        continue;
+    }
+
+	<div class="food-menu-button food-menu-button-size menu-item-bill-unselected" id="@Html.DisplayFor(modelItem => oi.id)">
+	<span class="last-button-bills">@Html.DisplayFor(modelItem => oi.menu_item.item.name)</span>
+	</div>  
+}
+</div>
+</div>
+<div class="one-third column">  
+@foreach (var bill in Model.bills)
+{
+	@Html.Raw("<div class='order-wrapper'>");
+                                         	<div class="food-menu-delete">
+	@Ajax.ImageActionLink("/Content/images/trash.png",
+    "DeleteBillFromOrder", "22", "22", "DeleteBillFromOrder", new { id = bill.id }, new AjaxOptions()
+    {
+        Confirm = "Are you sure you want to delete?",
+        HttpMethod = "POST",
+        OnSuccess = "onCreateBillForOrder",
+        OnFailure = "console.log(error)"
+    })
+	</div> 
+                                         var billtag = "";
+                                         if (!(bool)bill.paid)
+                                         {
+                                             billtag = "bill-item";
+                                         }
+        
+	<div class="order-header bold order-@Html.DisplayFor(modelItem => bill.id) @billtag" id="@bill.id">Bill #: @Html.DisplayFor(modelItem => bill.id)</div>
+	
+	@Html.Raw("<div class='order-wrapper-small'>");
+	<span>Time: </span><span class="go-right">@Html.DisplayFor(modelItem => bill.timestamp)</span><br />
+	<span>Waiter: </span>@Html.DisplayFor(modelItem => bill.order.waiter_id)<br />                
+	
+	<div class="spacer10">&nbsp;</div>
+                                               {
+                                                   int counter = 1;
+
+                                                   foreach (var oi in bill.order_item)
+                                                   {        
+			
+			<span class="align-left">
+			@if (!((bool)bill.paid))
+   {
+				@Html.ActionLink("Remove", "RemoveOrderItem", new { id = oi.id }, new { @class = "button" })
+   }
+			@Html.DisplayFor(model => oi.menu_item.item.name)
+			</span>
+			<span class="align-right">
+			$@Html.DisplayFor(model => oi.menu_item.price)                 
+			</span>
+			<div style="clear: both;"></div>            
+   counter = counter + 1;
+                                                   }
+		<div class="align-right">=========</div><br />
+		<span>TPS: </span><span class="go-right">$@Html.DisplayFor(modelItem => bill.tps)</span><br />
+		<span>TVQ: </span><span class="go-right">$@Html.DisplayFor(modelItem => bill.tvq)</span><br />
+		<span>Total: </span><span class="go-right">$@BillUtil.GetTotalAfterTax(bill)</span><br />
+                                               }
+	<span><br/></span>
+                                               HttpRequest request = HttpContext.Current.Request;
+                                               HttpRequestBase requestBase = new HttpRequestWrapper(request);
+                                               user authUser = UserUtil.getAuthenticatedUser(requestBase);
+                                               if (authUser.user_role == (int)TouchForFood.Util.Security.SiteRoles.Restaurant)
+                                               {
+                                                   if (!((bool)bill.paid))
+                                                   {
+		    @Html.ActionLink("Paid", "BillPaid", new { id = bill.id }, new { @class = "button" })
+                                                   }
+                                                   else
+                                                   {
+            @Html.ActionLink("Not Paid", "BillNotPaid", new { id = bill.id }, new { @class = "button" })
+                                                   }
+                                               }
+	@Html.Raw("</div>");
+	@Html.Raw("</div>");
+
+
+
+}
+
+@Ajax.ActionLink("+ Create New Bill", "CreateBillForOrder", "Bill", new { id = Model.id }, new AjaxOptions()
+{
+	Confirm = "Are you sure you want to add?",
+	HttpMethod = "POST",
+    OnSuccess = "onCreateBillForOrder",
+	OnFailure = "console.log(error)"
+},
+new { @class = "button" }) 
+</div>

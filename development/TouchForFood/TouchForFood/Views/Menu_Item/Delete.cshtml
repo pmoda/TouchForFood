@@ -1,0 +1,35 @@
+﻿@model TouchForFood.Models.menu_item
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>menu_item</legend>
+
+    <div class="display-label">item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.item.name)
+    </div>
+
+    <div class="display-label">menu_category</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.menu_category.id)
+    </div>
+
+    <div class="display-label">price</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.price)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

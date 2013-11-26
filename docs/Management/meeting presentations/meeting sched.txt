@@ -1,0 +1,36 @@
+- Retrospective on last few sprints (15 minutes)
+
+- Recap of meeting with Dr. Constantinides (5 minutes)
+
+- Stakeholder update (Pat and Mat) (5 minutes)
+
+- Scrum update from each team member (2 minutes each)
+
+- Review of what's left (stories, defects, and doc) (35 minutes)
+	- 1 minute per defect for the reporting person to explain the defect
+
+- UIR (10 minutes)
+- UI Testing (5 minutes)
+
+- Goals (10 minutes)
+- Schedule (5 minutes)
+
+- Demos
+
+	- Code reviews with branches (Ryan) (20 minutes)
+	- Unit testing (Mike) (10 minutes)
+
+- General Issues
+
+	- Database backup, restore and test data (10 minutes)
+	- process on closing bugs (1 minute)
+	- Email/google group chains (2 minutes)
+	- Finders and mappers (10 minutes)
+	- File/folder cleanup? (2 minutes)
+	- db in memory issue (2 minutes)
+	- commit issues (2 minutes)
+	- coding standards (1 minute)
+	- excption class for non-active menu (1 minute)
+	- deleting a menu_item that is associated to an order (1 minute)
+
+- Questions and comments

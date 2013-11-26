@@ -1,0 +1,34 @@
+﻿@using TouchForFood.Util.User
+@using TouchForFood.Models
+@using TouchForFood.Util.Security
+
+@{
+    HttpRequest request = HttpContext.Current.Request;
+    HttpRequestBase requestBase = new HttpRequestWrapper(request);
+    user authUser = UserUtil.getAuthenticatedUser(requestBase);
+
+    if (authUser.table != null &&
+        authUser.current_table_id != null)
+    {
+        <div data-iconpos="top" data-role="navbar" class="ui-navbar ui-mini" role="navigation">
+            <ul class="ui-grid-b">
+                <li class="ui-block-a"><a data-icon="" data-theme="c" data-transition="fade" href="@Url.Action("UserMenu","Menu")"
+                    data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span"
+                    data-iconpos="top" data-inline="true" class="ui-btn ui-btn-inline ui-btn-icon-top ui-btn-up-c">
+                    <span class="ui-btn-inner"><span class="ui-btn-text">Menus</span></span>
+                </a></li>
+                <li class="ui-block-b"><a data-icon="" data-theme="c" data-transition="fade" href="@Url.Action("ViewFromSession","Order")"
+                    data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span"
+                    data-iconpos="top" data-inline="true" class="ui-btn ui-btn-up-c ui-btn-inline ui-btn-icon-top">
+                    <span class="ui-btn-inner"><span class="ui-btn-text">My Order</span></span>
+                </a></li>
+                <li class="ui-block-c"><a data-icon="" data-theme="c" data-transition="fade" href="@Url.Action("Create", "ServiceRequest")"
+                    data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="span"
+                    data-iconpos="top" data-inline="true" class="ui-btn ui-btn-up-c ui-btn-inline ui-btn-icon-top">
+                    <span class="ui-btn-inner"><span class="ui-btn-text">Call Waiter</span></span>
+                </a></li>
+            </ul>
+        </div>
+    }
+    
+}

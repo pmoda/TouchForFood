@@ -1,0 +1,77 @@
+﻿@model TouchForFood.Models.side
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>side</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.menu_category_id, "menu_category")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("menu_category_id", String.Empty)
+            @Html.ValidationMessageFor(model => model.menu_category_id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.name)
+            @Html.ValidationMessageFor(model => model.name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.price)
+            @Html.ValidationMessageFor(model => model.price)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.is_active)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.is_active)
+            @Html.ValidationMessageFor(model => model.is_active)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.is_deleted)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.is_deleted)
+            @Html.ValidationMessageFor(model => model.is_deleted)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.version)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.version)
+            @Html.ValidationMessageFor(model => model.version)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

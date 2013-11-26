@@ -1,0 +1,22 @@
+﻿@model IEnumerable<TouchForFood.Models.menu>
+@using TouchForFood.App_GlobalResources
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Menus";
+}
+
+<div class="one-third column">&nbsp;</div>
+
+<div class="one-third column">
+
+<h4>Choose a menu</h4>
+
+@foreach (var item in Model)
+{
+
+    @Html.ActionLink(item.name, "Order", new { id = item.id }, new { @class = "food-menu-button isactive-menu-button" })
+
+}
+
+</div>

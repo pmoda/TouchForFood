@@ -1,0 +1,45 @@
+﻿@model TouchForFood.Models.review
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>review</legend>
+
+    <div class="display-label">written_by</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.written_by)
+    </div>
+
+    <div class="display-label">restaurant</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.restaurant.name)
+    </div>
+
+    <div class="display-label">user</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.user.username)
+    </div>
+
+    <div class="display-label">rating</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.rating)
+    </div>
+
+    <div class="display-label">is_anonymous</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.is_anonymous)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

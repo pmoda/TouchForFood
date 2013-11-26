@@ -1,0 +1,35 @@
+﻿@model TouchForFood.Models.category
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>category</legend>
+
+    <div class="display-label">name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+</fieldset>
+
+
+  <table id="items_table">
+    <thead><tr><th> Items </th></tr></thead>
+    <tbody>
+    @foreach (var item in Model.items)
+    {
+        <tr id="@item.id">
+            @Html.Partial("../Item/View", item, new ViewDataDictionary { { "tag", "td" } })
+        </tr>
+    }
+    </tbody>
+  </table>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

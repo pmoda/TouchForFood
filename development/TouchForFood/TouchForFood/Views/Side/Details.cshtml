@@ -1,0 +1,46 @@
+﻿@model TouchForFood.Models.side
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>side</legend>
+
+    <div class="display-label">menu_category</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.menu_category.id)
+    </div>
+
+    <div class="display-label">name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>
+
+    <div class="display-label">price</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.price)
+    </div>
+
+    <div class="display-label">is_active</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.is_active)
+    </div>
+
+    <div class="display-label">is_deleted</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.is_deleted)
+    </div>
+
+    <div class="display-label">version</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.version)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

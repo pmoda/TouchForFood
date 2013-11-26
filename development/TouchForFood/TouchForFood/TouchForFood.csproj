@@ -1,0 +1,891 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C0B97CE-2532-40CB-89B9-0E648D69467B}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TouchForFood</RootNamespace>
+    <AssemblyName>TouchForFood</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Local|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\TouchForFood.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Deploy|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\TouchForFood.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Global1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Global.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\BillController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\FriendshipController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\Menu_CategoryController.cs" />
+    <Compile Include="Controllers\Menu_ItemController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\Order_ItemController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\RestaurantController.cs" />
+    <Compile Include="Controllers\RestaurantUserController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Controllers\Review_Order_ItemController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\ServiceRequestController.cs" />
+    <Compile Include="Controllers\SideController.cs" />
+    <Compile Include="Controllers\TableController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Exceptions\AssociationExistsException.cs" />
+    <Compile Include="Exceptions\ItemActiveException.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mappers\Abstract\GenericIM.cs" />
+    <Compile Include="Mappers\Abstract\GenericOM.cs" />
+    <Compile Include="Mappers\Bill\BillIM.cs" />
+    <Compile Include="Mappers\Bill\BillOM.cs" />
+    <Compile Include="Mappers\Category\CategoryIM.cs" />
+    <Compile Include="Mappers\Category\CategoryOM.cs" />
+    <Compile Include="Mappers\Item\ItemIM.cs" />
+    <Compile Include="Mappers\Item\ItemOM.cs" />
+    <Compile Include="Mappers\Menu\MenuIM.cs" />
+    <Compile Include="Mappers\Menu_Category\MenuCategoryIM.cs" />
+    <Compile Include="Mappers\Menu_Category\MenuCategoryOM.cs" />
+    <Compile Include="Mappers\Menu_Item\MenuItemIM.cs" />
+    <Compile Include="Mappers\Menu_Item\MenuItemOM.cs" />
+    <Compile Include="Mappers\Order\OrderIM.cs" />
+    <Compile Include="Mappers\Order\OrderOM.cs" />
+    <Compile Include="Mappers\Order_Item\Order_ItemIM.cs" />
+    <Compile Include="Mappers\Order_Item\Order_ItemOM.cs" />
+    <Compile Include="Mappers\Reports\ReportsIM.cs" />
+    <Compile Include="Mappers\Restaurant\RestaurantIM.cs" />
+    <Compile Include="Mappers\Restaurant\RestaurantOM.cs" />
+    <Compile Include="Mappers\Review\ReviewIM.cs" />
+    <Compile Include="Mappers\Review\ReviewOM.cs" />
+    <Compile Include="Mappers\Review_Order_Item\Review_Order_ItemIM.cs" />
+    <Compile Include="Mappers\Review_Order_Item\Review_Order_ItemOM.cs" />
+    <Compile Include="Mappers\Search\SearchIM.cs" />
+    <Compile Include="Mappers\ServiceRequest\ServiceRequestIM.cs" />
+    <Compile Include="Mappers\ServiceRequest\ServiceRequestOM.cs" />
+    <Compile Include="Mappers\Side\SideIM.cs" />
+    <Compile Include="Mappers\Side\SideOM.cs" />
+    <Compile Include="Mappers\Table\TableIM.cs" />
+    <Compile Include="Mappers\Table\TableOM.cs" />
+    <Compile Include="Mappers\User\UserIM.cs" />
+    <Compile Include="Mappers\User\UserOM.cs" />
+    <Compile Include="Mappers\Waiter\WaiterIM.cs" />
+    <Compile Include="Mappers\Waiter\WaiterOM.cs" />
+    <Compile Include="Models\bill.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\category.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Classes\restaurant_user.cs" />
+    <Compile Include="Models\Classes\menu.cs" />
+    <Compile Include="Models\Classes\order.cs" />
+    <Compile Include="Models\Classes\order_item.cs" />
+    <Compile Include="Models\Classes\restaurant.cs" />
+    <Compile Include="Models\Classes\review.cs" />
+    <Compile Include="Models\Classes\review_order_item.cs" />
+    <Compile Include="Models\Classes\table.cs" />
+    <Compile Include="Models\Classes\user.cs" />
+    <Compile Include="Models\friendship.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\item.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\menu.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\menu_category.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\menu_item.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\order.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderStatusHelper.cs" />
+    <Compile Include="Models\order_item.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\restaurant.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\restaurant_user.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\review.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\review_order_item.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\service_request.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\side.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\table.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\touch_for_food.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>touch_for_food.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\touch_for_food.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\touch_for_food.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>touch_for_food.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\user.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\waiter.cs">
+      <DependentUpon>touch_for_food.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Bill\BillUtil.cs" />
+    <Compile Include="Util\Category\CategoryUtil.cs" />
+    <Compile Include="Util\Html\HtmlDropDownExtensions.cs" />
+    <Compile Include="Util\Html\ImageActionLinkHelper.cs" />
+    <Compile Include="Util\Html\UrlUtils.cs" />
+    <Compile Include="Util\Item\ItemUtil.cs" />
+    <Compile Include="Mappers\Menu\MenuOM.cs" />
+    <Compile Include="Util\Order\OrderUtil.cs" />
+    <Compile Include="Util\Order\OrderStatusUtil.cs" />
+    <Compile Include="Util\Review\Rating.cs" />
+    <Compile Include="Util\Review\TextParser.cs" />
+    <Compile Include="Util\Search\SearchService.cs" />
+    <Compile Include="Util\Search\SearchUtil.cs" />
+    <Compile Include="Util\Search\SearchViewModelHelper.cs" />
+    <Compile Include="Util\Security\AES.cs" />
+    <Compile Include="Util\Security\CustomAuthorizationAttribute.cs" />
+    <Compile Include="Util\ServiceRequest\ServiceRequestUtil.cs" />
+    <Compile Include="Util\Session\SessionUtil.cs" />
+    <Compile Include="Util\Side\SideUtil.cs" />
+    <Compile Include="Util\String\StringUtilities.cs" />
+    <Compile Include="Util\Table\TableUtil.cs" />
+    <Compile Include="Util\User\UserUtil.cs" />
+    <Compile Include="ViewModels\CategoryFilterVM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Attributes\AjaxHandler.cs" />
+    <Compile Include="ViewModels\ItemFilterVM.cs" />
+    <Compile Include="ViewModels\MostPopularDishViewModel.cs" />
+    <Compile Include="ViewModels\OrderItemVM.cs" />
+    <Compile Include="ViewModels\OrderVM.cs" />
+    <Compile Include="ViewModels\ReviewVM.cs" />
+    <Compile Include="ViewModels\SearchViewModel.cs" />
+    <Compile Include="ViewModels\ServiceRequestVM.cs" />
+    <Compile Include="ViewModels\SideFilterVM.cs" />
+    <Compile Include="ViewModels\WaiterStatsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\images\32x32.png" />
+    <Content Include="Content\images\Accept16.png" />
+    <Content Include="Content\images\Accept24.png" />
+    <Content Include="Content\images\add.bmp" />
+    <Content Include="Content\images\apple-touch-icon-114x114.png" />
+    <Content Include="Content\images\apple-touch-icon-72x72.png" />
+    <Content Include="Content\images\apple-touch-icon.png" />
+    <Content Include="Content\images\Cancel16.png" />
+    <Content Include="Content\images\Cancel24.png" />
+    <Content Include="Content\images\Edit16.png" />
+    <Content Include="Content\images\Edit24.png" />
+    <Content Include="Content\images\food\carrot.jpg" />
+    <Content Include="Content\images\food\eclairs.jpg" />
+    <Content Include="Content\images\food\meatballs.jpg" />
+    <Content Include="Content\images\food\melonballs.jpg" />
+    <Content Include="Content\images\food\pinwheels.jpg" />
+    <Content Include="Content\images\homebg.png" />
+    <Content Include="Content\images\httpwww.123rf.comphoto_11564605_vector-add-delete-or-show-hide-black-buttons.html.jpg" />
+    <Content Include="Content\images\icon64.png" />
+    <Content Include="Content\images\iconset\Accept16.png" />
+    <Content Include="Content\images\iconset\Accept24.png" />
+    <Content Include="Content\images\iconset\Accept32.png" />
+    <Content Include="Content\images\iconset\Accept48.png" />
+    <Content Include="Content\images\iconset\Add16.png" />
+    <Content Include="Content\images\iconset\Add24.png" />
+    <Content Include="Content\images\iconset\Add32.png" />
+    <Content Include="Content\images\iconset\Add48.png" />
+    <Content Include="Content\images\iconset\Add_fav16.png" />
+    <Content Include="Content\images\iconset\Add_fav24.png" />
+    <Content Include="Content\images\iconset\Add_fav32.png" />
+    <Content Include="Content\images\iconset\Add_fav48.png" />
+    <Content Include="Content\images\iconset\Add_user16.png" />
+    <Content Include="Content\images\iconset\Add_user24.png" />
+    <Content Include="Content\images\iconset\Add_user32.png" />
+    <Content Include="Content\images\iconset\Add_user48.png" />
+    <Content Include="Content\images\iconset\Alert16.png" />
+    <Content Include="Content\images\iconset\Alert24.png" />
+    <Content Include="Content\images\iconset\Alert32.png" />
+    <Content Include="Content\images\iconset\Alert48.png" />
+    <Content Include="Content\images\iconset\Billboard16.png" />
+    <Content Include="Content\images\iconset\Billboard24.png" />
+    <Content Include="Content\images\iconset\Billboard32.png" />
+    <Content Include="Content\images\iconset\Billboard48.png" />
+    <Content Include="Content\images\iconset\Cancel16.png" />
+    <Content Include="Content\images\iconset\Cancel24.png" />
+    <Content Include="Content\images\iconset\Cancel32.png" />
+    <Content Include="Content\images\iconset\Cancel48.png" />
+    <Content Include="Content\images\iconset\Chat16.png" />
+    <Content Include="Content\images\iconset\Chat24.png" />
+    <Content Include="Content\images\iconset\Chat32.png" />
+    <Content Include="Content\images\iconset\Chat48.png" />
+    <Content Include="Content\images\iconset\Close16.png" />
+    <Content Include="Content\images\iconset\Close24.png" />
+    <Content Include="Content\images\iconset\Close32.png" />
+    <Content Include="Content\images\iconset\Close48.png" />
+    <Content Include="Content\images\iconset\Communicate16.png" />
+    <Content Include="Content\images\iconset\Communicate24.png" />
+    <Content Include="Content\images\iconset\Communicate32.png" />
+    <Content Include="Content\images\iconset\Communicate48.png" />
+    <Content Include="Content\images\iconset\Copy16.png" />
+    <Content Include="Content\images\iconset\Copy24.png" />
+    <Content Include="Content\images\iconset\Copy32.png" />
+    <Content Include="Content\images\iconset\Copy48.png" />
+    <Content Include="Content\images\iconset\Cut16.png" />
+    <Content Include="Content\images\iconset\Cut24.png" />
+    <Content Include="Content\images\iconset\Cut32.png" />
+    <Content Include="Content\images\iconset\Cut48.png" />
+    <Content Include="Content\images\iconset\Delete16.png" />
+    <Content Include="Content\images\iconset\Delete24.png" />
+    <Content Include="Content\images\iconset\Delete32.png" />
+    <Content Include="Content\images\iconset\Delete48.png" />
+    <Content Include="Content\images\iconset\Delete_user16.png" />
+    <Content Include="Content\images\iconset\Delete_user24.png" />
+    <Content Include="Content\images\iconset\Delete_user32.png" />
+    <Content Include="Content\images\iconset\Delete_user48.png" />
+    <Content Include="Content\images\iconset\Edit16.png" />
+    <Content Include="Content\images\iconset\Edit24.png" />
+    <Content Include="Content\images\iconset\Edit32.png" />
+    <Content Include="Content\images\iconset\Edit48.png" />
+    <Content Include="Content\images\iconset\Faq16.png" />
+    <Content Include="Content\images\iconset\Faq24.png" />
+    <Content Include="Content\images\iconset\Faq32.png" />
+    <Content Include="Content\images\iconset\Faq48.png" />
+    <Content Include="Content\images\iconset\Fav16.png" />
+    <Content Include="Content\images\iconset\Fav24.png" />
+    <Content Include="Content\images\iconset\Fav32.png" />
+    <Content Include="Content\images\iconset\Fav48.png" />
+    <Content Include="Content\images\iconset\File16.png" />
+    <Content Include="Content\images\iconset\File24.png" />
+    <Content Include="Content\images\iconset\File32.png" />
+    <Content Include="Content\images\iconset\File48.png" />
+    <Content Include="Content\images\iconset\File_add16.png" />
+    <Content Include="Content\images\iconset\File_add24.png" />
+    <Content Include="Content\images\iconset\File_add32.png" />
+    <Content Include="Content\images\iconset\File_add48.png" />
+    <Content Include="Content\images\iconset\File_delete16.png" />
+    <Content Include="Content\images\iconset\File_delete24.png" />
+    <Content Include="Content\images\iconset\File_delete32.png" />
+    <Content Include="Content\images\iconset\File_delete48.png" />
+    <Content Include="Content\images\iconset\File_edit16.png" />
+    <Content Include="Content\images\iconset\File_edit24.png" />
+    <Content Include="Content\images\iconset\File_edit32.png" />
+    <Content Include="Content\images\iconset\File_edit48.png" />
+    <Content Include="Content\images\iconset\File_info16.png" />
+    <Content Include="Content\images\iconset\File_info24.png" />
+    <Content Include="Content\images\iconset\File_info32.png" />
+    <Content Include="Content\images\iconset\File_info48.png" />
+    <Content Include="Content\images\iconset\Flag16.png" />
+    <Content Include="Content\images\iconset\Flag24.png" />
+    <Content Include="Content\images\iconset\Flag32.png" />
+    <Content Include="Content\images\iconset\Flag48.png" />
+    <Content Include="Content\images\iconset\Folder16.png" />
+    <Content Include="Content\images\iconset\Folder24.png" />
+    <Content Include="Content\images\iconset\Folder32.png" />
+    <Content Include="Content\images\iconset\Folder48.png" />
+    <Content Include="Content\images\iconset\Folder_add16.png" />
+    <Content Include="Content\images\iconset\Folder_add24.png" />
+    <Content Include="Content\images\iconset\Folder_add32.png" />
+    <Content Include="Content\images\iconset\Folder_add48.png" />
+    <Content Include="Content\images\iconset\Folder_alert16.png" />
+    <Content Include="Content\images\iconset\Folder_alert24.png" />
+    <Content Include="Content\images\iconset\Folder_alert32.png" />
+    <Content Include="Content\images\iconset\Folder_alert48.png" />
+    <Content Include="Content\images\iconset\Folder_delete16.png" />
+    <Content Include="Content\images\iconset\Folder_delete24.png" />
+    <Content Include="Content\images\iconset\Folder_delete32.png" />
+    <Content Include="Content\images\iconset\Folder_delete48.png" />
+    <Content Include="Content\images\iconset\Folder_fav16.png" />
+    <Content Include="Content\images\iconset\Folder_fav24.png" />
+    <Content Include="Content\images\iconset\Folder_fav32.png" />
+    <Content Include="Content\images\iconset\Folder_fav48.png" />
+    <Content Include="Content\images\iconset\Folder_info16.png" />
+    <Content Include="Content\images\iconset\Folder_info24.png" />
+    <Content Include="Content\images\iconset\Folder_info32.png" />
+    <Content Include="Content\images\iconset\Folder_info48.png" />
+    <Content Include="Content\images\iconset\Home16.png" />
+    <Content Include="Content\images\iconset\Home24.png" />
+    <Content Include="Content\images\iconset\Home32.png" />
+    <Content Include="Content\images\iconset\Home48.png" />
+    <Content Include="Content\images\iconset\Info16.png" />
+    <Content Include="Content\images\iconset\Info24.png" />
+    <Content Include="Content\images\iconset\Info32.png" />
+    <Content Include="Content\images\iconset\Info48.png" />
+    <Content Include="Content\images\iconset\Key16.png" />
+    <Content Include="Content\images\iconset\Key24.png" />
+    <Content Include="Content\images\iconset\Key32.png" />
+    <Content Include="Content\images\iconset\Key48.png" />
+    <Content Include="Content\images\iconset\Lock16.png" />
+    <Content Include="Content\images\iconset\Lock24.png" />
+    <Content Include="Content\images\iconset\Lock32.png" />
+    <Content Include="Content\images\iconset\Lock48.png" />
+    <Content Include="Content\images\iconset\Login_in16.png" />
+    <Content Include="Content\images\iconset\Login_in24.png" />
+    <Content Include="Content\images\iconset\Login_in32.png" />
+    <Content Include="Content\images\iconset\Login_in48.png" />
+    <Content Include="Content\images\iconset\Login_out16.png" />
+    <Content Include="Content\images\iconset\Login_out24.png" />
+    <Content Include="Content\images\iconset\Login_out32.png" />
+    <Content Include="Content\images\iconset\Login_out48.png" />
+    <Content Include="Content\images\iconset\Paperclip16.png" />
+    <Content Include="Content\images\iconset\Paperclip24.png" />
+    <Content Include="Content\images\iconset\Paperclip32.png" />
+    <Content Include="Content\images\iconset\Paperclip48.png" />
+    <Content Include="Content\images\iconset\Paste16.png" />
+    <Content Include="Content\images\iconset\Paste24.png" />
+    <Content Include="Content\images\iconset\Paste32.png" />
+    <Content Include="Content\images\iconset\Paste48.png" />
+    <Content Include="Content\images\iconset\Percent16.png" />
+    <Content Include="Content\images\iconset\Percent24.png" />
+    <Content Include="Content\images\iconset\Percent32.png" />
+    <Content Include="Content\images\iconset\Percent48.png" />
+    <Content Include="Content\images\iconset\Pools16.png" />
+    <Content Include="Content\images\iconset\Pools24.png" />
+    <Content Include="Content\images\iconset\Pools32.png" />
+    <Content Include="Content\images\iconset\Pools48.png" />
+    <Content Include="Content\images\iconset\Prohibit16.png" />
+    <Content Include="Content\images\iconset\Prohibit24.png" />
+    <Content Include="Content\images\iconset\Prohibit32.png" />
+    <Content Include="Content\images\iconset\Prohibit48.png" />
+    <Content Include="Content\images\iconset\Refresh16.png" />
+    <Content Include="Content\images\iconset\Refresh24.png" />
+    <Content Include="Content\images\iconset\Refresh32.png" />
+    <Content Include="Content\images\iconset\Refresh48.png" />
+    <Content Include="Content\images\iconset\Remove_fav16.png" />
+    <Content Include="Content\images\iconset\Remove_fav24.png" />
+    <Content Include="Content\images\iconset\Remove_fav32.png" />
+    <Content Include="Content\images\iconset\Remove_fav48.png" />
+    <Content Include="Content\images\iconset\Ruler16.png" />
+    <Content Include="Content\images\iconset\Ruler24.png" />
+    <Content Include="Content\images\iconset\Ruler32.png" />
+    <Content Include="Content\images\iconset\Ruler48.png" />
+    <Content Include="Content\images\iconset\Save16.png" />
+    <Content Include="Content\images\iconset\Save24.png" />
+    <Content Include="Content\images\iconset\Save32.png" />
+    <Content Include="Content\images\iconset\Save48.png" />
+    <Content Include="Content\images\iconset\Search16.png" />
+    <Content Include="Content\images\iconset\Search24.png" />
+    <Content Include="Content\images\iconset\Search32.png" />
+    <Content Include="Content\images\iconset\Search48.png" />
+    <Content Include="Content\images\iconset\Shoppingbag16.png" />
+    <Content Include="Content\images\iconset\Shoppingbag24.png" />
+    <Content Include="Content\images\iconset\Shoppingbag32.png" />
+    <Content Include="Content\images\iconset\Shoppingbag48.png" />
+    <Content Include="Content\images\iconset\Shoppingcart16.png" />
+    <Content Include="Content\images\iconset\Shoppingcart24.png" />
+    <Content Include="Content\images\iconset\Shoppingcart32.png" />
+    <Content Include="Content\images\iconset\Shoppingcart48.png" />
+    <Content Include="Content\images\iconset\Star_empty16.png" />
+    <Content Include="Content\images\iconset\Star_empty24.png" />
+    <Content Include="Content\images\iconset\Star_empty32.png" />
+    <Content Include="Content\images\iconset\Star_empty48.png" />
+    <Content Include="Content\images\iconset\Star_full16.png" />
+    <Content Include="Content\images\iconset\Star_full24.png" />
+    <Content Include="Content\images\iconset\Star_full32.png" />
+    <Content Include="Content\images\iconset\Star_full48.png" />
+    <Content Include="Content\images\iconset\Star_half_full16.png" />
+    <Content Include="Content\images\iconset\Star_half_full24.png" />
+    <Content Include="Content\images\iconset\Star_half_full32.png" />
+    <Content Include="Content\images\iconset\Star_half_full48.png" />
+    <Content Include="Content\images\iconset\Telephone16.png" />
+    <Content Include="Content\images\iconset\Telephone24.png" />
+    <Content Include="Content\images\iconset\Telephone32.png" />
+    <Content Include="Content\images\iconset\Telephone48.png" />
+    <Content Include="Content\images\iconset\Tools16.png" />
+    <Content Include="Content\images\iconset\Tools24.png" />
+    <Content Include="Content\images\iconset\Tools32.png" />
+    <Content Include="Content\images\iconset\Tools48.png" />
+    <Content Include="Content\images\iconset\Unlock16.png" />
+    <Content Include="Content\images\iconset\Unlock24.png" />
+    <Content Include="Content\images\iconset\Unlock32.png" />
+    <Content Include="Content\images\iconset\Unlock48.png" />
+    <Content Include="Content\images\iconset\User16.png" />
+    <Content Include="Content\images\iconset\User24.png" />
+    <Content Include="Content\images\iconset\User32.png" />
+    <Content Include="Content\images\iconset\User48.png" />
+    <Content Include="Content\images\iconset\Users16.png" />
+    <Content Include="Content\images\iconset\Users24.png" />
+    <Content Include="Content\images\iconset\Users32.png" />
+    <Content Include="Content\images\iconset\Users48.png" />
+    <Content Include="Content\images\iconset\Wheel16.png" />
+    <Content Include="Content\images\iconset\Wheel24.png" />
+    <Content Include="Content\images\iconset\Wheel32.png" />
+    <Content Include="Content\images\iconset\Wheel48.png" />
+    <Content Include="Content\images\iconset\Wheels16.png" />
+    <Content Include="Content\images\iconset\Wheels24.png" />
+    <Content Include="Content\images\iconset\Wheels32.png" />
+    <Content Include="Content\images\iconset\Wheels48.png" />
+    <Content Include="Content\images\iconset\Wrench16.png" />
+    <Content Include="Content\images\iconset\Wrench24.png" />
+    <Content Include="Content\images\iconset\Wrench32.png" />
+    <Content Include="Content\images\iconset\Wrench48.png" />
+    <Content Include="Content\images\iconset\Zoom_in16.png" />
+    <Content Include="Content\images\iconset\Zoom_in24.png" />
+    <Content Include="Content\images\iconset\Zoom_in32.png" />
+    <Content Include="Content\images\iconset\Zoom_in48.png" />
+    <Content Include="Content\images\iconset\Zoom_out16.png" />
+    <Content Include="Content\images\iconset\Zoom_out24.png" />
+    <Content Include="Content\images\iconset\Zoom_out32.png" />
+    <Content Include="Content\images\iconset\Zoom_out48.png" />
+    <Content Include="Content\images\Login_in16.png" />
+    <Content Include="Content\images\Login_out16.png" />
+    <Content Include="Content\images\profilepic.jpg" />
+    <Content Include="Content\images\Search16.png" />
+    <Content Include="Content\images\Search24.png" />
+    <Content Include="Content\images\star-half.png" />
+    <Content Include="Content\images\star-off - Copy.png" />
+    <Content Include="Content\images\star-off.png" />
+    <Content Include="Content\images\star-on - Copy.png" />
+    <Content Include="Content\images\star-on.png" />
+    <Content Include="Content\images\TFFlogo.png" />
+    <Content Include="Content\images\Tools16.png" />
+    <Content Include="Content\images\trash16.png" />
+    <Content Include="Content\images\trash24.png" />
+    <Content Include="Content\stylesheets\images\border.png" />
+    <Content Include="Content\stylesheets\images\controls.png" />
+    <Content Include="Content\stylesheets\images\loading.gif" />
+    <Content Include="Content\stylesheets\images\loading_background.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\remove.bmp" />
+    <Content Include="Content\images\trash.png" />
+    <Content Include="Content\stylesheets\colorbox.css" />
+    <Content Include="Content\stylesheets\jquery.mobile-1.3.0.min.css" />
+    <Content Include="Content\stylesheets\textarea.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\stylesheets\style.css" />
+    <Content Include="Scripts\Bill\bill.js" />
+    <Content Include="Scripts\colorbox\jquery.colorbox-min.js" />
+    <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.raty.js" />
+    <Content Include="Scripts\jquery.raty.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\altrows.js" />
+    <Content Include="Scripts\Menu\menu_ajax_handler.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Content\stylesheets\base.css" />
+    <Content Include="Content\stylesheets\layout.css" />
+    <Content Include="Content\stylesheets\skeleton.css" />
+    <Content Include="Scripts\Order\order.js" />
+    <Content Include="Scripts\Reports\report.js" />
+    <Content Include="Scripts\ServiceRequest\toggleVisibility.js" />
+    <Content Include="Views\User\PastReviewsPartial.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\Restaurant\Index.cshtml" />
+    <Content Include="Views\Restaurant\Details.cshtml" />
+    <Content Include="Views\Restaurant\Create.cshtml" />
+    <Content Include="Views\Restaurant\Edit.cshtml" />
+    <Content Include="Views\Restaurant\Delete.cshtml" />
+    <Content Include="Views\Menu\Index.cshtml" />
+    <Content Include="Views\Menu\Details.cshtml" />
+    <Content Include="Views\Menu\Create.cshtml" />
+    <Content Include="Views\Menu\Edit.cshtml" />
+    <Content Include="Views\Menu\Delete.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Category\Delete.cshtml" />
+    <Content Include="Views\Menu_Category\Index.cshtml" />
+    <Content Include="Views\Menu_Category\Details.cshtml" />
+    <Content Include="Views\Menu_Category\Create.cshtml" />
+    <Content Include="Views\Menu_Category\Edit.cshtml" />
+    <Content Include="Views\Menu_Category\Delete.cshtml" />
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+    <Content Include="Views\User\LogOn.cshtml" />
+    <Content Include="Views\Shared\_CategoryTable.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Restaurant\_ReviewsPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\.svn\all-wcprops" />
+    <None Include="Models\.svn\entries" />
+    <None Include="Models\.svn\text-base\category.cs.svn-base" />
+    <None Include="Models\.svn\text-base\friendship.cs.svn-base" />
+    <None Include="Models\.svn\text-base\item.cs.svn-base" />
+    <None Include="Models\.svn\text-base\Menu.cs.svn-base" />
+    <None Include="Models\.svn\text-base\menu_category.cs.svn-base" />
+    <None Include="Models\.svn\text-base\menu_item.cs.svn-base" />
+    <None Include="Models\.svn\text-base\order.cs.svn-base" />
+    <None Include="Models\.svn\text-base\order_item.cs.svn-base" />
+    <None Include="Models\.svn\text-base\order_status.cs.svn-base" />
+    <None Include="Models\.svn\text-base\Restaurant.cs.svn-base" />
+    <None Include="Models\.svn\text-base\restaurant_user.cs.svn-base" />
+    <None Include="Models\.svn\text-base\review.cs.svn-base" />
+    <None Include="Models\.svn\text-base\sysdiagram.cs.svn-base" />
+    <None Include="Models\.svn\text-base\touch_for_food.Context.cs.svn-base" />
+    <None Include="Models\.svn\text-base\touch_for_food.Context.tt.svn-base" />
+    <None Include="Models\.svn\text-base\touch_for_food.cs.svn-base" />
+    <None Include="Models\.svn\text-base\touch_for_food.Designer.cs.svn-base" />
+    <None Include="Models\.svn\text-base\touch_for_food.edmx.svn-base" />
+    <None Include="Models\.svn\text-base\touch_for_food.tt.svn-base" />
+    <None Include="Models\.svn\text-base\user.cs.svn-base" />
+    <None Include="Models\.svn\text-base\waiter.cs.svn-base" />
+    <None Include="Models\Classes\.svn\all-wcprops" />
+    <None Include="Models\Classes\.svn\entries" />
+    <None Include="Models\Classes\.svn\text-base\restaurant.cs.svn-base" />
+    <None Include="Models\Classes\.svn\text-base\review.cs.svn-base" />
+    <None Include="Models\Classes\.svn\text-base\user.cs.svn-base" />
+    <Content Include="Views\Review\Create.cshtml" />
+    <Content Include="Views\Friendship\Index.cshtml" />
+    <Content Include="Views\Friendship\Details.cshtml" />
+    <Content Include="Views\Friendship\Create.cshtml" />
+    <Content Include="Views\Friendship\Edit.cshtml" />
+    <Content Include="Views\Friendship\Delete.cshtml" />
+    <Content Include="Views\User\_PastOrdersPartial.cshtml" />
+    <Content Include="Views\Order\Index.cshtml" />
+    <Content Include="Views\Order\Details.cshtml" />
+    <Content Include="Views\Order\Create.cshtml" />
+    <Content Include="Views\Order\Edit.cshtml" />
+    <Content Include="Views\Order\Delete.cshtml" />
+    <Content Include="Views\Order\OrderUserDetails.cshtml" />
+    <Content Include="Views\Item\Create.cshtml" />
+    <Content Include="Views\Item\Delete.cshtml" />
+    <Content Include="Views\Item\Details.cshtml" />
+    <Content Include="Views\Item\Edit.cshtml" />
+    <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Item\View.cshtml" />
+    <Content Include="Views\Category\View.cshtml" />
+    <Content Include="Views\Menu_Category\View.cshtml" />
+    <Content Include="Views\Menu_Item\Index.cshtml" />
+    <Content Include="Views\Menu_Item\Details.cshtml" />
+    <Content Include="Views\Menu_Item\Create.cshtml" />
+    <Content Include="Views\Menu_Item\Edit.cshtml" />
+    <Content Include="Views\Menu_Item\Delete.cshtml" />
+    <Content Include="Views\Shared\_CategoryCreate.cshtml" />
+    <Content Include="Views\Shared\_ItemTable.cshtml" />
+    <Content Include="Views\Shared\_ItemCreate.cshtml" />
+    <Content Include="Views\Order_Item\Index.cshtml" />
+    <Content Include="Views\Order_Item\Details.cshtml" />
+    <Content Include="Views\Order_Item\Create.cshtml" />
+    <Content Include="Views\Order_Item\Edit.cshtml" />
+    <Content Include="Views\Order_Item\Delete.cshtml" />
+    <Content Include="Views\Order\ViewFromSession.cshtml" />
+    <Content Include="Views\Shared\_MenuItemAdd.cshtml" />
+    <Content Include="Views\Order\Cancel.cshtml" />
+    <Content Include="Views\Order\Decline.cshtml" />
+    <Content Include="Views\Table\Index.cshtml" />
+    <Content Include="Views\Table\Details.cshtml" />
+    <Content Include="Views\Table\Create.cshtml" />
+    <Content Include="Views\Table\Edit.cshtml" />
+    <Content Include="Views\Table\Delete.cshtml" />
+    <Content Include="Views\ServiceRequest\Index.cshtml" />
+    <Content Include="Views\ServiceRequest\Details.cshtml" />
+    <Content Include="Views\ServiceRequest\Create.cshtml" />
+    <Content Include="Views\ServiceRequest\Edit.cshtml" />
+    <Content Include="Views\ServiceRequest\Delete.cshtml" />
+    <Content Include="Views\ServiceRequest\Cancel.cshtml" />
+    <Content Include="Views\ServiceRequest\Complete.cshtml" />
+    <Content Include="Views\Bill\Create.cshtml" />
+    <Content Include="Views\Bill\Delete.cshtml" />
+    <Content Include="Views\Bill\Details.cshtml" />
+    <Content Include="Views\Bill\Edit.cshtml" />
+    <Content Include="Views\Bill\Index.cshtml" />
+    <Content Include="Views\Bill\ManageBills.cshtml" />
+    <Content Include="Views\Search\Search.cshtml" />
+    <Content Include="Views\Menu\_ViewMenu.cshtml" />
+    <Content Include="Views\Table\Manage.cshtml" />
+    <Content Include="Views\Shared\_OrderList.cshtml" />
+    <Content Include="Views\Shared\_NavAdmin.cshtml" />
+    <Content Include="Views\Shared\_NavCustomer.cshtml" />
+    <Content Include="Views\Shared\_NavDev.cshtml" />
+    <Content Include="Views\Shared\_NavRestaurant.cshtml" />
+    <Content Include="Views\Shared\_SearchPartial.cshtml" />
+    <Content Include="Views\Menu\Order.cshtml" />
+    <Content Include="Views\Menu\UserMenu.cshtml" />
+    <Content Include="Views\Menu_Item\PartialDetails.cshtml" />
+    <Content Include="Views\Shared\_PastReviewsPartial.cshtml" />
+    <Content Include="Views\Menu\Order.cshtml" />
+    <Content Include="Views\Menu\UserMenu.cshtml" />
+    <Content Include="Views\Shared\_NavAdmin.cshtml" />
+    <Content Include="Views\Shared\_NavCustomer.cshtml" />
+    <Content Include="Views\Shared\_NavDev.cshtml" />
+    <Content Include="Views\Shared\_NavRestaurant.cshtml" />
+    <Content Include="Views\Shared\_SearchPartial.cshtml" />
+    <Content Include="Views\Review_Order_Item\Index.cshtml" />
+    <Content Include="Views\Review_Order_Item\Details.cshtml" />
+    <Content Include="Views\Review_Order_Item\Create.cshtml" />
+    <Content Include="Views\Review_Order_Item\Edit.cshtml" />
+    <Content Include="Views\Review_Order_Item\Delete.cshtml" />
+    <Content Include="Views\Review\Delete.cshtml" />
+    <Content Include="Views\Review\Details.cshtml" />
+    <Content Include="Views\Review\Edit.cshtml" />
+    <Content Include="Views\Review\Index.cshtml" />
+    <Content Include="Views\Side\Create.cshtml" />
+    <Content Include="Views\Side\Delete.cshtml" />
+    <Content Include="Views\Side\Details.cshtml" />
+    <Content Include="Views\Side\Edit.cshtml" />
+    <Content Include="Views\Side\Index.cshtml" />
+    <Content Include="Views\Shared\_SideCreate.cshtml" />
+    <Content Include="Views\User\SuggestedItems.cshtml" />
+    <None Include="Models\touch_for_food.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>touch_for_food.Context.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="Models\touch_for_food.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>touch_for_food.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\touch_for_food.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>touch_for_food.cs</LastGenOutput>
+    </None>
+    <Content Include="Views\Menu_Category\_OnTheMenu.cshtml" />
+    <Content Include="Views\Menu_Item\PickSides.cshtml" />
+    <Content Include="Views\Menu_Item\_OnTheMenu.cshtml" />
+    <Content Include="Views\RestaurantUser\Index.cshtml" />
+    <Content Include="Views\RestaurantUser\Details.cshtml" />
+    <Content Include="Views\RestaurantUser\Create.cshtml" />
+    <Content Include="Views\RestaurantUser\Edit.cshtml" />
+    <Content Include="Views\RestaurantUser\Delete.cshtml" />
+    <Content Include="Views\Reports\GenerateMostPopularDishReport.cshtml" />
+    <Content Include="Views\Reports\GenerateWaiterStatsReport.cshtml" />
+    <Content Include="Views\Reports\Index.cshtml" />
+    <Content Include="Views\Reports\MostPopularDishReport.cshtml" />
+    <Content Include="Views\Reports\WaiterStatsReport.cshtml" />
+    <Content Include="Views\Shared\_SideTable.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\User\SuggestedByRating.cshtml" />
+    <Content Include="Views\Item\PartialDetails.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\.svn\prop-base\" />
+    <Folder Include="Models\.svn\props\" />
+    <Folder Include="Models\.svn\tmp\prop-base\" />
+    <Folder Include="Models\.svn\tmp\props\" />
+    <Folder Include="Models\.svn\tmp\text-base\" />
+    <Folder Include="Models\Classes\.svn\prop-base\" />
+    <Folder Include="Models\Classes\.svn\props\" />
+    <Folder Include="Models\Classes\.svn\tmp\prop-base\" />
+    <Folder Include="Models\Classes\.svn\tmp\props\" />
+    <Folder Include="Models\Classes\.svn\tmp\text-base\" />
+    <Folder Include="uploads\user_images\" />
+    <Folder Include="Views\Shared\tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_GlobalResources\Global.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Global1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5115</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)copyifnewer.bat" "$(ProjectDir)web.config.$(ConfigurationName)" "$(ProjectDir)web.config"</PreBuildEvent>
+  </PropertyGroup>
+</Project>

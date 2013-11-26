@@ -1,0 +1,35 @@
+﻿@model TouchForFood.ViewModels.SideFilterVM    
+
+<h4 class="main-green go-left remove-br">Available Sides</h4>
+<div class="clear"></div>
+
+@foreach (var side in Model.sides)
+{
+    <span class="side-color">@Html.Raw(side.name)</span>
+
+    @Ajax.ActionLink("+", "AjaxActive", "Side", new { id = side.id, isActive = true }, new AjaxOptions()
+{
+    HttpMethod = "POST",
+    OnSuccess = "window.location.reload()",
+    OnFailure = "console.log(error)"
+}, new { @class = "go-right add-button" })
+    
+    <div class="clear"></div>
+ 
+}
+<div id="result" style="display:none;"></div> 
+
+<script type="text/javascript">
+    $(document).ready(function () {        
+        $("#result").dialog({
+            autoOpen: false,
+            title: 'Add new Item',
+            width: 500,
+            height: 'auto',
+            modal: true,
+        });   
+    });
+    function openPopup() {
+        $("#result").dialog("open");
+    }
+</script>

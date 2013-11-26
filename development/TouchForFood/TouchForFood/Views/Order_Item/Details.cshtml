@@ -1,0 +1,47 @@
+﻿@model TouchForFood.Models.order_item
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>order_item</legend>
+
+    <div class="display-label">order</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.order.id)
+    </div>
+
+    <div class="display-label">menu_item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.menu_item.id)
+    </div>
+
+    <div class="display-label">note</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.note)
+    </div>
+
+    <div class="display-label">order_item_status</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.order_item_status.Value)
+    </div>
+
+    <div class="display-label">last_changed</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.last_changed)
+    </div>
+
+    <div class="display-label">version</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.version)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Accept", "Accept", new { id = Model.id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

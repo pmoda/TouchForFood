@@ -1,0 +1,86 @@
+﻿@model TouchForFood.Models.order
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>order  Total: @Model.total</legend>
+
+        @Html.HiddenFor(model => model.id)
+        @Html.HiddenFor(model => model.version)
+
+        <div class="display-field">
+            @Html.LabelFor(model => model.timestamp)
+
+            @Html.DisplayFor(model => model.timestamp)
+        </div>
+        <div class="display-field">
+            @Html.LabelFor(model => model.order_status)
+
+            @Html.DisplayFor(model => model.order_status)
+        </div>
+
+        
+    <table id="menu_table">    
+    <thead><tr><th> ITEM</th><th> NOTE</th><th> TYPE</th></tr></thead>
+        @foreach (var order_item in @Model.order_item)
+        {
+            <tr id="@order_item.id">
+                <td>                      
+                    <div class="display-field">
+                        @Html.DisplayFor(model => order_item.menu_item.item.name)
+                    </div>
+                 </td>
+                 <td>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => order_item.note)
+                    </div>
+                 </td>
+                 <td>
+                    <div class="display-field">
+                        @TouchForFood.Models.OrderStatusHelper.GetOrderStatusName((int)Model.order_status)
+                    </div>
+                 </td>
+                 <td>
+                    @Html.ActionLink("Remove", "Delete", "Order_Item", new { id = order_item.id }, new { })
+                    <!-- if order is placed and user is not editing order allow Accept order to be performed by admin  -->
+                    @if (order_item.order.order_status == (int)TouchForFood.Models.OrderStatusHelper.OrderStatusEnum.PLACED)
+                    {
+                     @Html.ActionLink("Accept", "Accept", "Order_Item", new { id = order_item.id }, new { })
+                    }
+                 </td>
+            </tr>    
+        }
+    </table>
+
+        <div class="display-field">
+            @Html.LabelFor(model => model.order_status, "order_status")
+
+            @TouchForFood.Models.OrderStatusHelper.GetOrderStatusName((int)Model.order_status)
+        </div>
+
+        <div class="display-field">
+            @Html.LabelFor(model => model.waiter_id, "waiter")
+
+            @Html.DisplayFor(model => model.waiter.first_name)
+        </div>
+        
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

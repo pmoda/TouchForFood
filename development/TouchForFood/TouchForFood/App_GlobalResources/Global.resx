@@ -1,0 +1,1048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddConfirm" xml:space="preserve">
+    <value>Are you sure you want to add?</value>
+  </data>
+  <data name="BillMenu_Header" xml:space="preserve">
+    <value>Bill</value>
+    <comment>This appears in the main menu as a link</comment>
+  </data>
+  <data name="CallWaiter_Header" xml:space="preserve">
+    <value>Call Waiter!(Customer)</value>
+    <comment>This appears in the main menu as a link</comment>
+  </data>
+  <data name="CategoryBack_Link" xml:space="preserve">
+    <value>&lt; Back</value>
+    <comment>Category/Edit and Item/Details and Item/Edit and Menu/Details and Menu_Category/Details and Menu_Item/Details</comment>
+  </data>
+  <data name="CategoryDelete_Confirm" xml:space="preserve">
+    <value>Are you sure you want to delete this category?</value>
+    <comment>Category/Delete</comment>
+  </data>
+  <data name="CategoryNew_Link" xml:space="preserve">
+    <value>+ New Category</value>
+    <comment>Category/Index</comment>
+  </data>
+  <data name="CategoryTable_Header" xml:space="preserve">
+    <value>category</value>
+    <comment>Category/Edit</comment>
+  </data>
+  <data name="Category_Delete" xml:space="preserve">
+    <value>Category Deleting...</value>
+    <comment>Category/Delete</comment>
+  </data>
+  <data name="Category_Header" xml:space="preserve">
+    <value>Category Manager</value>
+    <comment>Category/Index</comment>
+  </data>
+  <data name="CreateBill_Link" xml:space="preserve">
+    <value>+ Create New Bill</value>
+    <comment>Bill/ManageBills</comment>
+  </data>
+  <data name="DeleteConfirm" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="FriendshipTable_Header" xml:space="preserve">
+    <value>friendship</value>
+    <comment>Friendship/Create</comment>
+  </data>
+  <data name="Generic_BackToList" xml:space="preserve">
+    <value>Back To List</value>
+    <comment>This appears on the generic CRUD pages  to go back to Index</comment>
+  </data>
+  <data name="Generic_Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="Generic_Create_New" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Friendship/Index</comment>
+  </data>
+  <data name="Generic_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Generic_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Generic_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Generic_Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Generic_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="HomeIndex_Title" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ItemsTable_Header" xml:space="preserve">
+    <value>Items</value>
+    <comment>Category/Details</comment>
+  </data>
+  <data name="ItemTable_Category" xml:space="preserve">
+    <value>category</value>
+    <comment>Item/Index</comment>
+  </data>
+  <data name="ItemTable_DeleteHeader" xml:space="preserve">
+    <value>Are you sure you want to delete this?</value>
+    <comment>Item/Delete and Menu_Category/Delete and Menu_Item/Delete</comment>
+  </data>
+  <data name="ItemTable_Description" xml:space="preserve">
+    <value>description</value>
+    <comment>Item/Index</comment>
+  </data>
+  <data name="ItemTable_Header" xml:space="preserve">
+    <value>item</value>
+    <comment>Item/Create</comment>
+  </data>
+  <data name="ItemTable_ImageURL" xml:space="preserve">
+    <value>image_url</value>
+    <comment>Item/Index</comment>
+  </data>
+  <data name="ItemTable_MetaData" xml:space="preserve">
+    <value>metadata</value>
+    <comment>Item/Index</comment>
+  </data>
+  <data name="ItemTable_Name" xml:space="preserve">
+    <value>name</value>
+    <comment>Item/Index</comment>
+  </data>
+  <data name="ManageBills_Title" xml:space="preserve">
+    <value>Manage Bills</value>
+  </data>
+  <data name="ServiceRequest_Header" xml:space="preserve">
+    <value>Service Request(Admin/Resto)</value>
+    <comment>This appears in the main menu as a link</comment>
+  </data>
+  <data name="UserMenu_Header" xml:space="preserve">
+    <value>User Menus</value>
+    <comment>This appears in the main menu as a link</comment>
+  </data>
+  <data name="CategoriesLink" xml:space="preserve">
+    <value>Categories</value>
+    <comment>Shared/_NavDev and Shared/_NavRestaurant</comment>
+  </data>
+  <data name="CategoryActiveError" xml:space="preserve">
+    <value>This category is currently active! Cannot delete it.</value>
+    <comment>In Om</comment>
+  </data>
+  <data name="CategoryAssociationError" xml:space="preserve">
+    <value>This category has items associated to it. It cannot be deleted</value>
+    <comment>In OM</comment>
+  </data>
+  <data name="CategoryMenuAssociationError" xml:space="preserve">
+    <value>This category exists in a menu. It cannot be deleted</value>
+    <comment>In OM</comment>
+  </data>
+  <data name="CategoryTable_Desc" xml:space="preserve">
+    <value>space for some description like sides.</value>
+    <comment>Shared/_CategoryTable</comment>
+  </data>
+  <data name="DuplicateRequestError" xml:space="preserve">
+    <value>A request for service has already been made.</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="EmailNotUnique" xml:space="preserve">
+    <value>Email address already exists!</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="Error_Message" xml:space="preserve">
+    <value>Sorry, an error occurred while processing your request</value>
+    <comment>Shared/Error</comment>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Error</value>
+    <comment>Shared/Error</comment>
+  </data>
+  <data name="ItemCreate_Price" xml:space="preserve">
+    <value>price</value>
+    <comment>Shared/_ItemCreate and Shared/_ItemTable</comment>
+  </data>
+  <data name="ItemLink" xml:space="preserve">
+    <value>Item</value>
+    <comment>Shared/_NavDev and Shared/_NavRestaurant</comment>
+  </data>
+  <data name="ItemMenuAssociationError" xml:space="preserve">
+    <value>This item exists in a menu. It cannot be deleted</value>
+    <comment>In OM</comment>
+  </data>
+  <data name="LockError" xml:space="preserve">
+    <value>This service request has already been updated somewhere else. Please refresh and try again</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+    <comment>Shared/_LogOnPartial and User/LogOn</comment>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>Log Off</value>
+    <comment>Shared/_LogOnPartial</comment>
+  </data>
+  <data name="MenuActive" xml:space="preserve">
+    <value>Active</value>
+    <comment>In model</comment>
+  </data>
+  <data name="MenuActiveError" xml:space="preserve">
+    <value>This menu is currently active! Cannot delete it.</value>
+    <comment>In OM</comment>
+  </data>
+  <data name="MenuActiveWarning" xml:space="preserve">
+    <value>This menu is currently active. Disactivate it before deleting it.\n</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="MenuAjaxOrder_Link" xml:space="preserve">
+    <value>Order</value>
+    <comment>Menu/Order</comment>
+  </data>
+  <data name="MenuAssociationWarning" xml:space="preserve">
+    <value>This menu has categories associated to it. \n Are you sure you want to delete it?</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="MenuCategoryActiveWarning" xml:space="preserve">
+    <value>This category is currently active. Disactivate it before deleting it.\n</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="MenuCategoryAssociationWarning" xml:space="preserve">
+    <value>This menu category has items associated to it. \n Are you sure you want to delete it?</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="MenuCategoryCreate_TableHeader" xml:space="preserve">
+    <value>menu_category</value>
+    <comment>Menu_Category/Menu and Menu_Category/Delete and Menu_Category/Edit</comment>
+  </data>
+  <data name="MenuCategory_AjaxLink" xml:space="preserve">
+    <value>New Item</value>
+    <comment>Menu_Category/Details</comment>
+  </data>
+  <data name="MenuCategory_Form" xml:space="preserve">
+    <value>New Category</value>
+    <comment>Menu/Details</comment>
+  </data>
+  <data name="MenuCategory_TableCategory" xml:space="preserve">
+    <value>category</value>
+    <comment>Menu_Category/Index</comment>
+  </data>
+  <data name="MenuCategory_TableMenu" xml:space="preserve">
+    <value>menu</value>
+    <comment>Menu_Category/Index</comment>
+  </data>
+  <data name="MenuCatgeoryLink" xml:space="preserve">
+    <value>Menu Category</value>
+    <comment>Shared/_NavDev and Shared/_NavRestaurant</comment>
+  </data>
+  <data name="MenuCreate" xml:space="preserve">
+    <value>+ Create New Menu</value>
+    <comment>Menu/Index</comment>
+  </data>
+  <data name="MenuCreate_Header" xml:space="preserve">
+    <value>New Menu</value>
+    <comment>Menu/Create</comment>
+  </data>
+  <data name="MenuCreate_S1" xml:space="preserve">
+    <value>1- Create a new menu</value>
+    <comment>Menu/Index</comment>
+  </data>
+  <data name="MenuCreate_S2" xml:space="preserve">
+    <value>2- Edit a menu by clicking it</value>
+    <comment>Menu/Index</comment>
+  </data>
+  <data name="MenuCreate_S3" xml:space="preserve">
+    <value>3- Activate a menu using checkbox</value>
+    <comment>Menu/Index</comment>
+  </data>
+  <data name="MenuDeleteSuccessMessage" xml:space="preserve">
+    <value>Menu is now deleted</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="MenuDeleteSucessMessage" xml:space="preserve">
+    <value>Menu is now deleted</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="MenuDelete_Confirm" xml:space="preserve">
+    <value>Are you sure you want to delete this menu?</value>
+    <comment>Menu/Delete</comment>
+  </data>
+  <data name="MenuDelete_Header" xml:space="preserve">
+    <value>Menu Deleting...</value>
+    <comment>Menu/Delete</comment>
+  </data>
+  <data name="MenuDetails_Categories" xml:space="preserve">
+    <value>Available Categories</value>
+    <comment>Menu/Details</comment>
+  </data>
+  <data name="MenuDetails_Header" xml:space="preserve">
+    <value>On the Menu</value>
+    <comment>Menu/Details</comment>
+  </data>
+  <data name="MenuEditTable_Header" xml:space="preserve">
+    <value>menu</value>
+    <comment>Menu/Edit</comment>
+  </data>
+  <data name="MenuHeader" xml:space="preserve">
+    <value>Please fill in the following fields to create a menu.</value>
+    <comment>Menu/Create</comment>
+  </data>
+  <data name="MenuIndex_Header" xml:space="preserve">
+    <value>Menu Editor</value>
+    <comment>Menu/Index</comment>
+  </data>
+  <data name="MenuItemActiveError" xml:space="preserve">
+    <value>This menu item is currently active! Cannot delete it.</value>
+    <comment>In Om</comment>
+  </data>
+  <data name="MenuItemDeleteSuccessMessage" xml:space="preserve">
+    <value>Menu Item is now deleted</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="MenuItem_AjaxLink" xml:space="preserve">
+    <value>Add to order</value>
+    <comment>Menu_Item/Details</comment>
+  </data>
+  <data name="MenuItem_CancelConfirm" xml:space="preserve">
+    <value>Are you sure you want to cancel this order?</value>
+    <comment>Menu_Item/Cancel</comment>
+  </data>
+  <data name="MenuItem_RecentRatings" xml:space="preserve">
+    <value>Recent Ratings</value>
+    <comment>Menu_Item/Details and Menu_Item/PartialDetails</comment>
+  </data>
+  <data name="MenuItem_Space" xml:space="preserve">
+    <value>Space for list of ratings pertaining to this item</value>
+    <comment>Menu_Item/Details and Menu_Item/PartialDetails</comment>
+  </data>
+  <data name="MenuItem_TableHeader" xml:space="preserve">
+    <value>menu_item</value>
+    <comment>Menu_Item/Create and Menu_Item/Edit</comment>
+  </data>
+  <data name="MenuItem_TableItem" xml:space="preserve">
+    <value>item</value>
+    <comment>Menu_Item/Delete and Menu_Item/Index</comment>
+  </data>
+  <data name="MenuItem_TableMC" xml:space="preserve">
+    <value>menu_category</value>
+    <comment>Menu_Item/Delete and Menu_Item/Index</comment>
+  </data>
+  <data name="MenuItem_TablePrice" xml:space="preserve">
+    <value>price</value>
+    <comment>Menu_Item/Delete and Menu_Item/Index</comment>
+  </data>
+  <data name="MenuName" xml:space="preserve">
+    <value>Menu Name</value>
+    <comment>In model</comment>
+  </data>
+  <data name="MenuNameErrorMessage" xml:space="preserve">
+    <value>The {0} must be between {2} and {1} characters long.</value>
+    <comment>In model</comment>
+  </data>
+  <data name="MenuOrder_Header" xml:space="preserve">
+    <value>View Menu</value>
+    <comment>Menu/Order</comment>
+  </data>
+  <data name="MenuRestaurantName" xml:space="preserve">
+    <value>Restaurant</value>
+    <comment>In model</comment>
+  </data>
+  <data name="MenusLink" xml:space="preserve">
+    <value>Menus</value>
+    <comment>Shared/_NavCustomer and Shared/_NavDev and Shared/_NavRestaurant</comment>
+  </data>
+  <data name="MenusOrderUser" xml:space="preserve">
+    <value>Order-User</value>
+    <comment>Shared/_NavCustomer and Shared/_NavDev</comment>
+  </data>
+  <data name="MenuUser_Header" xml:space="preserve">
+    <value>Choose a menu</value>
+    <comment>Menu/UserMenu</comment>
+  </data>
+  <data name="OrderAminLink" xml:space="preserve">
+    <value>Order-Admin</value>
+    <comment>Shared/_NavDev and Shared/_NavRestaurant</comment>
+  </data>
+  <data name="OrderDeclineConfirm" xml:space="preserve">
+    <value>Are you sure you want to decline this item?</value>
+    <comment>Order/Decline</comment>
+  </data>
+  <data name="OrderDecline_Title" xml:space="preserve">
+    <value>Decline Item</value>
+    <comment>Order/Decline</comment>
+  </data>
+  <data name="OrderEdit_Total" xml:space="preserve">
+    <value>order  Total:</value>
+    <comment>Order/Edit</comment>
+  </data>
+  <data name="OrderItemProcessingError" xml:space="preserve">
+    <value>This order has an item that is being processed. Cannot delete it.</value>
+    <comment>In Om</comment>
+  </data>
+  <data name="OrderItem_Header" xml:space="preserve">
+    <value>Item #</value>
+    <comment>Order/Index</comment>
+  </data>
+  <data name="OrderItem_LastChanged" xml:space="preserve">
+    <value>last_changed</value>
+    <comment>Order_Item/Details and Order_Item/Index</comment>
+  </data>
+  <data name="OrderItem_MI" xml:space="preserve">
+    <value>menu_item</value>
+    <comment>Order_Item/Details and Order_Item/Index</comment>
+  </data>
+  <data name="OrderItem_Note" xml:space="preserve">
+    <value>note</value>
+    <comment>Order_Item/Details and Order_Item/Index</comment>
+  </data>
+  <data name="OrderItem_Status" xml:space="preserve">
+    <value>order_item_status</value>
+    <comment>Order_Item/Details and Order_Item/Index</comment>
+  </data>
+  <data name="OrderItem_TableHeader" xml:space="preserve">
+    <value>order_item</value>
+    <comment>Order_Item/Create and Order_Item/Edit</comment>
+  </data>
+  <data name="OrderItem_TableOrder" xml:space="preserve">
+    <value>order</value>
+    <comment>Order_Item/Details and Order_Item/Index</comment>
+  </data>
+  <data name="OrderItem_Version" xml:space="preserve">
+    <value>version</value>
+    <comment>Order_Item/Details and Order_Item/Index</comment>
+  </data>
+  <data name="OrderManage_Action" xml:space="preserve">
+    <value>Manage bills</value>
+    <comment>Order/Index</comment>
+  </data>
+  <data name="OrderNumber_Header" xml:space="preserve">
+    <value>Order #</value>
+    <comment>Order/Index</comment>
+  </data>
+  <data name="OrderOS_Header" xml:space="preserve">
+    <value>Order Status:</value>
+    <comment>Order/Index</comment>
+  </data>
+  <data name="OrdersNA" xml:space="preserve">
+    <value>You do not have any Orders created</value>
+    <comment>Order/OrderUserDetails and Order/ViewFromSession</comment>
+  </data>
+  <data name="Orders_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Order/OrderUserDetails and Order/ViewFromSession</comment>
+  </data>
+  <data name="Orders_CookingStatus" xml:space="preserve">
+    <value>Cooking Status:</value>
+    <comment>Order/OrderUserDetails</comment>
+  </data>
+  <data name="Orders_Description" xml:space="preserve">
+    <value>Description:</value>
+    <comment>Order/OrderUserDetails</comment>
+  </data>
+  <data name="Orders_Editing" xml:space="preserve">
+    <value>Edit Order</value>
+    <comment>Order/OrderUserDetails and Order/ViewFromSession</comment>
+  </data>
+  <data name="Orders_Finalize" xml:space="preserve">
+    <value>Finalize</value>
+    <comment>Order/OrderUserDetails and Order/ViewFromSession</comment>
+  </data>
+  <data name="Orders_Name" xml:space="preserve">
+    <value>Name</value>
+    <comment>Order/ViewFromSession</comment>
+  </data>
+  <data name="Orders_Note" xml:space="preserve">
+    <value>Note:</value>
+    <comment>Order/OrderUserDetails</comment>
+  </data>
+  <data name="Orders_OrderBy" xml:space="preserve">
+    <value>Ordered by:</value>
+    <comment>Order/OrderUserDetails and Order/ViewFromSession</comment>
+  </data>
+  <data name="Orders_StatusMessage" xml:space="preserve">
+    <value>Status:</value>
+    <comment>Order/OrderUserDetails and Order/ViewFromSession</comment>
+  </data>
+  <data name="Orders_Total" xml:space="preserve">
+    <value>Total</value>
+    <comment>Order/ViewFromSession</comment>
+  </data>
+  <data name="Orders_ViewOrder" xml:space="preserve">
+    <value>View Order</value>
+    <comment>Order/OrderUserDetails</comment>
+  </data>
+  <data name="Orders_WaiterGreeting" xml:space="preserve">
+    <value>Your waiter today is</value>
+    <comment>Order/OrderUserDetails and Order/ViewFromSession</comment>
+  </data>
+  <data name="OrderTime_Header" xml:space="preserve">
+    <value>Time:</value>
+    <comment>Order/Index</comment>
+  </data>
+  <data name="OrderWaiter_Header" xml:space="preserve">
+    <value>Waiter:</value>
+    <comment>Order/Index</comment>
+  </data>
+  <data name="Order_Accept" xml:space="preserve">
+    <value>Accept</value>
+    <comment>Order/Edit</comment>
+  </data>
+  <data name="Order_DetailsItem" xml:space="preserve">
+    <value>ITEM</value>
+    <comment>Order/Details and Order/Edit</comment>
+  </data>
+  <data name="Order_DetailsNote" xml:space="preserve">
+    <value>NOTE</value>
+    <comment>Order/Details and Order/Edit</comment>
+  </data>
+  <data name="Order_DetailsType" xml:space="preserve">
+    <value>TYPE</value>
+    <comment>Order/Details and Order/Edit</comment>
+  </data>
+  <data name="Order_Index_Header" xml:space="preserve">
+    <value>Manage Orders</value>
+    <comment>Order/Index</comment>
+  </data>
+  <data name="Order_OrderStatus" xml:space="preserve">
+    <value>order_status</value>
+    <comment>Order/Cancel and Order/Delete and Order/Details</comment>
+  </data>
+  <data name="Order_Remove" xml:space="preserve">
+    <value>Remove</value>
+    <comment>Order/Edit</comment>
+  </data>
+  <data name="Order_Table" xml:space="preserve">
+    <value>order</value>
+    <comment>Order/Cancel </comment>
+  </data>
+  <data name="Order_TableMenuItemName" xml:space="preserve">
+    <value>Menu Item Name</value>
+    <comment>Order/Decline</comment>
+  </data>
+  <data name="Order_TableNumber" xml:space="preserve">
+    <value>table_number</value>
+    <comment>Order/Cancel and Order/Decline and Order/Delete and Order/Details</comment>
+  </data>
+  <data name="Order_TableOIVersion" xml:space="preserve">
+    <value>Order Item Version</value>
+    <comment>Order/Decline</comment>
+  </data>
+  <data name="Order_TableOrderVersion" xml:space="preserve">
+    <value>order version</value>
+    <comment>Order/Decline</comment>
+  </data>
+  <data name="Order_TableTimestamp" xml:space="preserve">
+    <value>timestamp</value>
+    <comment>Order/Cancel and Order/Decline and Order/Delete and Order/Details</comment>
+  </data>
+  <data name="Order_TableTotal" xml:space="preserve">
+    <value>total</value>
+    <comment>Order/Cancel and Order/Delete and Order/Details</comment>
+  </data>
+  <data name="Order_Table_Header" xml:space="preserve">
+    <value>Table #:</value>
+    <comment>Order/Index and Order/OrderUserDetails</comment>
+  </data>
+  <data name="Order_User" xml:space="preserve">
+    <value>user</value>
+    <comment>Order/Cancel and Order/Decline and Order/Delete and Order/Details</comment>
+  </data>
+  <data name="Order_Version" xml:space="preserve">
+    <value>version</value>
+    <comment>Order/Cancel and Order/Delete and Order/Details</comment>
+  </data>
+  <data name="Order_Waiter" xml:space="preserve">
+    <value>waiter</value>
+    <comment>Order/Cancel and Order/Decline and Order/Delete and Order/Details</comment>
+  </data>
+  <data name="RestaurantAddress" xml:space="preserve">
+    <value>Address</value>
+    <comment>In model</comment>
+  </data>
+  <data name="RestaurantAnonAuthor" xml:space="preserve">
+    <value>:Anonymous</value>
+    <comment>Restaurant/_ReviewsPartial</comment>
+  </data>
+  <data name="RestaurantCity" xml:space="preserve">
+    <value>City</value>
+    <comment>In model</comment>
+  </data>
+  <data name="RestaurantLink" xml:space="preserve">
+    <value>Restaurant</value>
+    <comment>Shared/_NavAdmin and Shared/_NavDev and Shared/_NavRestaurant</comment>
+  </data>
+  <data name="RestaurantName" xml:space="preserve">
+    <value>Restaurant Name</value>
+    <comment>In model</comment>
+  </data>
+  <data name="RestaurantPostalCode" xml:space="preserve">
+    <value>Postal Code</value>
+    <comment>In model</comment>
+  </data>
+  <data name="RestaurantReview_Header" xml:space="preserve">
+    <value>Latest Reviews</value>
+    <comment>Restaurant/_ReviewsPartial</comment>
+  </data>
+  <data name="Restaurant_Address" xml:space="preserve">
+    <value>address</value>
+    <comment>Restaurant/Delete and Restaurant/Index</comment>
+  </data>
+  <data name="Restaurant_City" xml:space="preserve">
+    <value>city</value>
+    <comment>Restaurant/Delete and Restaurant/Index</comment>
+  </data>
+  <data name="Restaurant_Header" xml:space="preserve">
+    <value>restaurant</value>
+    <comment>Restaurant/Create and Restaurant/Edit</comment>
+  </data>
+  <data name="Restaurant_Name" xml:space="preserve">
+    <value>name</value>
+    <comment>Restaurant/Delete and Restaurant/Index</comment>
+  </data>
+  <data name="Restaurant_PC" xml:space="preserve">
+    <value>postal_code</value>
+    <comment>Restaurant/Delete and Restaurant/Index</comment>
+  </data>
+  <data name="Restaurant_Rating" xml:space="preserve">
+    <value>rating</value>
+    <comment>Restaurant/Delete and Restaurant/Index</comment>
+  </data>
+  <data name="ReviewDescription" xml:space="preserve">
+    <value>Review Description</value>
+    <comment>In model</comment>
+  </data>
+  <data name="ReviewMakeAnonymous" xml:space="preserve">
+    <value>Make Review Anonymous</value>
+    <comment>In model</comment>
+  </data>
+  <data name="ReviewRating" xml:space="preserve">
+    <value>Rating</value>
+    <comment>In model</comment>
+  </data>
+  <data name="ReviewWrittenBy" xml:space="preserve">
+    <value>Written By</value>
+    <comment>In model</comment>
+  </data>
+  <data name="ReviewWrittenOn" xml:space="preserve">
+    <value>Written On</value>
+    <comment>In model</comment>
+  </data>
+  <data name="Review_Header" xml:space="preserve">
+    <value>Now reviewing:</value>
+    <comment>Review/Create</comment>
+  </data>
+  <data name="ServiceRequest_Back" xml:space="preserve">
+    <value>Back to Service Requests</value>
+    <comment>Service_Request/Create</comment>
+  </data>
+  <data name="ServiceRequest_CallW" xml:space="preserve">
+    <value>Call Waiter!</value>
+    <comment>Service_Request/Create</comment>
+  </data>
+  <data name="ServiceRequest_CancelUser" xml:space="preserve">
+    <value>Cancel Service Request</value>
+    <comment>Service_Request/Cancel</comment>
+  </data>
+  <data name="ServiceRequest_Comment" xml:space="preserve">
+    <value>Comment:</value>
+    <comment>Service_Request/Cancel  and Service_Request/Close and Service_Request/Delete</comment>
+  </data>
+  <data name="ServiceRequest_Create" xml:space="preserve">
+    <value>Create Service Request</value>
+    <comment>Service_Request/Create</comment>
+  </data>
+  <data name="ServiceRequest_Created" xml:space="preserve">
+    <value>Created:</value>
+    <comment>Service_Request/Cancel  and Service_Request/Close and Service_Request/Delete</comment>
+  </data>
+  <data name="ServiceRequest_Delete" xml:space="preserve">
+    <value>Delete Service Request</value>
+    <comment>Service_Request/Delete</comment>
+  </data>
+  <data name="ServiceRequest_Details" xml:space="preserve">
+    <value>Service Request Details</value>
+    <comment>Service_Request/Details</comment>
+  </data>
+  <data name="ServiceRequest_Edit" xml:space="preserve">
+    <value>Edit Service Request</value>
+    <comment>Service_Request/Edit</comment>
+  </data>
+  <data name="ServiceRequest_HeaderList" xml:space="preserve">
+    <value>Service Requests</value>
+    <comment>Service_Request/Index</comment>
+  </data>
+  <data name="ServiceRequest_Resaurant" xml:space="preserve">
+    <value>Restaurant ID:</value>
+    <comment>Service_Request/Cancel and Service_Request/Close and Service_Request/Delete</comment>
+  </data>
+  <data name="ServiceRequest_RestaurantName" xml:space="preserve">
+    <value>Restaurant Name:</value>
+    <comment>Service_Request/Cancel  and Service_Request/Close and Service_Request/Delete</comment>
+  </data>
+  <data name="ServiceRequest_Table" xml:space="preserve">
+    <value>Table:</value>
+    <comment>Service_Request/Cancel  and Service_Request/Close and Service_Request/Delete</comment>
+  </data>
+  <data name="Service_Request_CancelConfirm" xml:space="preserve">
+    <value>Are you sure you want to cancel this service request?</value>
+    <comment>Service_Request/Cancel</comment>
+  </data>
+  <data name="Service_Request_CloseConfirm" xml:space="preserve">
+    <value>Close Service Request</value>
+    <comment>Service_Request/Close</comment>
+  </data>
+  <data name="Service_Request_DeleteConfirm" xml:space="preserve">
+    <value>Are you sure you want to delete this service request?</value>
+    <comment>Service_Request/Delete</comment>
+  </data>
+  <data name="StringExcpetion" xml:space="preserve">
+    <value>Invalid string value in StrToByteArray</value>
+    <comment>In Util/AES</comment>
+  </data>
+  <data name="TableLink" xml:space="preserve">
+    <value>Table</value>
+    <comment>Shared/_NavDev and Shared/_NavRestaurant</comment>
+  </data>
+  <data name="TableNullError" xml:space="preserve">
+    <value>Table reference cannot be left blank</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="Table_Name" xml:space="preserve">
+    <value>name</value>
+    <comment>Table/Delete and Table/Details</comment>
+  </data>
+  <data name="Table_NFC" xml:space="preserve">
+    <value>NFC Link</value>
+    <comment>Table/Index</comment>
+  </data>
+  <data name="TAble_Number" xml:space="preserve">
+    <value>Table #</value>
+    <comment>Table/Manage</comment>
+  </data>
+  <data name="Table_Orders" xml:space="preserve">
+    <value>Manage Orders</value>
+    <comment>Table/Manage</comment>
+  </data>
+  <data name="Table_Restaurant" xml:space="preserve">
+    <value>restaurant</value>
+    <comment>Table/Delete and Table/Details</comment>
+  </data>
+  <data name="UnknownError" xml:space="preserve">
+    <value>An unknown error has occurred, please try again.</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="UserConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UserConfirmPasswordError" xml:space="preserve">
+    <value>The password and confirmation password do not match.</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UserCreate" xml:space="preserve">
+    <value>Create a new user profile</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="UserCreate_ErrorMessage" xml:space="preserve">
+    <value>Account creation was unsuccessful. Please correct the errors and try again.</value>
+    <comment>User/Create</comment>
+  </data>
+  <data name="UserCreate_Message" xml:space="preserve">
+    <value>Please fill in the following fields to create a user account.</value>
+    <comment>User/Create</comment>
+  </data>
+  <data name="UserCreate_Title" xml:space="preserve">
+    <value>Sign Up</value>
+    <comment>User/Create</comment>
+  </data>
+  <data name="UserEmailAddress" xml:space="preserve">
+    <value>Email Address</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UserFirstName" xml:space="preserve">
+    <value>First Name</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UserImage" xml:space="preserve">
+    <value>User Image</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UserLastName" xml:space="preserve">
+    <value>Last Name</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UserList" xml:space="preserve">
+    <value>Touch For Food User List</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UserNameError" xml:space="preserve">
+    <value>The {0} must be at least {2} characters long.</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UserNameNotUnique" xml:space="preserve">
+    <value>User name already exists!</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="UserPassword" xml:space="preserve">
+    <value>Password</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UserPasswordError" xml:space="preserve">
+    <value>The {0} must be at least {2} characters long.</value>
+    <comment>In model</comment>
+  </data>
+  <data name="UsersLink" xml:space="preserve">
+    <value>Users</value>
+    <comment>Shared/_NavAdmin and Shared/_NavCustomer and Shared/_NavDev</comment>
+  </data>
+  <data name="User_Email" xml:space="preserve">
+    <value>email</value>
+    <comment>User/Delete  and User/Index</comment>
+  </data>
+  <data name="User_FirstName" xml:space="preserve">
+    <value>first_name</value>
+    <comment>User/Delete  and User/Index</comment>
+  </data>
+  <data name="User_LastName" xml:space="preserve">
+    <value>last_name</value>
+    <comment>User/Delete  and User/Index</comment>
+  </data>
+  <data name="User_Password" xml:space="preserve">
+    <value>password</value>
+    <comment>User/Delete  and User/Index</comment>
+  </data>
+  <data name="User_PastOrders" xml:space="preserve">
+    <value>Past Orders</value>
+    <comment>User/_PastOrdersPartial</comment>
+  </data>
+  <data name="User_PastOrdersDetails" xml:space="preserve">
+    <value>View Order Details</value>
+    <comment>User/_PastOrdersPartial</comment>
+  </data>
+  <data name="User_PastReviews" xml:space="preserve">
+    <value>Past Reviews</value>
+    <comment>User/_PastReviewsPartial</comment>
+  </data>
+  <data name="User_Profile" xml:space="preserve">
+    <value>My Profile</value>
+    <comment>User/Details and User/Index</comment>
+  </data>
+  <data name="User_Username" xml:space="preserve">
+    <value>username</value>
+    <comment>User/Delete and User/Index</comment>
+  </data>
+  <data name="VersioningError" xml:space="preserve">
+    <value>This record has already been updated. Please refresh and try again</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="ServerError" xml:space="preserve">
+    <value>An internal server error occurred while processing your request, please try again later.</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>Welcome to Touch For Food</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="DeleteError" xml:space="preserve">
+    <value>Error deleting the item</value>
+  </data>
+  <data name="DeleteSuccesful" xml:space="preserve">
+    <value>Item has been succesful deleted</value>
+  </data>
+  <data name="Review_Create_Error" xml:space="preserve">
+    <value>There was an error creating the review</value>
+    <comment>ReviewController/Create</comment>
+  </data>
+  <data name="SideActiveWarning" xml:space="preserve">
+    <value>This side is currently active! Cannot delete it.</value>
+    <comment>In the Side OM</comment>
+  </data>
+  <data name="EmailAlreadyExists" xml:space="preserve">
+    <value>Email address already exists!</value>
+    <comment>In User controller</comment>
+  </data>
+  <data name="UserNameAlreadyExists" xml:space="preserve">
+    <value>User name already exists!</value>
+    <comment>In User controller</comment>
+  </data>
+  <data name="ServiceRequestDuplicateRequestError" xml:space="preserve">
+    <value>A request for service has already been made at the selected table.</value>
+    <comment>In Controller</comment>
+  </data>
+  <data name="ServiceRequestLockError" xml:space="preserve">
+    <value>This service request has already been updated somewhere else. Please refresh and try again</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="ServiceRequestTableNullError" xml:space="preserve">
+    <value>Table reference cannot be left blank</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="ServiceRequestAdminSuccess" xml:space="preserve">
+    <value>Service Request has been created!</value>
+    <comment>In controller create</comment>
+  </data>
+  <data name="ServiceRequestSuccess" xml:space="preserve">
+    <value>The waiter has been called!</value>
+    <comment>In controller create</comment>
+  </data>
+  <data name="TableCreateError" xml:space="preserve">
+    <value>Cannot create a table. No restaurant associated to you.</value>
+    <comment>In TableController</comment>
+  </data>
+  <data name="MenuItemCreateError" xml:space="preserve">
+    <value>Error creating the menu item.</value>
+    <comment>Im Menu_ItemController</comment>
+  </data>
+  <data name="OrderLockError" xml:space="preserve">
+    <value>This order has already been updated somewhere else. Please refresh and try again</value>
+    <comment>In OrderController</comment>
+  </data>
+  <data name="RestaurantUserNotSpecifiedError" xml:space="preserve">
+    <value>Please specifiy a user and a restaurant</value>
+    <comment>In RestaurantUserController</comment>
+  </data>
+  <data name="ReviewOrderItemDeleted" xml:space="preserve">
+    <value>Review Order Item is now deleted</value>
+    <comment>In Review_Order_ItemController</comment>
+  </data>
+  <data name="ReviewVMSession" xml:space="preserve">
+    <value>ReviewVM</value>
+    <comment>In ReviewController</comment>
+  </data>
+  <data name="TouchForFoodUserList" xml:space="preserve">
+    <value>Touch For Food User List</value>
+    <comment>In UserController</comment>
+  </data>
+  <data name="UserCreateProfile" xml:space="preserve">
+    <value>Create a new user profile</value>
+    <comment>In UserController</comment>
+  </data>
+  <data name="UsernamePasswordIncorrect" xml:space="preserve">
+    <value>The user name or password provided is incorrect.</value>
+    <comment>In UserController</comment>
+  </data>
+  <data name="ServiceRequestClientNotAssignedTable" xml:space="preserve">
+    <value>Table number missing! To request service through TFF please sign in at a table.</value>
+    <comment>In controller</comment>
+  </data>
+  <data name="ServiceRequestDuplicateRequestClient" xml:space="preserve">
+    <value>A call for service has already been made for your table.</value>
+    <comment>In controller</comment>
+  </data>
+</root>

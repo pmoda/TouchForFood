@@ -1,0 +1,85 @@
+﻿@model System.Collections.Generic.Dictionary<TouchForFood.ViewModels.SearchViewModel, int>
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.ViewModels
+@using TouchForFood.Util.Html
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var searchString = ViewBag.SearchString;
+}
+
+@section JavaScript{
+    <script type="text/javascript" src="@Url.Content("/Scripts/Menu/menu_ajax_handler.js")"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/colorbox/jquery.colorbox-min.js")"></script>
+}
+
+<link rel="stylesheet" href="@Url.Content("/Content/stylesheets/colorbox.css")" />
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $(".ajax").colorbox({ width: "95%" });
+
+    });
+
+</script>
+
+<div class="one-third column">&nbsp;</div>
+
+<div class="one-third column">
+
+@if (Model.Count() < 1)
+{
+    <div>Sorry, we couldn't find any results for: @searchString</div>
+}
+else
+{
+    <div>Showing results for: <span class="bold italic">@searchString</span></div>
+    <br />
+
+    foreach (KeyValuePair<SearchViewModel, int> item in Model.OrderByDescending(key => key.Value))
+    {
+
+
+        var item_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("PartialDetails", "Menu_Item", new { id = item.Key.menuItemId }));
+        var side_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("PickSides", "Menu_Item", new { id = item.Key.menuItemId }));
+                
+        <div id="mi-@item.Key.menuItemId" style="overflow:auto;">
+            <div class="bold go-left">
+                <a class='ajax cboxElement' href='@item_url'>
+                    @Html.Raw(item.Key.name)
+                </a>
+            </div>
+
+            <div class="bold go-right">
+                <a class='vm-button ajax cboxElement' href='@side_url'>
+                    Order
+                </a>
+            </div>
+                
+            <div class="bold go-right">
+                $@Html.Raw(item.Key.price.ToString())
+            </div>
+            <div class="clear"></div>
+        
+            <div class="bold go-left smaller-font">
+                Menu: @Html.Raw(item.Key.menuName)
+            </div>
+        
+            <div class="clear"></div>
+           
+            <div class="italic go-left">
+                @Html.Raw(item.Key.description)
+            </div>
+        </div>
+        <div class="clear"></div>
+        <br />
+    
+    }
+}
+
+
+
+</div>

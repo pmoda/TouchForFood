@@ -1,0 +1,20 @@
+﻿@model IEnumerable<TouchForFood.Models.menu_item>
+@using TouchForFood.Util.Html
+
+@foreach (var item in Model)
+{
+    var item_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("PartialDetails", "Menu_Item", new { id = item.id }));
+    
+    <a class='go-left ajax cboxElement' href='@item_url'>
+        @Html.Raw(item.item.name)
+    </a>
+
+    @Ajax.ActionLink("X", "AjaxDelete", "Menu_Item", new { id = item.id }, new AjaxOptions()
+{
+    Confirm = "Are you sure you want to delete?",
+    HttpMethod = "POST",
+    OnSuccess = "onRemoveMenuItemSuccess",
+    OnFailure = "console.log(error)"
+}, new { @class = "go-right remove-button" })
+    <div style="clear: both;"></div>            
+}

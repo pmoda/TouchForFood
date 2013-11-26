@@ -1,0 +1,85 @@
+﻿@model TouchForFood.Models.menu_category
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Util.Html
+
+@{
+    ViewBag.Title = @Model.category.name;
+}
+
+@section JavaScript{
+    <script type="text/javascript" src="@Url.Content("/Scripts/Menu/menu_ajax_handler.js")"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/colorbox/jquery.colorbox-min.js")"></script>
+}
+
+<link rel="stylesheet" href="@Url.Content("/Content/stylesheets/colorbox.css")" />
+
+<script>
+
+    $(document).ready(function () {
+
+        $(".ajax").colorbox({ width: "370px" });
+
+    });
+
+</script>
+
+<div class="sixteen columns">    
+    @Html.ActionLink("< Back", "Details", "Menu", new { id = @Model.menu_id }, new { @class = "button go-left" })
+    <h3 class="offset-by-one main-green go-left remove-br">@Html.DisplayFor(model => model.menu.name)</h3>
+    &nbsp
+</div>
+
+<div class="one-third column"> 
+    <fieldset>
+        <h4 class="main-green">@Html.DisplayFor(model => model.category.name)</h4>
+        <hr />
+        <h5>Menu Items</h5>
+        <hr />
+            @Html.Action("OnTheMenu", "Menu_Item", @Model.id)
+             <hr />
+             <h5>Sides</h5>
+             <hr />
+            @foreach (var side in Model.sides)
+            {
+                if (side.is_active)
+                {
+                    <span class="side-color">@Html.Raw(side.name)</span>
+
+                    @Ajax.ActionLink("X", "AjaxActive", "Side", new { id = side.id, isActive = false }, new AjaxOptions()
+               {
+                   Confirm = "Are you sure you want to set the side as inactive?",
+                   HttpMethod = "POST",
+                   OnSuccess = "window.location.reload()",
+                   OnFailure = "console.log(error)"
+               }, new { @class = "go-right remove-button" })
+                    <div class="clear"></div>
+                }
+            }       
+
+    </fieldset>
+</div>
+<div class="two-thirds column">
+    <fieldset>
+        <h4 class="main-green go-left remove-br">Available Items</h4>            
+        <h5 class="go-right remove-br">
+            ( 
+                @{
+                    var item_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("CreatePartial", "Item", new { cat_id = Model.id }));
+                }
+                <a class='ajax cboxElement' href='@item_url'>New Item</a>
+            )
+        </h5>
+        <h5 class="go-right remove-br">
+            ( 
+                @{
+                    var side_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("CreatePartial", "Side", new { cat_id = Model.id }));
+                }
+                <a class='ajax cboxElement' href='@side_url'>New Side</a>
+            )
+        </h5>
+        <div style="clear: both;"></div>
+        <!-- Partially render Category Index-->
+        @Html.Action("FilterItems", "Item", @Model)
+        @Html.Action("FilterSides", "Side", @Model)
+    </fieldset>
+</div>

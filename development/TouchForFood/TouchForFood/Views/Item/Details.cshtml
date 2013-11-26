@@ -1,0 +1,58 @@
+﻿@model TouchForFood.Models.item
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="sixteen columns">   
+    @*if admin give Edit option, or else just Back to List*@ 
+        @Html.ActionLink("< Back", "Index", null, new { @class = "button go-left" })
+       @* @Html.ActionLink("Edit", "Edit", new { id=Model.id } , new {@class="button"})*@
+       
+    <h3 class="offset-by-one go-left main-green">@Model.name &nbsp;<h5 class="user-edit-link">(@Html.ActionLink("Edit", "Edit", new { id = Model.id }))</h5></h3>    
+</div>
+
+<div class="one-third column">
+   
+<fieldset>
+@*
+    <div class="display-label">name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.name)
+    </div>*@
+        <div class="editor-label">
+            @Html.LabelFor(model => model.description)
+        </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.metadata)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.metadata)
+    </div>
+    
+        <div class="editor-label">
+            @Html.LabelFor(model => model.category)
+        </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.category.name)
+    </div>
+    @*
+    <div class="display-field">
+        @Html.DisplayFor(model => model.image_url)
+    </div>*@
+</fieldset>
+</div>
+
+@if (Model.image_url != String.Empty)
+{
+<div class="one-third column">
+    <img alt="blank" width="300" height="265" src = "http://@(Model.image_url)"/>        
+    <div class="spacer20"></div>
+
+</div>
+}

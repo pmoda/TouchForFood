@@ -1,0 +1,70 @@
+﻿@model TouchForFood.Models.review
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>review</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.written_by)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.written_by)
+            @Html.ValidationMessageFor(model => model.written_by)
+        </div>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.restaurant_id, "restaurant")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("restaurant_id", String.Empty)
+            @Html.ValidationMessageFor(model => model.restaurant_id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.user_id, "user")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("user_id", String.Empty)
+            @Html.ValidationMessageFor(model => model.user_id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.rating)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.rating)
+            @Html.ValidationMessageFor(model => model.rating)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.is_anonymous)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.is_anonymous)
+            @Html.ValidationMessageFor(model => model.is_anonymous)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

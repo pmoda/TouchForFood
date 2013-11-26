@@ -1,0 +1,16 @@
+﻿@using TouchForFood.Util.User
+@using TouchForFood.Models
+@using TouchForFood.Util.Security
+
+@if(Request.IsAuthenticated) {
+    HttpRequest request = HttpContext.Current.Request;
+    HttpRequestBase requestBase = new HttpRequestWrapper(request);
+    user authUser = UserUtil.getAuthenticatedUser(requestBase);
+    
+    <text>Welcome <strong class="main-green">@Html.ActionLink(User.Identity.Name, "Details", "User", new { id = authUser.id }, null)</strong>!</text>
+    @Html.ActionLink("&nbsp;", "LogOff", "User", null, new { @class = "user-button user-logout", title = "Logout" })
+}
+else
+{
+    @Html.ActionLink("&nbsp;", "LogOn", "User", null, new { @class = "user-button user-login", title = "Login" })
+}

@@ -1,0 +1,12 @@
+﻿@model TouchForFood.Models.category
+@{
+    var tag = ViewData["tag"];
+    if(tag==null)
+    {
+        tag = "td";
+    }
+}
+
+<@tag class="display-field">
+   @Html.DisplayFor(model => model.name)
+</@tag>

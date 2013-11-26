@@ -1,0 +1,10 @@
+﻿@using (Html.BeginForm("Search", "Search", FormMethod.Post, new { id = "search" }))    
+{
+
+    @Html.TextBox("searchString", null, new { @class="go-left search-input" })
+    
+    <input class="go-left search-seethrough" type="submit" value="Search"/>  
+    <img src="@Url.Content("~/Content/images/search24.png")" class="go-left search-button" alt="HTML tutorial" width="24" height="24"/>    
+}
+
+<div class="clear"></div>

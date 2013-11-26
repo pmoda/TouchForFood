@@ -1,0 +1,36 @@
+﻿@model TouchForFood.Models.review_order_item
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>review_order_item</legend>
+
+    <div class="display-label">rating</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.rating)
+    </div>
+
+    <div class="display-label">review_text</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.review_text)
+    </div>
+
+    <div class="display-label">order_item</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.order_item.note)
+    </div>
+
+    <div class="display-label">review</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.review.id)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

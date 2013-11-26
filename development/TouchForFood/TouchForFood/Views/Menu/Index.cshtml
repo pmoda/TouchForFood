@@ -1,0 +1,97 @@
+﻿@model IEnumerable<TouchForFood.Models.menu>
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Menu Editor";
+}
+<script type="text/javascript">
+    var actionUrl =
+    ' @Url.Action("toggleActiveMenu", "Menu", new { id = "PLACEHOLDER" })';
+
+    function Activate(ID) {
+        window.location.replace(actionUrl.replace('PLACEHOLDER', ID));
+     }
+</script>
+<div class="sixteen columns"> 
+    <h3 class="main-green go-left">Menu Editor</h3>
+    <div class="clear"></div>
+    <h5 class="light-blue">
+        <span class="five columns">1- Create a new menu</span> 
+        <span class="five columns">2- Edit a menu by clicking it</span> 
+        <span class="five columns">3- Activate a menu using checkbox</span> 
+    </h5>
+</div>
+
+<div class="clear"></div>
+<br />
+
+<div class="one-third column">
+<div class="food-menu-delete"></div>     
+    <h4>
+        @Html.ActionLink("+ Create New Menu", "Create", null, new { @class = "food-menu-button food-menu-button-size" })
+    </h4>
+</div> 
+ 
+@foreach (var item in Model)
+{
+    <div class="one-third column"> 
+        <div class="food-menu-delete">
+            <a href="@Url.Content("Menu/Delete/" + item.id)"> 
+            <img src="@Url.Content("~/Content/images/trash.png")" alt="HTML tutorial" width="22" height="22"></a>
+        </div>         
+
+       <div class="editor-field food-menu-active">@*
+            @Html.LabelFor(model => item.is_active)
+            @Html.DisplayFor(model => item.is_active)*@
+            @Html.CheckBoxFor(model => item.is_active, new
+       {
+           onclick = "Activate(" + item.id + ");"
+       })
+        </div>
+        <h4>        
+        @if (item.is_active == true)
+        {  
+            @Html.ActionLink(item.name, "Details", new { id = item.id }, new { @class = "food-menu-button isactive-menu-button" })
+        }
+        else
+        {
+            @Html.ActionLink(item.name, "Details", new { id = item.id }, new { @class = "food-menu-button food-menu-button-size" })
+        }
+        </h4>
+    </div>  
+
+}
+
+@*<table>
+    <tr>
+        <th>
+            restaurant
+        </th>
+        <th>
+            name
+        </th>
+        <th>
+            Is active
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.restaurant.name)
+        </td>
+        <td>
+            @Html.ActionLink(item.name, "Details", new { id=item.id})
+        </td>
+        <td>
+           @Html.DisplayFor(modelItem => item.is_active)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>*@

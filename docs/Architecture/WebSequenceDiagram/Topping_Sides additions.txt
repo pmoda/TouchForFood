@@ -1,0 +1,10 @@
+title Topping/Sides additions
+alt Item has Toppings
+    Client->System: add Topping
+    System->Client: confirm Topping
+end
+alt item has sides
+    Client->System: add Side
+    System->Client: confirm Sides
+end
+

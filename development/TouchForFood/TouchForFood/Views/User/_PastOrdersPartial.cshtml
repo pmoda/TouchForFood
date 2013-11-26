@@ -1,0 +1,66 @@
+﻿@model IEnumerable<TouchForFood.Models.order>
+@using TouchForFood.App_GlobalResources
+<fieldset>
+    <legend>Past Orders</legend>
+    <div id="pastReviews">
+        @foreach (var item in Model)
+        {
+            if (item.order_status == (int)TouchForFood.Models.OrderStatusHelper.OrderStatusEnum.COMPLETE)
+            {
+            <div class="orderContainer">
+                <div class="order-top main-green">
+                    <div class="orderRestaurantName">
+                        @* Make a link to the restaurant's details *@
+                        @Html.ActionLink(item.table.restaurant.name, "Details", "Restaurant",
+                     new { id = item.table.restaurant.id }, null)
+                        <span class="orderTotalCost go-right">
+                            @Html.DisplayFor(modelItem => item.total)$ </span>
+                    </div>
+                </div>
+                <div>
+                    <ul class="orderList">
+                        @foreach (var order_item in item.order_item)
+                        { 
+                            <li class="order_item_li">@order_item.menu_item.item.name<br />
+                                <span class="order_item_desc">@Truncate(order_item.menu_item.item.description, 20)</span>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                <div class="orderDate">
+                    @Html.DisplayFor(modelItem => item.timestamp)
+                </div>
+                @Html.ActionLink("Details", "Details", "Order", new { id = item.id }, new { @class = "button" })
+                @{bool reviewIncomplete = false;
+                  foreach (TouchForFood.Models.order_item oi in item.order_item)
+                  {
+                      if (oi.review_order_item.Count == 0)
+                      {
+                          reviewIncomplete = true;
+                      }
+                  }
+                  if (reviewIncomplete)
+                  {
+                    @Html.ActionLink("Leave Review", "Create", "Review", new { orderID = item.id }, new { @class = "button" })
+                  }
+                }
+            </div>
+            <br />
+            }
+        }
+    </div>
+</fieldset>
+@helper Truncate(string input, int length)
+    {
+        if (input != null)
+        {
+            if (input.Length <= length)
+            {
+            @input
+            }
+            else
+            {
+            @input.Substring(0, length)<text>...</text>
+            }
+        }
+}

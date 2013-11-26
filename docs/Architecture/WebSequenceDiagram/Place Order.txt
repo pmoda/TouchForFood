@@ -1,0 +1,33 @@
+title Place Order
+
+Client->System: Client taps on the NFC/QR
+System->Database: create Order
+Database->System: Order creation confirmation
+System->Client: Menu view
+
+loop order not finalized
+alt item addition
+    Client->System: add Item
+    System->Client: Item addition confirmation
+    Client->System: Topping/Sides additions
+    note right of Client: see Toping/Sides additions diagram
+else edit
+   Client->System: edit Item
+   Client->System: Topping/Sides additions
+   note right of Client: see Toping/Sides additions diagram
+   System->Client: Item edit confirmation
+
+else delete
+   Client->System: delete Item
+   System->Client: confirm deletion
+end
+end
+
+
+
+Client->System: finalize Order
+System->Client: request confirmation
+Client->System: confirm finalization
+System->Database: populate Order
+Database->System: confirm population
+System->Client: confirm Order status

@@ -1,0 +1,92 @@
+﻿@model TouchForFood.Models.menu
+@using TouchForFood.App_GlobalResources
+@using TouchForFood.Util.Html
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@section JavaScript{
+    <script type="text/javascript" src="@Url.Content("/Scripts/Menu/menu_ajax_handler.js")"></script>
+    <script type="text/javascript" src="@Url.Content("/Scripts/colorbox/jquery.colorbox-min.js")"></script>
+}
+
+<link rel="stylesheet" href="@Url.Content("/Content/stylesheets/colorbox.css")" />
+
+<script>
+
+    $(document).ready(function () {
+
+        $(".ajax").colorbox({ width: "50%" });
+
+    });
+
+</script>
+
+<div class="sixteen columns">
+    @Html.ActionLink("< Back", "Index", null, new { @class = "button go-left" })
+    <h3 class="offset-by-one main-green go-left remove-br">@Html.DisplayFor(model => model.name)</h3>
+    &nbsp
+    <h5 class="remove-br">(@Html.ActionLink("Edit", "Edit", new { id = Model.id }))</h5>
+    
+</div>
+<div class="one-third column">
+    @Html.Action("OnTheMenu", "Menu_Category", @Model.id)
+</div>
+<div class="two-thirds column">
+    <fieldset>    
+        <h4 class="main-green go-left remove-br">Available Categories</h4>            
+        <h5 class="go-right remove-br">
+            (
+                @{
+                    var item_url = UrlUtils.ConvertRelativeUrlToAbsoluteUrl(Url.Action("CreatePartial", "Category", new { menu_id = Model.id }));
+                    //@Ajax.ActionLink("New Category", "CreatePartial", "Category", new { menu_id = Model.id },
+                    //new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "result", InsertionMode = InsertionMode.Replace, OnSuccess = "openPopup" })
+                }
+                <a class='ajax cboxElement' href='@item_url'>New Category</a>
+            )
+        </h5>
+        <div style="clear: both;"></div>
+        <!-- Partially render Category Index-->
+        @Html.Action("FilterCategories", "Category", @Model)
+    </fieldset>
+</div>
+@*<h2>Details</h2>
+
+<h3>@Html.DisplayFor(model => model.name)</h3>
+
+
+    <table id="menu_table">
+    <thead><tr><th> Categories on the Menu </th></tr></thead>
+@foreach (var menu_category in Model.menu_category)
+{
+    <tr id="@menu_category.id">
+        <td>
+            <a href='@Url.Content("~/Menu_Category/Details/" + menu_category.id)'> 
+                @Html.Partial("../Menu_Category/View", menu_category, new ViewDataDictionary { { "tag", "div" } })
+            </a>
+        </td>
+        <td>
+            @Ajax.ActionLink("Remove", "AjaxDelete", "Menu_Category", new { id = menu_category.id }, new AjaxOptions()
+        {
+            Confirm = "Are you sure you want to delete?",
+            HttpMethod = "POST",
+            OnSuccess = "window.location.reload()",
+            OnFailure = "console.log(error)"
+        })
+        </td>
+    </tr>    
+}
+    </table>
+
+        <table>
+    <thead><tr><th>Available Categories </th></tr></thead>
+    <!-- Partially render Category Index-->
+    @Html.Action("FilterCategories", "Category", @Model)
+
+    </table>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
+<!--<script src="../../Scripts/jquery-1.5.1-vsdoc.js" type="text/javascript"></script>-->

@@ -1,0 +1,45 @@
+﻿@model TouchForFood.Models.order
+@using TouchForFood.App_GlobalResources
+
+@{
+    ViewBag.Title = "Decline Item";
+    int itemIDToDecline = Convert.ToInt32(Request["itemID"]);
+}
+
+<h2>Cancel</h2>
+
+<h3>Are you sure you want to decline this item?</h3>
+
+<fieldset>
+            @* Get the name of the item to decline from the collection of items in the order *@
+            @Html.DisplayFor(model => model.order_item.FirstOrDefault(itemID => itemID.id == itemIDToDecline).menu_item.item.name)<br />
+
+            <div id="order-username">
+                Ordered by: @Html.DisplayFor(model => model.user.username)</div>
+                @{
+                  var time = String.Format("{0:dd MMM yyyy HH:mm:ss}", Model.timestamp);
+                }
+            <div id="order-timestamp">@Html.DisplayFor(model => time)</div>
+            <div id="order-table-status">
+                <span id="order-table" class="go-left">Table #@Html.DisplayFor(model => model.table.id)</span><br />
+                <span class="go-left">Total: @Model.total</span> <br />
+                @if (Model.waiter != null){
+                    <span class="go-left">Waiter: Model.waiter.first_name + " " + Model.waiter.last_name<br /></span>
+                }
+
+
+                <div class="clear">
+                </div>
+            </div>
+</fieldset>
+
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="hidden" value="@Html.DisplayFor(model => model.version)" name="orderVersion" />
+        <input type="hidden" value="@Html.DisplayFor(model => model.order_item.FirstOrDefault(itemID => itemID.id == itemIDToDecline).version)" name="orderItemVersion" />
+        <input type="submit" value="Confirm" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+

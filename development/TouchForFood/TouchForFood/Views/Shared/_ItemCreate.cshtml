@@ -1,0 +1,51 @@
+﻿@model TouchForFood.Models.ItemFilterVM
+<div>
+@using (@Ajax.BeginForm("addItemToMenu", "Item", new { id = "item_menu_form" },
+    new AjaxOptions { HttpMethod = "POST", OnSuccess = "window.location.reload()", OnFailure = "console.log('err')" }))
+{
+    @Html.ValidationSummary(true)
+    <h3 class="main-green">New Item</h3>
+    <fieldset>
+            @Html.Hidden("menu_cat_id", Model.menu_cat.id)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.items[0].name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.items[0].name)
+            @Html.ValidationMessageFor(model => model.items[0].name)
+        </div>
+
+         <div class="editor-label">
+            @Html.LabelFor(model => model.items[0].description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.items[0].description)
+            @Html.ValidationMessageFor(model => model.items[0].description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.items[0].metadata)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.items[0].metadata)
+            @Html.ValidationMessageFor(model => model.items[0].metadata)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.items[0].image_url)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.items[0].image_url)
+            @Html.ValidationMessageFor(model => model.items[0].image_url)
+        </div>
+         
+         <div class="editor-field">
+            Price<br />
+            @Html.TextBox("price", 00.00)
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+</div>

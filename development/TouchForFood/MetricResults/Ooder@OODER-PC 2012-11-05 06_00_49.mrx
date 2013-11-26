@@ -1,0 +1,2369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeMetricsReport Version="10">
+   <Targets>
+      <Target Name="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\bin\TouchForFood.dll">
+         <Modules>
+            <Module Name="TouchForFood.dll" AssemblyVersion="1.0.0.0" FileVersion="1.0.0.0">
+               <Metrics>
+                  <Metric Name="MaintainabilityIndex" Value="88" />
+                  <Metric Name="CyclomaticComplexity" Value="286" />
+                  <Metric Name="ClassCoupling" Value="58" />
+                  <Metric Name="DepthOfInheritance" Value="3" />
+                  <Metric Name="LinesOfCode" Value="413" />
+               </Metrics>
+               <Namespaces>
+                  <Namespace Name="TouchForFood.Models">
+                     <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="92" />
+                        <Metric Name="CyclomaticComplexity" Value="206" />
+                        <Metric Name="ClassCoupling" Value="21" />
+                        <Metric Name="DepthOfInheritance" Value="2" />
+                        <Metric Name="LinesOfCode" Value="219" />
+                     </Metrics>
+                     <Types>
+                        <Type Name="item">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="92" />
+                              <Metric Name="CyclomaticComplexity" Value="19" />
+                              <Metric Name="ClassCoupling" Value="6" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="21" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="item()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\item.cs" Line="17">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="80" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="description.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="description.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="metadata.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="metadata.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="category_id.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="category_id.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="image_url.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="image_url.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="category.get() : category">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="category.set(category) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_item.get() : ICollection&lt;menu_item&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_item.set(ICollection&lt;menu_item&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_item.get() : ICollection&lt;order_item&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_item.set(ICollection&lt;order_item&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="order_item">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="93" />
+                              <Metric Name="CyclomaticComplexity" Value="13" />
+                              <Metric Name="ClassCoupling" Value="3" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="13" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_id.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_id.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_item_id.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_item_id.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="note.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="note.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="item.get() : item">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="item.set(item) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order.get() : order">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order.set(order) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_item()">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="100" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="menu_category">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="93" />
+                              <Metric Name="CyclomaticComplexity" Value="13" />
+                              <Metric Name="ClassCoupling" Value="5" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="14" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="menu_category()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\menu_category.cs" Line="17">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="category_id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="category_id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="category.get() : category">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="category.set(category) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu.get() : menu">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu.set(menu) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_item.get() : ICollection&lt;menu_item&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_item.set(ICollection&lt;menu_item&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="menu">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="93" />
+                              <Metric Name="CyclomaticComplexity" Value="11" />
+                              <Metric Name="ClassCoupling" Value="5" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="12" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="menu()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\menu.cs" Line="17">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="resto_id.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="resto_id.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category.get() : ICollection&lt;menu_category&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category.set(ICollection&lt;menu_category&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="restaurant.get() : restaurant">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="restaurant.set(restaurant) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="user">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="92" />
+                              <Metric Name="CyclomaticComplexity" Value="19" />
+                              <Metric Name="ClassCoupling" Value="3" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="20" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="user()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\user.cs" Line="17">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="username.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="username.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="password.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="password.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="first_name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="first_name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="last_name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="last_name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="email.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="email.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="display_name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="display_name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="image_url.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="image_url.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="orders.get() : ICollection&lt;order&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="orders.set(ICollection&lt;order&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="order">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="92" />
+                              <Metric Name="CyclomaticComplexity" Value="25" />
+                              <Metric Name="ClassCoupling" Value="8" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="27" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="order()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\order.cs" Line="17">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="80" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="timestamp.get() : DateTime?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="timestamp.set(DateTime?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="total.get() : double?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="total.set(double?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="table_number.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="table_number.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status_id.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status_id.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="user_id.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="user_id.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="waiter_id.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="waiter_id.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_item.get() : ICollection&lt;order_item&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_item.set(ICollection&lt;order_item&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status.get() : order_status">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status.set(order_status) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status1.get() : ICollection&lt;order_status&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status1.set(ICollection&lt;order_status&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="user.get() : user">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="user.set(user) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="waiter.get() : waiter">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="waiter.set(waiter) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="sysdiagram">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="93" />
+                              <Metric Name="CyclomaticComplexity" Value="11" />
+                              <Metric Name="ClassCoupling" Value="1" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="11" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="principal_id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="principal_id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="diagram_id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="diagram_id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="version.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="version.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="definition.get() : byte[]">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="definition.set(byte[]) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="sysdiagram()">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="100" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="category">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="92" />
+                              <Metric Name="CyclomaticComplexity" Value="9" />
+                              <Metric Name="ClassCoupling" Value="4" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="11" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="category()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\category.cs" Line="17">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="80" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category.get() : ICollection&lt;menu_category&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category.set(ICollection&lt;menu_category&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="items.get() : ICollection&lt;item&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="items.set(ICollection&lt;item&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="waiter">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="93" />
+                              <Metric Name="CyclomaticComplexity" Value="13" />
+                              <Metric Name="ClassCoupling" Value="5" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="14" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="waiter()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\waiter.cs" Line="17">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="first_name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="first_name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="last_name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="last_name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="resto_id.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="resto_id.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="orders.get() : ICollection&lt;order&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="orders.set(ICollection&lt;order&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="restaurant.get() : restaurant">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="restaurant.set(restaurant) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="order_status">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="92" />
+                              <Metric Name="CyclomaticComplexity" Value="17" />
+                              <Metric Name="ClassCoupling" Value="5" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="18" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="order_status()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\order_status.cs" Line="17">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="timestamp.get() : DateTime?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="timestamp.set(DateTime?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_id.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_id.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status1.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status1.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="orders.get() : ICollection&lt;order&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="orders.set(ICollection&lt;order&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order.get() : order">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order.set(order) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status11.get() : order_status">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status11.set(order_status) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status2.get() : order_status">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status2.set(order_status) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="touch_for_foodEntities">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="92" />
+                              <Metric Name="CyclomaticComplexity" Value="26" />
+                              <Metric Name="ClassCoupling" Value="16" />
+                              <Metric Name="DepthOfInheritance" Value="2" />
+                              <Metric Name="LinesOfCode" Value="26" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="touch_for_foodEntities()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\touch_for_food.Context.cs" Line="18">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="OnModelCreating(DbModelBuilder) : void" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\touch_for_food.Context.cs" Line="24">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="categories.get() : DbSet&lt;category&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="categories.set(DbSet&lt;category&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="items.get() : DbSet&lt;item&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="items.set(DbSet&lt;item&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menus.get() : DbSet&lt;menu&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menus.set(DbSet&lt;menu&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category.get() : DbSet&lt;menu_category&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category.set(DbSet&lt;menu_category&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_item.get() : DbSet&lt;menu_item&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_item.set(DbSet&lt;menu_item&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="orders.get() : DbSet&lt;order&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="orders.set(DbSet&lt;order&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_item.get() : DbSet&lt;order_item&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_item.set(DbSet&lt;order_item&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status.get() : DbSet&lt;order_status&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="order_status.set(DbSet&lt;order_status&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="restaurants.get() : DbSet&lt;restaurant&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="restaurants.set(DbSet&lt;restaurant&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="sysdiagrams.get() : DbSet&lt;sysdiagram&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="sysdiagrams.set(DbSet&lt;sysdiagram&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="users.get() : DbSet&lt;user&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="users.set(DbSet&lt;user&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="waiters.get() : DbSet&lt;waiter&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="waiters.set(DbSet&lt;waiter&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="restaurant">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="92" />
+                              <Metric Name="CyclomaticComplexity" Value="17" />
+                              <Metric Name="ClassCoupling" Value="5" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="19" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="restaurant()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Models\restaurant.cs" Line="17">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="80" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="name.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="name.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="address.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="address.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="postal_code.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="postal_code.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="city.get() : string">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="city.set(string) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="rating.get() : int?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="rating.set(int?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menus.get() : ICollection&lt;menu&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menus.set(ICollection&lt;menu&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="waiters.get() : ICollection&lt;waiter&gt;">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="waiters.set(ICollection&lt;waiter&gt;) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="menu_item">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="93" />
+                              <Metric Name="CyclomaticComplexity" Value="13" />
+                              <Metric Name="ClassCoupling" Value="4" />
+                              <Metric Name="DepthOfInheritance" Value="1" />
+                              <Metric Name="LinesOfCode" Value="13" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="item_id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="item_id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category_id.get() : int">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category_id.set(int) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="price.get() : decimal?">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="price.set(decimal?) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="item.get() : item">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="item.set(item) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category.get() : menu_category">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="98" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_category.set(menu_category) : void">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="95" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="menu_item()">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="100" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="0" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                     </Types>
+                  </Namespace>
+                  <Namespace Name="TouchForFood.Controllers">
+                     <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="78" />
+                        <Metric Name="CyclomaticComplexity" Value="76" />
+                        <Metric Name="ClassCoupling" Value="36" />
+                        <Metric Name="DepthOfInheritance" Value="3" />
+                        <Metric Name="LinesOfCode" Value="187" />
+                     </Metrics>
+                     <Types>
+                        <Type Name="RestaurantController">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="76" />
+                              <Metric Name="CyclomaticComplexity" Value="12" />
+                              <Metric Name="ClassCoupling" Value="12" />
+                              <Metric Name="DepthOfInheritance" Value="3" />
+                              <Metric Name="LinesOfCode" Value="33" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="Index() : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="20">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="83" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Details(int) : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="28">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create() : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="37">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="89" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create(restaurant) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="46">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="69" />
+                                    <Metric Name="CyclomaticComplexity" Value="2" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="6" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="61">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(restaurant) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="71">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="69" />
+                                    <Metric Name="CyclomaticComplexity" Value="2" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="6" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Delete(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="85">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="DeleteConfirmed(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="95">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="71" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="5" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Dispose(bool) : void" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="103">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="RestaurantController()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\RestaurantController.cs" Line="14">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="92" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="HomeController">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="96" />
+                              <Metric Name="CyclomaticComplexity" Value="2" />
+                              <Metric Name="ClassCoupling" Value="2" />
+                              <Metric Name="DepthOfInheritance" Value="3" />
+                              <Metric Name="LinesOfCode" Value="3" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="Index() : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\HomeController.cs" Line="15">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="89" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="HomeController()">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="100" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="Menu_CategoryController">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="69" />
+                              <Metric Name="CyclomaticComplexity" Value="20" />
+                              <Metric Name="ClassCoupling" Value="29" />
+                              <Metric Name="DepthOfInheritance" Value="3" />
+                              <Metric Name="LinesOfCode" Value="42" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="Index() : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="20">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="73" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="15" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Details(int) : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="29">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create() : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="38">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="68" />
+                                    <Metric Name="CyclomaticComplexity" Value="3" />
+                                    <Metric Name="ClassCoupling" Value="11" />
+                                    <Metric Name="LinesOfCode" Value="4" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create(menu_category) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="49">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="60" />
+                                    <Metric Name="CyclomaticComplexity" Value="4" />
+                                    <Metric Name="ClassCoupling" Value="16" />
+                                    <Metric Name="LinesOfCode" Value="8" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="66">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="65" />
+                                    <Metric Name="CyclomaticComplexity" Value="3" />
+                                    <Metric Name="ClassCoupling" Value="13" />
+                                    <Metric Name="LinesOfCode" Value="5" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(menu_category) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="78">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="60" />
+                                    <Metric Name="CyclomaticComplexity" Value="4" />
+                                    <Metric Name="ClassCoupling" Value="16" />
+                                    <Metric Name="LinesOfCode" Value="8" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Delete(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="94">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="DeleteConfirmed(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="104">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="71" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="5" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Dispose(bool) : void" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="112">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Menu_CategoryController()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\Menu_CategoryController.cs" Line="14">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="92" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="MenuController">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="73" />
+                              <Metric Name="CyclomaticComplexity" Value="16" />
+                              <Metric Name="ClassCoupling" Value="30" />
+                              <Metric Name="DepthOfInheritance" Value="3" />
+                              <Metric Name="LinesOfCode" Value="38" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="Index() : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="20">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="74" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="14" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Details(int) : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="29">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create() : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="38">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="73" />
+                                    <Metric Name="CyclomaticComplexity" Value="2" />
+                                    <Metric Name="ClassCoupling" Value="13" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create(menu) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="48">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="64" />
+                                    <Metric Name="CyclomaticComplexity" Value="3" />
+                                    <Metric Name="ClassCoupling" Value="17" />
+                                    <Metric Name="LinesOfCode" Value="7" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="64">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="69" />
+                                    <Metric Name="CyclomaticComplexity" Value="2" />
+                                    <Metric Name="ClassCoupling" Value="14" />
+                                    <Metric Name="LinesOfCode" Value="4" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(menu) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="75">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="63" />
+                                    <Metric Name="CyclomaticComplexity" Value="3" />
+                                    <Metric Name="ClassCoupling" Value="17" />
+                                    <Metric Name="LinesOfCode" Value="7" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Delete(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="90">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="DeleteConfirmed(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="100">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="71" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="5" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Dispose(bool) : void" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="108">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="MenuController()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\MenuController.cs" Line="14">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="92" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="UserController">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="75" />
+                              <Metric Name="CyclomaticComplexity" Value="14" />
+                              <Metric Name="ClassCoupling" Value="15" />
+                              <Metric Name="DepthOfInheritance" Value="3" />
+                              <Metric Name="LinesOfCode" Value="38" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="Index() : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="22">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="83" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Details(int) : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="30">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create() : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="39">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="89" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create(user) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="48">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="69" />
+                                    <Metric Name="CyclomaticComplexity" Value="2" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="6" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="63">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(user, HttpPostedFileBase) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="73">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="59" />
+                                    <Metric Name="CyclomaticComplexity" Value="4" />
+                                    <Metric Name="ClassCoupling" Value="11" />
+                                    <Metric Name="LinesOfCode" Value="11" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Delete(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="98">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="DeleteConfirmed(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="108">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="71" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="5" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Dispose(bool) : void" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="116">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="UserController()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\UserController.cs" Line="16">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="92" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                        <Type Name="CategoryController">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="76" />
+                              <Metric Name="CyclomaticComplexity" Value="12" />
+                              <Metric Name="ClassCoupling" Value="12" />
+                              <Metric Name="DepthOfInheritance" Value="3" />
+                              <Metric Name="LinesOfCode" Value="33" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="Index() : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="20">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="83" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Details(int) : ViewResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="28">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create() : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="37">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="89" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Create(category) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="46">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="69" />
+                                    <Metric Name="CyclomaticComplexity" Value="2" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="6" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="61">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Edit(category) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="71">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="69" />
+                                    <Metric Name="CyclomaticComplexity" Value="2" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="6" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Delete(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="85">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="77" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="5" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="DeleteConfirmed(int) : ActionResult" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="95">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="71" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="8" />
+                                    <Metric Name="LinesOfCode" Value="5" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Dispose(bool) : void" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="103">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="87" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="CategoryController()" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Controllers\CategoryController.cs" Line="14">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="92" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                     </Types>
+                  </Namespace>
+                  <Namespace Name="TouchForFood">
+                     <Metrics>
+                        <Metric Name="MaintainabilityIndex" Value="90" />
+                        <Metric Name="CyclomaticComplexity" Value="4" />
+                        <Metric Name="ClassCoupling" Value="9" />
+                        <Metric Name="DepthOfInheritance" Value="2" />
+                        <Metric Name="LinesOfCode" Value="7" />
+                     </Metrics>
+                     <Types>
+                        <Type Name="MvcApplication">
+                           <Metrics>
+                              <Metric Name="MaintainabilityIndex" Value="90" />
+                              <Metric Name="CyclomaticComplexity" Value="4" />
+                              <Metric Name="ClassCoupling" Value="9" />
+                              <Metric Name="DepthOfInheritance" Value="2" />
+                              <Metric Name="LinesOfCode" Value="7" />
+                           </Metrics>
+                           <Members>
+                              <Member Name="RegisterGlobalFilters(GlobalFilterCollection) : void" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Global.asax.cs" Line="16">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="94" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="2" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="RegisterRoutes(RouteCollection) : void" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Global.asax.cs" Line="21">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="82" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="2" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="Application_Start() : void" File="C:\Users\Ooder\Documents\Concordia\school\fall 2012\soen-490-capstone\development\TouchForFood\TouchForFood\Global.asax.cs" Line="33">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="80" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="3" />
+                                    <Metric Name="LinesOfCode" Value="3" />
+                                 </Metrics>
+                              </Member>
+                              <Member Name="MvcApplication()">
+                                 <Metrics>
+                                    <Metric Name="MaintainabilityIndex" Value="100" />
+                                    <Metric Name="CyclomaticComplexity" Value="1" />
+                                    <Metric Name="ClassCoupling" Value="1" />
+                                    <Metric Name="LinesOfCode" Value="1" />
+                                 </Metrics>
+                              </Member>
+                           </Members>
+                        </Type>
+                     </Types>
+                  </Namespace>
+               </Namespaces>
+            </Module>
+         </Modules>
+      </Target>
+   </Targets>
+</CodeMetricsReport>

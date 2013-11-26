@@ -1,0 +1,41 @@
+﻿@model TouchForFood.Models.restaurant
+@using TouchForFood.App_GlobalResources
+           
+<fieldset>
+    <legend>Latest Reviews</legend>
+    <div id="pastReviews">
+        @* Iterate through the collection of related reviews in the model object. Remember that from the RestaurantController this will
+        only display the latest 5 reviews *@
+        @foreach (var item in Model.reviews)
+        {
+            <div class="reviewContainer">
+            @*
+                <div class="reviewDate">
+                    @Html.LabelFor(modelItem => item.submitted_on): @Html.DisplayFor(modelItem => item.submitted_on)
+                </div>*@
+                <div class="reviewCreator">
+                    @Html.LabelFor(modelItem => item.written_by):
+
+                    @* Check if our review was labeled as anonymous. The "@:" tag in the else indicates the beginning of a line's content *@
+                    @if (item.is_anonymous == false)
+                    {
+                        @* Make a link to the user's profile page *@
+                        @Html.ActionLink(item.user.username, "Details", "User", new { id = item.user_id }, null)
+                    }
+                    else
+                    {
+                        @:Anonymous
+                    }
+                </div>
+                @*
+                <div class="reviewText">
+                    @Html.LabelFor(modelItem => item.review_text): @Html.DisplayFor(modelItem => item.review_text)
+                </div>
+                *@
+                <div class="reviewRating">
+                    @Html.LabelFor(modelItem => item.rating): @Html.DisplayFor(modelItem => item.rating)
+                </div>
+            </div>
+        }
+    </div>
+</fieldset>
